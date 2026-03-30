@@ -1,0 +1,21 @@
+# Raw data
+data_raw/
+
+# Large processed data
+data/processed/*.csv
+data/processed/*.parquet
+
+# Keep sample data if you want to upload small examples
+!data/processed/sample/
+!data/processed/sample/*.csv
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Python
+__pycache__/
+*.pyc
+
+# OS files
+.DS_Store
+Thumbs.db
