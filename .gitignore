@@ -1,21 +1,41 @@
-# Raw data
+# ========================
+# DATA
+# ========================
+
+# Raw data (never track)
 data_raw/
 
-# Large processed data
-data/processed/*.csv
-data/processed/*.parquet
+# Cleaned data (ignore large files in root)
+data_cleaned/*.csv
+data_cleaned/*.parquet
 
-# Keep sample data if you want to upload small examples
-!data/processed/sample/
-!data/processed/sample/*.csv
+# Allow only sample data
+!data_cleaned/sample/
+!data_cleaned/sample/*.csv
 
-# Jupyter
+# ========================
+# JUPYTER
+# ========================
 .ipynb_checkpoints/
 
-# Python
+# ========================
+# PYTHON
+# ========================
 __pycache__/
 *.pyc
 
-# OS files
+# ========================
+# ENVIRONMENT / IDE
+# ========================
+.env
+venv/
+.envrc
+
+# VS Code
+.vscode/
+
+# ========================
+# OPERATING SYSTEM FILES
+# ========================
 .DS_Store
 Thumbs.db
