@@ -3,15 +3,18 @@
 # ========================
 
 # Raw data (never track)
-data_raw/
+data/data_raw/
 
-# Cleaned data (ignore large files in root)
-data_cleaned/*.csv
-data_cleaned/*.parquet
+# Cleaned data (ignore large files)
+data/data_cleaned/*.csv
+data/data_cleaned/*.parquet
 
-# Allow only sample data
-!data_cleaned/sample/
-!data_cleaned/sample/*.csv
+# Other processed data
+data/processed/
+
+# Allow sample data
+!data/data_cleaned/sample/
+!data/data_cleaned/sample/*.csv
 
 # ========================
 # JUPYTER
@@ -30,8 +33,6 @@ __pycache__/
 .env
 venv/
 .envrc
-
-# VS Code
 .vscode/
 
 # ========================

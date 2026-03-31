@@ -1,211 +1,259 @@
 # Federal Contract Spending Intelligence Dashboard: Trend, Concentration, and Efficiency Analysis (2021–2024)
 
-## Project Summary
-This project analyzes U.S. federal contract spending data from fiscal years 2021 through 2024 to identify multi-year spending trends, agency concentration patterns, and high-growth areas that may warrant closer review. The goal is to build a decision-focused analytics project that demonstrates end-to-end business analytics capability across data sourcing, cleaning, transformation, SQL analysis, KPI development, and dashboard reporting.
+## Current Status
+**Project stage:** Data cleaning and consolidation completed  
 
-Rather than simply visualizing spending totals, this project is designed to support better decision-making by surfacing where contract obligations are concentrated, which agencies are growing fastest, and where year-over-year changes appear unusually large relative to the broader spending trend.
+**Completed so far:**
+- Downloaded and organized FY2021–FY2024 federal contract data from USAspending  
+- Cleaned and standardized raw contract files across all four years  
+- Combined yearly files into master cleaned datasets  
+- Created a lean analysis-ready dataset for downstream KPI analysis and dashboard development  
+
+**Current focus:**
+- Exploratory analysis  
+- KPI development  
+- SQL query development  
+- Power BI dashboard construction  
+
+---
+
+## Project Summary
+
+This project analyzes U.S. federal contract spending from fiscal years 2021 through 2024 to identify spending trends, agency concentration, and high-growth areas that may warrant closer review.
+
+It is structured to reflect real-world analytical workflows and demonstrate the ability to work with large-scale datasets, design business-relevant metrics, and communicate insights effectively.
+
+The objective is not just to report total spending, but to transform raw federal contract data into decision-ready insights that highlight:
+- where contract obligations are concentrated  
+- which agencies are driving growth  
+- where year-over-year changes may signal potential inefficiencies or areas for further review  
+
+To accomplish this, the project builds an end-to-end analytics pipeline that:
+- ingests large-scale public spending data (millions of records per year)  
+- standardizes and consolidates multi-year datasets  
+- develops KPI-driven analysis using Python and SQL  
+- delivers insights through a business-focused dashboard  
+
+The final output is designed to support analytical thinking aligned with roles in government contracting, financial analysis, and operations strategy, with a focus on scale, clarity, and decision relevance.
+
+---
 
 ## Business Problem
-Federal contract spending is large, complex, and distributed across many agencies. Decision-makers need a structured way to monitor how spending changes over time, where obligations are concentrated, and which areas may deserve closer review for planning, oversight, or resource prioritization.
 
-This project addresses that need by transforming raw federal contract data into a set of decision-ready metrics and visual insights.
+Federal contract spending represents a significant portion of government expenditures and is distributed across numerous agencies, programs, and service areas. However, without structured analysis, it is difficult to quickly understand where spending is concentrated, how it is changing over time, and which areas may require closer review.
+
+Decision-makers need a clear and consistent way to:
+- monitor multi-year spending trends  
+- identify which agencies control the largest share of contract obligations  
+- detect unusually high growth or volatility in spending  
+- prioritize areas for deeper review or resource optimization  
+
+Raw contract-level data alone does not provide these insights. It must be transformed into aggregated, comparable, and decision-ready metrics.
+
+This project addresses that gap by converting large-scale federal contract data into a structured analytical framework that supports trend analysis, concentration analysis, and growth detection across agencies.
+
+---
 
 ## Project Objective
+
 The objective of this project is to use federal contract data to answer practical business and oversight questions such as:
-- How did federal contract obligations change from 2021 to 2024?
-- Which agencies accounted for the largest share of contract spending?
-- Which agencies experienced the fastest year-over-year growth?
-- How concentrated is contract spending among the top agencies?
-- Which agencies show unusual volatility or sharp spending changes over time?
-- What patterns suggest opportunities for closer spending review or resource optimization?
+- How did federal contract obligations change from 2021 to 2024?  
+- Which agencies accounted for the largest share of contract spending?  
+- Which agencies experienced the fastest year-over-year growth?  
+- How concentrated is contract spending among the top agencies?  
+- Which agencies show unusual volatility or sharp spending changes over time?  
+- What patterns suggest opportunities for closer spending review or resource optimization?  
+
+---
 
 ## Data Source
-This project uses federal contract award data from the **USAspending Award Data Archive**. The archive provides downloadable award data by category and fiscal year. USAspending states that **full files** contain fiscal-year data up to the date the file was prepared, while **delta files** contain only new, modified, and deleted records since the previous file. For this project, the analysis is based on annual contract data files covering fiscal years **2021, 2022, 2023, and 2024**. :contentReference[oaicite:1]{index=1}
 
-Primary source:
-- USAspending.gov — Award Data Archive
+This project uses federal contract award data from the USAspending Award Data Archive.
 
-Supporting reference:
-- USAspending.gov — Federal Spending Guide :contentReference[oaicite:2]{index=2}
+**Primary source:**  
+https://www.usaspending.gov/download_center/award_data_archive  
+
+**Supporting reference:**  
+https://www.usaspending.gov/#/federal_spending  
+
+---
 
 ## Scope
-- **Award Type:** Contracts
-- **Time Period:** FY2021–FY2024
-- **Primary Focus:** Federal contract obligations, agency-level trends, growth patterns, and spending concentration
-- **Analytical Goal:** Produce an executive-style dashboard and supporting analysis that can inform review, prioritization, and decision-making
+- **Award Type:** Contracts  
+- **Time Period:** FY2021–FY2024  
+- **Primary Focus:** Federal contract obligations, agency-level trends, growth patterns, and spending concentration  
+- **Analytical Goal:** Produce an executive-style dashboard and supporting analysis that can inform review, prioritization, and decision-making  
+
+---
 
 ## Business Questions Being Solved
-This project is built around the following core questions:
 
-1. **Trend Analysis**
-   - How has total federal contract spending changed year over year from 2021 to 2024?
+### Trend Analysis
+- How has total federal contract spending changed from 2021 to 2024?  
+- Are spending increases consistent year-over-year, or are there periods of acceleration or slowdown?  
 
-2. **Agency Concentration**
-   - Which agencies account for the largest share of total contract obligations?
-   - Is spending concentrated among a relatively small number of agencies?
+### Agency Concentration
+- Which agencies account for the largest share of total contract obligations?  
+- How concentrated is federal contract spending among the top agencies?  
 
-3. **Growth and Change Detection**
-   - Which agencies experienced the largest absolute increase in contract obligations?
-   - Which agencies experienced the fastest percentage growth?
+### Growth and Change Detection
+- Which agencies have experienced the largest absolute increases in spending?  
+- Which agencies are growing the fastest in percentage terms?  
+- Are there agencies whose growth significantly outpaces the overall trend?  
 
-4. **Oversight and Review Prioritization**
-   - Which agencies combine high total spending with high growth?
-   - Which agencies show volatility or sudden shifts that may warrant further review?
+### Oversight and Review Prioritization
+- Which agencies combine high total spending with high growth?  
+- Which agencies show volatility or sharp year-over-year changes that may warrant further review?  
 
-5. **Decision Support**
-   - Where should leadership focus attention first if the goal is to monitor large spending centers and unusual changes in obligations?
+### Decision Support
+- If leadership had to prioritize oversight or analysis efforts, which agencies should be reviewed first based on scale, growth, and variability?  
+
+---
 
 ## KPIs Tracked
-The dashboard and analysis will focus on a set of business-relevant KPIs, including:
 
-- **Total Contract Obligations**
-- **Year-over-Year Spending Growth (%)**
-- **Absolute Change in Obligations by Year**
-- **Top 10 Agencies by Contract Spending**
-- **Top 10 Agencies’ Share of Total Spend**
-- **Fastest-Growing Agencies**
-- **Largest Absolute Spending Increases**
+### Scale Metrics
+- **Total Contract Obligations**  
+- **Total Obligations by Year**
+
+### Growth Metrics
+- **Year-over-Year Growth (%)**  
+- **Absolute Change in Obligations**  
+- **Agency-Level Growth Rate**
+
+### Concentration Metrics
+- **Top 10 Agencies by Contract Spending**  
+- **Top Agencies’ Share of Total Spend (%)**  
 - **Spending Concentration Ratio**
-- **Agency Spending Volatility**
-- **Multi-Year Growth Trend by Agency**
 
-These KPIs are intended to move beyond descriptive totals and help highlight concentration, growth, and potential review areas.
+### Oversight and Prioritization Metrics
+- **High Spend + High Growth Agencies**  
+- **Spending Volatility**  
+- **Multi-Year Growth Trend**
+
+---
 
 ## Analytical Approach
-The project follows an end-to-end analytics workflow:
 
-1. **Data Acquisition**
-   - Download raw contract data files for FY2021–FY2024 from the USAspending Award Data Archive
+### 1. Data Acquisition
+- Downloaded FY2021–FY2024 contract data from USAspending  
 
-2. **Data Cleaning and Standardization**
-   - Review available fields and select analysis-relevant columns
-   - Standardize field names and data types across years
-   - Handle missing or inconsistent values
-   - Prepare obligation amounts and agency fields for analysis
+### 2. Data Cleaning and Standardization
+- Standardized schemas across years  
+- Converted data types  
+- Handled missing values  
+- Removed duplicates  
 
-3. **Dataset Consolidation**
-   - Combine yearly contract data into a unified analysis-ready dataset
-   - Add fiscal year tagging and ensure consistent schema alignment
+### 3. Scalable Data Processing
+- Implemented chunk-based processing for large datasets  
+- Processed multi-million-row files efficiently  
 
-4. **Exploratory Data Analysis**
-   - Review distributions, totals, and outliers
-   - Validate trends across years and agencies
+### 4. Dataset Consolidation
+- Combined yearly data into a unified master dataset  
+- Added fiscal year indicators  
 
-5. **SQL-Based Analysis**
-   - Build reusable queries to calculate spending totals, rankings, year-over-year growth, and concentration metrics
+### 5. Data Validation
+- Verified row counts and totals  
+- Checked data consistency and missingness  
 
-6. **Dashboard Development**
-   - Create a Power BI dashboard with executive KPIs, trend visuals, agency comparisons, and drilldown views
+### 6. Exploratory Analysis (In Progress)
+- Trend analysis and distribution review  
 
-7. **Insight Generation**
-   - Translate analysis into business findings and practical recommendations
+### 7. SQL-Based Analysis (Planned)
+- KPI and aggregation queries  
+
+### 8. Dashboard Development (Planned)
+- Power BI dashboard with executive KPIs  
+
+### 9. Insight Generation (Planned)
+- Translate analytical results into actionable business insights  
+
+---
 
 ## Techniques Used
-This project is designed to showcase both technical and business analytics techniques, including:
+- Data cleaning and transformation  
+- Multi-year schema standardization  
+- Exploratory data analysis  
+- Aggregation and summarization  
+- Trend and growth analysis  
+- Ranking and concentration analysis  
+- KPI design  
+- Dashboard storytelling  
 
-- Data cleaning and transformation
-- Schema standardization across multiple yearly files
-- Exploratory data analysis
-- Aggregation and summarization
-- Trend analysis
-- Year-over-year growth analysis
-- Ranking and top-N analysis
-- Concentration analysis
-- Volatility analysis
-- KPI design
-- Dashboard storytelling
-- Executive summary communication
+---
 
 ## Tools and Technologies
-- **Python** — data cleaning, preprocessing, and exploratory analysis
-- **Pandas** — transformation and dataset consolidation
-- **Jupyter Notebook** — analysis workflow and documentation
-- **SQL** — querying, aggregation, ranking, and KPI generation
-- **Power BI** — dashboard design and business intelligence reporting
-- **Excel** — quick validation and spot checks
-- **Git / GitHub** — version control and project documentation
 
-## Planned Dashboard Views
-The final dashboard is planned to include the following views:
+- **Python (Pandas)** — large-scale data cleaning and transformation  
+- **Jupyter Notebook** — workflow and documentation  
+- **SQL** — aggregation and KPI analysis  
+- **Power BI** — dashboard development  
+- **Excel** — validation and quick checks  
+- **Git / GitHub** — version control and project documentation  
 
-### 1. Executive Overview
-- Total contract obligations
-- Year-over-year growth
-- Top agency by spending
-- Total agencies included
-- Spending trend from 2021 to 2024
+---
 
-### 2. Agency Comparison
-- Top agencies by total obligations
-- Agency-level growth rates
-- Agency spending by year
-- Filters for year and agency
+## Data Availability
 
-### 3. Concentration and Review Priorities
-- Share of total spending held by top agencies
-- Ranking of agencies by growth and scale
-- Identification of agencies with both high spend and high growth
+The full datasets are too large to store in this repository.
 
-### 4. Drilldown Analysis
-- Deeper breakdown by agency or sub-agency
-- Detailed tables for targeted review
-- Support for identifying unusual patterns and changes
+This repo includes:
+- code and notebooks  
+- SQL queries  
+- project documentation  
+- a small sample dataset  
 
-## Expected Deliverables
-This repository is intended to include:
-- Clean project documentation
-- Jupyter notebooks for cleaning and analysis
-- SQL query files
-- Power BI dashboard files and screenshots
-- Key findings summary
-- Reproducible project structure and methodology notes
+To reproduce:
+1. Download FY2021–FY2024 contract data from USAspending  
+2. Place files in `data_raw/`  
+3. Run the cleaning notebook  
+4. Generate cleaned datasets locally  
 
-### Data Availability
-The full raw and cleaned contract datasets used in this project are too large to store directly in this GitHub repository.
-
-This repository includes:
-- project code
-- notebooks
-- SQL queries
-- dashboard assets
-- a small sample dataset for reference
-
-To reproduce the analysis:
-1. Download the FY2021–FY2024 contract files from the USAspending Award Data Archive
-2. Place the raw files in the `data_raw/` directory
-3. Run the cleaning and consolidation notebook
-4. Generate the yearly and master cleaned datasets locally
+---
 
 ## Repository Structure
-```text
+
 federal-spending-efficiency-analysis/
 │
 ├── README.md
 ├── .gitignore
-├── requirements.txt
 │
-├── data/
-│   ├── raw/              # raw source files stored locally, typically ignored
-│   ├── processed/        # cleaned or transformed outputs
-│   └── sample/           # optional sample data for reference
+├── data_cleaned/
+│ └── sample/
+│ └── sample_contracts_2021_2024_1000_rows.csv
 │
 ├── notebooks/
-│   ├── 01_data_cleaning.ipynb
-│   ├── 02_exploratory_analysis.ipynb
-│   └── 03_final_analysis.ipynb
+│ └── 01_data_cleaning.ipynb
 │
-├── sql/
-│   ├── 01_total_spending_by_year.sql
-│   ├── 02_top_agencies.sql
-│   ├── 03_yoy_growth.sql
-│   ├── 04_spending_concentration.sql
-│   └── 05_volatility_analysis.sql
-│
-├── dashboards/
-│   ├── federal_spending_dashboard.pbix
-│   └── screenshots/
-│
-└── outputs/
-    ├── executive_summary.md
-    └── key_findings.md
+├── sql/ # (in progress)
+├── dashboards/ # (in progress)
+└── outputs/ # (in progress)
 
+---
+## Key Insights (Preview)
+
+Preliminary analysis of FY2021–FY2024 federal contract data reveals several notable patterns:
+
+- **Steady Growth in Federal Contract Spending**  
+  Total contract obligations increased consistently from 2021 through 2023, indicating sustained expansion in federal contracting activity, followed by a slight stabilization in 2024.
+
+- **High Concentration Among Top Agencies**  
+  A small number of agencies account for a disproportionately large share of total contract obligations, suggesting that federal spending is highly concentrated rather than evenly distributed.
+
+- **Variation in Agency Growth Rates**  
+  While overall spending trends upward, growth is not uniform across agencies. Some agencies exhibit significantly higher growth rates than the overall trend, indicating potential shifts in priorities or funding allocation.
+
+- **Emergence of High-Growth Agencies**  
+  Certain agencies show both high total spending and strong year-over-year growth, making them key candidates for further analysis and oversight.
+
+- **Potential Areas for Deeper Review**  
+  Agencies with large spending levels combined with volatility or sudden increases may warrant closer examination to understand underlying drivers.
+
+*Note: These insights are based on initial exploratory analysis and will be refined through further SQL-based analysis and dashboard development.*
+
+## Next Steps
+
+- Complete exploratory analysis  
+- Build SQL query layer  
+- Develop Power BI dashboard  
+- Generate key insights and executive summary  
