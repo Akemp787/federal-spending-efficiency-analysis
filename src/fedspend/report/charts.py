@@ -188,9 +188,13 @@ def line_chart(
             for si, s in enumerate(series)
             if s["values"][i] is not None
         )
+        # Clamp the hit column to the plot area so the end columns do not extend
+        # under the axis labels or past the viewBox.
+        col_left = max(x_of(i) - step / 2, box.left)
+        col_right = min(x_of(i) + step / 2, box.left + box.plot_w)
         out.append(
-            f'<rect class="hover-col" x="{x_of(i) - step / 2:.1f}" y="{box.top}" '
-            f'width="{step:.1f}" height="{box.plot_h}" '
+            f'<rect class="hover-col" x="{col_left:.1f}" y="{box.top}" '
+            f'width="{col_right - col_left:.1f}" height="{box.plot_h}" '
             f'data-tip="&lt;strong&gt;{esc(label)}&lt;/strong&gt;{esc(rows)}" />'
         )
         out.append(

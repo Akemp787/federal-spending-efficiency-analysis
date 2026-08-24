@@ -22,140 +22,9 @@ import pandas as pd
 from ..config import Config
 from ..logging_utils import get_logger
 from . import charts as ch
+from .theme import CSS, FONT_LINK, JS
 
 log = get_logger(__name__)
-
-CSS = """
-*,*::before,*::after{box-sizing:border-box}
-:root{
-  color-scheme:light;
-  --surface-0:#f6f5f2; --surface-1:#fcfcfb; --surface-2:#efeeea;
-  --border:#dedcd5; --border-strong:#c6c3b9;
-  --text-primary:#0b0b0b; --text-secondary:#52514e; --text-muted:#77756e;
-  --series-1:#2a78d6; --series-2:#eb6834; --series-3:#1baf7a;
-  --diverge-pos:#2a78d6; --diverge-neg:#e34948;
-  --status-good:#0ca30c; --status-warning:#fab219; --status-critical:#d03b3b;
-  --grid:#e4e2db; --shadow:0 1px 2px rgba(11,11,11,.06),0 8px 24px rgba(11,11,11,.05);
-}
-@media (prefers-color-scheme:dark){
-  :root:not([data-theme="light"]){
-    color-scheme:dark;
-    --surface-0:#111110; --surface-1:#1a1a19; --surface-2:#232322;
-    --border:#33332f; --border-strong:#4a4a45;
-    --text-primary:#ffffff; --text-secondary:#c3c2b7; --text-muted:#94938a;
-    --series-1:#3987e5; --series-2:#d95926; --series-3:#199e70;
-    --diverge-pos:#3987e5; --diverge-neg:#e66767;
-    --grid:#2c2c2a; --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px rgba(0,0,0,.3);
-  }
-}
-:root[data-theme="dark"]{
-  color-scheme:dark;
-  --surface-0:#111110; --surface-1:#1a1a19; --surface-2:#232322;
-  --border:#33332f; --border-strong:#4a4a45;
-  --text-primary:#ffffff; --text-secondary:#c3c2b7; --text-muted:#94938a;
-  --series-1:#3987e5; --series-2:#d95926; --series-3:#199e70;
-  --diverge-pos:#3987e5; --diverge-neg:#e66767;
-  --grid:#2c2c2a; --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px rgba(0,0,0,.3);
-}
-body{
-  margin:0; background:var(--surface-0); color:var(--text-primary);
-  font:15px/1.6 ui-sans-serif,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-  -webkit-font-smoothing:antialiased;
-}
-.wrap{max-width:1080px;margin:0 auto;padding:40px 22px 80px}
-header.masthead{border-bottom:2px solid var(--border-strong);padding-bottom:22px;margin-bottom:30px}
-.eyebrow{font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--text-muted);font-weight:650}
-h1{font-size:clamp(26px,4vw,38px);line-height:1.15;margin:10px 0 8px;letter-spacing:-.02em}
-.standfirst{font-size:17px;color:var(--text-secondary);max-width:66ch;margin:0}
-.meta{margin-top:16px;font-size:12.5px;color:var(--text-muted);display:flex;flex-wrap:wrap;gap:8px 18px}
-.meta code{background:var(--surface-2);padding:1px 6px;border-radius:4px;font-size:11.5px}
-
-.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(178px,1fr));gap:12px;margin:0 0 38px}
-.kpi{background:var(--surface-1);border:1px solid var(--border);border-radius:12px;padding:16px 16px 14px;box-shadow:var(--shadow)}
-.kpi .label{font-size:11.5px;color:var(--text-muted);text-transform:uppercase;letter-spacing:.06em;font-weight:600}
-.kpi .value{font-size:27px;font-weight:680;letter-spacing:-.02em;margin:7px 0 3px;font-variant-numeric:tabular-nums}
-.kpi .sub{font-size:12.5px;color:var(--text-secondary)}
-.kpi .sub.up{color:var(--status-critical)} .kpi .sub.down{color:var(--status-good)}
-
-section{margin:0 0 44px}
-.finding{background:var(--surface-1);border:1px solid var(--border);border-radius:14px;padding:24px;box-shadow:var(--shadow)}
-.tag{display:inline-block;font-size:11px;font-weight:660;letter-spacing:.07em;text-transform:uppercase;
-     color:var(--text-muted);border:1px solid var(--border-strong);border-radius:99px;padding:3px 10px;margin-bottom:12px}
-h2{font-size:21px;line-height:1.3;margin:0 0 10px;letter-spacing:-.01em}
-h3{font-size:14px;margin:26px 0 8px;color:var(--text-secondary);font-weight:640}
-p{margin:0 0 12px;color:var(--text-secondary);max-width:74ch}
-p strong,li strong{color:var(--text-primary);font-weight:640}
-.chart-frame{margin:18px 0 6px;overflow-x:auto}
-svg.chart{display:block;width:100%;height:auto;min-width:520px}
-.grid{stroke:var(--grid);stroke-width:1}
-.zero{stroke:var(--border-strong);stroke-width:1.5}
-.reference{stroke:var(--text-muted);stroke-width:1.5;stroke-dasharray:5 4}
-.reference-label{font-size:11px;fill:var(--text-muted)}
-.line{fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
-.marker{stroke:var(--surface-1);stroke-width:2}
-.bar{stroke:var(--surface-1);stroke-width:1}
-.range{stroke:var(--text-muted);stroke-width:1.5}
-.range-cap{stroke:var(--text-muted);stroke-width:1.5}
-.tick{font-size:11.5px;fill:var(--text-muted)}
-.row-label{font-size:12px;fill:var(--text-secondary)}
-.value-label{font-size:11.5px;fill:var(--text-secondary);font-variant-numeric:tabular-nums}
-.direct-label{font-size:12px;font-weight:660;font-variant-numeric:tabular-nums}
-.crosshair{stroke:var(--border-strong);stroke-width:1;stroke-dasharray:3 3;opacity:0}
-.hover-col{fill:transparent}
-.hover-col:hover + .crosshair{opacity:.8}
-.legend{display:flex;flex-wrap:wrap;gap:8px 18px;margin:4px 0 0;font-size:12.5px;color:var(--text-secondary)}
-.legend-item{display:inline-flex;align-items:center;gap:7px}
-.legend i,.tt-row i{width:11px;height:11px;border-radius:3px;display:inline-block;flex:none}
-
-details{margin-top:14px;border-top:1px solid var(--border);padding-top:12px}
-summary{cursor:pointer;font-size:12.5px;color:var(--text-muted);font-weight:600;list-style:none}
-summary::-webkit-details-marker{display:none}
-summary::before{content:"▸ ";display:inline-block;transition:transform .15s}
-details[open] summary::before{content:"▾ "}
-.table-scroll{overflow-x:auto;margin-top:12px}
-table{border-collapse:collapse;width:100%;font-size:12.5px;font-variant-numeric:tabular-nums}
-th,td{text-align:right;padding:7px 10px;border-bottom:1px solid var(--border);white-space:nowrap}
-th:first-child,td:first-child{text-align:left}
-thead th{color:var(--text-muted);font-weight:640;font-size:11.5px;text-transform:uppercase;letter-spacing:.05em;
-         border-bottom:1.5px solid var(--border-strong);position:sticky;top:0;background:var(--surface-1)}
-tbody tr:hover{background:var(--surface-2)}
-.pos{color:var(--diverge-pos)} .neg{color:var(--diverge-neg)}
-
-.callout{border-left:3px solid var(--series-2);background:var(--surface-2);padding:13px 16px;border-radius:0 8px 8px 0;margin:16px 0}
-.callout p:last-child{margin-bottom:0}
-ul{margin:0 0 12px;padding-left:20px;color:var(--text-secondary)} li{margin-bottom:7px}
-footer{margin-top:52px;padding-top:22px;border-top:1px solid var(--border);font-size:12.5px;color:var(--text-muted)}
-
-#tip{position:fixed;pointer-events:none;opacity:0;transition:opacity .1s;z-index:99;
-     background:var(--surface-1);border:1px solid var(--border-strong);border-radius:9px;
-     padding:9px 12px;font-size:12.5px;color:var(--text-primary);box-shadow:var(--shadow);max-width:290px}
-#tip .tt-row{display:flex;align-items:center;gap:7px;color:var(--text-secondary);margin-top:4px}
-#tip b{color:var(--text-primary);font-variant-numeric:tabular-nums}
-@media (max-width:640px){.wrap{padding:26px 14px 60px}.finding{padding:18px 15px}}
-@media print{.kpi,.finding{box-shadow:none}details{display:block}details>*{display:block}}
-"""
-
-JS = """
-(function(){
-  var tip=document.getElementById('tip');
-  document.addEventListener('mouseover',function(e){
-    var t=e.target.closest('[data-tip]'); if(!t)return;
-    tip.innerHTML=t.getAttribute('data-tip'); tip.style.opacity='1';
-  });
-  document.addEventListener('mousemove',function(e){
-    if(tip.style.opacity!=='1')return;
-    var r=tip.getBoundingClientRect();
-    var x=e.clientX+14, y=e.clientY+14;
-    if(x+r.width>window.innerWidth-8) x=e.clientX-r.width-14;
-    if(y+r.height>window.innerHeight-8) y=e.clientY-r.height-14;
-    tip.style.left=x+'px'; tip.style.top=y+'px';
-  });
-  document.addEventListener('mouseout',function(e){
-    if(e.target.closest('[data-tip]')) tip.style.opacity='0';
-  });
-})();
-"""
-
 
 # ---------------------------------------------------------------------------
 def _table(df: pd.DataFrame, columns: dict[str, str], signed: set[str] | None = None) -> str:
@@ -487,6 +356,7 @@ def build_dashboard(cfg: Config, out_path: Path | None = None) -> Path:
 
     # ---------------- assemble ---------------------------------------------
     snapshot = manifest.get("snapshot_date", date.today().isoformat())
+    page_title = "Federal Contract Efficiency"
     body = f"""
 <div class="wrap">
 <header class="masthead">
@@ -628,17 +498,23 @@ def build_dashboard(cfg: Config, out_path: Path | None = None) -> Path:
 <div id="tip"></div>
 """
 
+    head = f"<title>{ch.esc(page_title)}</title>{FONT_LINK}<style>{CSS}</style>"
+    fragment = f"{head}{body}<script>{JS}</script>"
     html_doc = (
         "<!doctype html><html lang='en'><head><meta charset='utf-8'>"
         "<meta name='viewport' content='width=device-width,initial-scale=1'>"
-        f"<title>Federal Contract Efficiency FY{base_fy}–FY{latest_fy}</title>"
-        f"<style>{CSS}</style></head><body>{body}<script>{JS}</script></body></html>"
+        f"{head}</head><body>{fragment[len(head):]}</body></html>"
     )
 
     out_path = out_path or (cfg.outputs_dir / "dashboard.html")
     out_path.parent.mkdir(parents=True, exist_ok=True)
     out_path.write_text(html_doc, encoding="utf-8")
     log.info("dashboard -> %s (%.0f KB)", out_path, out_path.stat().st_size / 1024)
+
+    # Fragment form for hosts that supply their own document skeleton.
+    frag_path = out_path.with_name(out_path.stem + "_fragment.html")
+    frag_path.write_text(fragment, encoding="utf-8")
+    log.info("dashboard fragment -> %s", frag_path)
     return out_path
 
 

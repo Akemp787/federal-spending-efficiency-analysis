@@ -150,15 +150,19 @@ outputs/                     dashboard.html · star-schema CSVs for Power BI/Tab
 
 ## The dashboard
 
-[`outputs/dashboard.html`](outputs/dashboard.html) is a single self-contained file — no CDN, no
-build step, no external requests. Charts are generated as inline SVG with colours bound to CSS
-custom properties, so it renders offline and follows the reader's light/dark theme. Every
-sentence in it is built from the curated tables at render time, so the prose cannot drift from
-the data.
+[`outputs/dashboard.html`](outputs/dashboard.html) is a single file with no build step and no
+JavaScript dependencies — every chart is inline SVG generated from the curated tables, with
+colours bound to CSS custom properties so the page follows the reader's light/dark theme without
+re-rendering. The only external request is the Google Fonts stylesheet, and every face has a real
+fallback stack, so the page renders correctly offline.
 
-The palette is validated for colour-vision-deficiency separation and surface contrast in both
-themes; every chart carries a legend, direct labels, a hover layer, and an expandable table view
-of its underlying figures.
+Every sentence in it is built from the data at render time, so the prose cannot drift from the
+figures. The palette is validated for colour-vision-deficiency separation and surface contrast in
+both themes; every chart carries a legend, direct labels, a hover layer, and an expandable table
+view of its underlying numbers.
+
+`outputs/dashboard_fragment.html` is the same page without the document skeleton, for embedding
+in a host that supplies its own.
 
 ---
 
