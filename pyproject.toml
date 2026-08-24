@@ -1,0 +1,51 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fedspend"
+version = "2.0.0"
+description = "Federal contract spending efficiency analytics: ingestion, warehouse, metrics, and reporting for FY2021-FY2025 USAspending contract data."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Andrew Kemp" }]
+keywords = ["usaspending", "federal-contracting", "analytics", "duckdb", "public-sector"]
+
+dependencies = [
+    "pandas>=2.0",
+    "numpy>=1.24",
+    "pyarrow>=12.0",
+    "duckdb>=0.10",
+    "requests>=2.28",
+    "tenacity>=8.2",
+    "PyYAML>=6.0",
+    "plotly>=5.9",
+    "scipy>=1.10",
+    "statsmodels>=0.14",
+    "jinja2>=3.1",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.4", "pytest-cov>=4.1", "ruff>=0.4", "jupyter>=1.0"]
+
+[project.scripts]
+fedspend = "fedspend.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+fedspend = ["warehouse/sql/*.sql"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]
+ignore = ["E501"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

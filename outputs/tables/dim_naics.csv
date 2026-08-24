@@ -1,0 +1,501 @@
+fiscal_year,category,rank,code,name,obligations
+2021,naics,1,336411,Aircraft Manufacturing,40668580662.98
+2021,naics,2,541330,Engineering Services,39586296932.9
+2021,naics,3,561210,Facilities Support Services,31791942023.44
+2021,naics,4,541715,"Research and Development in the Physical, Engineering, and Life Sciences (except Nanotechnology and Biotechnology)",29000922038.27
+2021,naics,5,524114,Direct Health and Medical Insurance Carriers,26878626463.92
+2021,naics,6,541512,Computer Systems Design Services,26742530232.05
+2021,naics,7,236220,Commercial and Institutional Building Construction,22951506401.87
+2021,naics,8,541519,Other Computer Related Services,22447492311.81
+2021,naics,9,336611,Ship Building and Repairing,20735569756.09
+2021,naics,10,325414,Biological Product (except Diagnostic) Manufacturing,19763339872.42
+2021,naics,11,325412,Pharmaceutical Preparation Manufacturing,19528450941.91
+2021,naics,12,336414,Guided Missile and Space Vehicle Manufacturing,18052288141.0
+2021,naics,13,541712,"Research and Development in the Physical, Engineering, and Life Sciences (except Biotechnology)",15099117294.86
+2021,naics,14,336413,Other Aircraft Parts and Auxiliary Equipment Manufacturing,13994825167.45
+2021,naics,15,541611,Administrative Management and General Management Consulting Services,13288522767.91
+2021,naics,16,334511,"Search, Detection, Navigation, Guidance, Aeronautical, and Nautical System and Instrument Manufacturing",13194332990.18
+2021,naics,17,541990,"All Other Professional, Scientific, and Technical Services",10774280130.23
+2021,naics,18,541511,Custom Computer Programming Services,8602817825.08
+2021,naics,19,541710,"Research and Development in the Physical, Engineering, and Life Sciences",8469019100.58
+2021,naics,20,336412,Aircraft Engine and Engine Parts Manufacturing,7281450942.04
+2021,naics,21,237990,Other Heavy and Civil Engineering Construction,6669164678.11
+2021,naics,22,488190,Other Support Activities for Air Transportation,6581184683.08
+2021,naics,23,324110,Petroleum Refineries,6479515313.05
+2021,naics,24,621111,Offices of Physicians (except Mental Health Specialists),5687263470.41
+2021,naics,25,336992,"Military Armored Vehicle, Tank, and Tank Component Manufacturing",5435762358.94
+2021,naics,26,561612,Security Guards and Patrol Services,4957433845.15
+2021,naics,27,562910,Remediation Services,4477192249.05
+2021,naics,28,511210,Software Publishers,3809340613.61
+2021,naics,29,334111,Electronic Computer Manufacturing,3781201013.76
+2021,naics,30,624230,Emergency and Other Relief Services,3774693659.33
+2021,naics,31,332993,Ammunition (except Small Arms) Manufacturing,3759219911.09
+2021,naics,32,334220,Radio and Television Broadcasting and Wireless Communications Equipment Manufacturing,3747359425.65
+2021,naics,33,325411,Medicinal and Botanical Manufacturing,3543103626.39
+2021,naics,34,311999,All Other Miscellaneous Food Manufacturing,3240694916.89
+2021,naics,35,332410,Power Boiler and Heat Exchanger Manufacturing,3107911836.89
+2021,naics,36,541513,Computer Facilities Management Services,3050591607.25
+2021,naics,37,518210,"Computing Infrastructure Providers, Data Processing, Web Hosting, and Related Services",2685199568.19
+2021,naics,38,621511,Medical Laboratories,2627912218.72
+2021,naics,39,541714,Research and Development in Biotechnology (except Nanobiotechnology),2535013201.73
+2021,naics,40,517110,Wired Telecommunications Carriers,2436776838.98
+2021,naics,41,562211,Hazardous Waste Treatment and Disposal,2356108875.63
+2021,naics,42,339112,Surgical and Medical Instrument Manufacturing,2319155425.61
+2021,naics,43,483111,Deep Sea Freight Transportation,2314106256.28
+2021,naics,44,423850,Service Establishment Equipment and Supplies Merchant Wholesalers,2184859545.1
+2021,naics,45,811219,Other Electronic and Precision Equipment Repair and Maintenance,2061332323.29
+2021,naics,46,325413,In-Vitro Diagnostic Substance Manufacturing,2011633164.65
+2021,naics,47,481211,Nonscheduled Chartered Passenger Air Transportation,2011622892.12
+2021,naics,48,331410,Nonferrous Metal (except Aluminum) Smelting and Refining,2000304503.91
+2021,naics,49,423450,"Medical, Dental, and Hospital Equipment and Supplies Merchant Wholesalers",1998708025.1
+2021,naics,50,339113,Surgical Appliance and Supplies Manufacturing,1993670330.94
+2021,naics,51,339999,All Other Miscellaneous Manufacturing,1925728040.34
+2021,naics,52,334290,Other Communications Equipment Manufacturing,1885521167.92
+2021,naics,53,237310,"Highway, Street, and Bridge Construction",1880096947.02
+2021,naics,54,541690,Other Scientific and Technical Consulting Services,1864594729.41
+2021,naics,55,331491,"Nonferrous Metal (except Copper and Aluminum) Rolling, Drawing, and Extruding",1781959635.56
+2021,naics,56,424210,Drugs and Druggists' Sundries Merchant Wholesalers,1743191637.62
+2021,naics,57,561990,All Other Support Services,1742478202.83
+2021,naics,58,481212,Nonscheduled Chartered Freight Air Transportation,1694233686.54
+2021,naics,59,493120,Refrigerated Warehousing and Storage,1611991701.15
+2021,naics,60,561720,Janitorial Services,1588556457.48
+2021,naics,61,622110,General Medical and Surgical Hospitals,1529369577.01
+2021,naics,62,336419,Other Guided Missile and Space Vehicle Parts and Auxiliary Equipment Manufacturing,1452485609.9
+2021,naics,63,611519,Other Technical and Trade Schools,1437467973.01
+2021,naics,64,334516,Analytical Laboratory Instrument Manufacturing,1430354854.08
+2021,naics,65,541810,Advertising Agencies,1427146006.47
+2021,naics,66,541614,"Process, Physical Distribution, and Logistics Consulting Services",1355720487.73
+2021,naics,67,311812,Commercial Bakeries,1343959885.6
+2021,naics,68,336111,Automobile Manufacturing,1225114651.49
+2021,naics,69,541711,Research and Development in Biotechnology,1220236076.41
+2021,naics,70,561320,Temporary Help Services,1160792788.02
+2021,naics,71,722310,Food Service Contractors,1157926819.51
+2021,naics,72,522390,Other Activities Related to Credit Intermediation,1125635304.58
+2021,naics,73,517410,Satellite Telecommunications,1124768385.6
+2021,naics,74,561422,Telemarketing Bureaus and Other Contact Centers,1112132780.16
+2021,naics,75,541720,Research and Development in the Social Sciences and Humanities,1102078846.21
+2021,naics,76,333318,Other Commercial and Service Industry Machinery Manufacturing,1094858197.86
+2021,naics,77,541211,Offices of Certified Public Accountants,1049443925.62
+2021,naics,78,541620,Environmental Consulting Services,1019116307.29
+2021,naics,79,334517,Irradiation Apparatus Manufacturing,1014498317.78
+2021,naics,80,236210,Industrial Building Construction,978788954.27
+2021,naics,81,517919,All Other Telecommunications,973087686.18
+2021,naics,82,623110,Nursing Care Facilities (Skilled Nursing Facilities),947234324.97
+2021,naics,83,611430,Professional and Management Development Training,907819722.69
+2021,naics,84,334519,Other Measuring and Controlling Device Manufacturing,890136428.74
+2021,naics,85,332994,"Small Arms, Ordnance, and Ordnance Accessories Manufacturing",860259189.56
+2021,naics,86,541310,Architectural Services,850205851.14
+2021,naics,87,334419,Other Electronic Component Manufacturing,841880873.22
+2021,naics,88,115310,Support Activities for Forestry,832949991.37
+2021,naics,89,561611,Investigation and Personal Background Check Services,832741183.72
+2021,naics,90,238990,All Other Specialty Trade Contractors,826476363.84
+2021,naics,91,,,821408317.78
+2021,naics,92,611310,"Colleges, Universities, and Professional Schools",801160187.39
+2021,naics,93,238220,"Plumbing, Heating, and Air-Conditioning Contractors",797000444.16
+2021,naics,94,238210,Electrical Contractors and Other Wiring Installation Contractors,791598527.81
+2021,naics,95,611512,Flight Training,785772827.53
+2021,naics,96,541612,Human Resources Consulting Services,775404531.11
+2021,naics,97,561110,Office Administrative Services,766163761.33
+2021,naics,98,493110,General Warehousing and Storage,745758121.62
+2021,naics,99,221122,Electric Power Distribution,732216715.95
+2021,naics,100,336415,Guided Missile and Space Vehicle Propulsion Unit and Propulsion Unit Parts Manufacturing,722064103.62
+2022,naics,1,541330,Engineering Services,41564748429.34
+2022,naics,2,336411,Aircraft Manufacturing,37221232369.79
+2022,naics,3,524114,Direct Health and Medical Insurance Carriers,37076210424.94
+2022,naics,4,541715,"Research and Development in the Physical, Engineering, and Life Sciences (except Nanotechnology and Biotechnology)",35004771305.95
+2022,naics,5,325412,Pharmaceutical Preparation Manufacturing,34447590438.27
+2022,naics,6,561210,Facilities Support Services,34051346590.72
+2022,naics,7,541512,Computer Systems Design Services,29883663550.58
+2022,naics,8,236220,Commercial and Institutional Building Construction,28907026478.25
+2022,naics,9,541519,Other Computer Related Services,23423631855.65
+2022,naics,10,336611,Ship Building and Repairing,22273489684.1
+2022,naics,11,336414,Guided Missile and Space Vehicle Manufacturing,21613239574.44
+2022,naics,12,336413,Other Aircraft Parts and Auxiliary Equipment Manufacturing,14522192441.18
+2022,naics,13,334511,"Search, Detection, Navigation, Guidance, Aeronautical, and Nautical System and Instrument Manufacturing",13897112943.76
+2022,naics,14,324110,Petroleum Refineries,13708693992.97
+2022,naics,15,541712,"Research and Development in the Physical, Engineering, and Life Sciences (except Biotechnology)",13008177909.63
+2022,naics,16,541611,Administrative Management and General Management Consulting Services,12937703260.75
+2022,naics,17,541990,"All Other Professional, Scientific, and Technical Services",11725173033.06
+2022,naics,18,336412,Aircraft Engine and Engine Parts Manufacturing,11108485922.39
+2022,naics,19,541710,"Research and Development in the Physical, Engineering, and Life Sciences",9398907132.52
+2022,naics,20,237990,Other Heavy and Civil Engineering Construction,9199976496.16
+2022,naics,21,541511,Custom Computer Programming Services,9150408224.07
+2022,naics,22,488190,Other Support Activities for Air Transportation,6852997559.15
+2022,naics,23,336992,"Military Armored Vehicle, Tank, and Tank Component Manufacturing",6588954893.03
+2022,naics,24,325413,In-Vitro Diagnostic Substance Manufacturing,5160217544.63
+2022,naics,25,561612,Security Guards and Patrol Services,5070242315.38
+2022,naics,26,562910,Remediation Services,4864278784.04
+2022,naics,27,511210,Software Publishers,4805775579.48
+2022,naics,28,332993,Ammunition (except Small Arms) Manufacturing,3859607019.0
+2022,naics,29,334111,Electronic Computer Manufacturing,3814122354.85
+2022,naics,30,334220,Radio and Television Broadcasting and Wireless Communications Equipment Manufacturing,3734132033.58
+2022,naics,31,325411,Medicinal and Botanical Manufacturing,3425876368.13
+2022,naics,32,541513,Computer Facilities Management Services,3294160740.89
+2022,naics,33,624230,Emergency and Other Relief Services,3057190167.84
+2022,naics,34,339999,All Other Miscellaneous Manufacturing,3015846441.83
+2022,naics,35,621111,Offices of Physicians (except Mental Health Specialists),2877868042.45
+2022,naics,36,481212,Nonscheduled Chartered Freight Air Transportation,2837961084.48
+2022,naics,37,541714,Research and Development in Biotechnology (except Nanobiotechnology),2806682734.19
+2022,naics,38,517110,Wired Telecommunications Carriers,2740694167.98
+2022,naics,39,483111,Deep Sea Freight Transportation,2647175187.06
+2022,naics,40,518210,"Computing Infrastructure Providers, Data Processing, Web Hosting, and Related Services",2524014875.91
+2022,naics,41,325414,Biological Product (except Diagnostic) Manufacturing,2491387440.21
+2022,naics,42,332410,Power Boiler and Heat Exchanger Manufacturing,2468015306.12
+2022,naics,43,481211,Nonscheduled Chartered Passenger Air Transportation,2353256213.26
+2022,naics,44,811219,Other Electronic and Precision Equipment Repair and Maintenance,2229966118.24
+2022,naics,45,331410,Nonferrous Metal (except Aluminum) Smelting and Refining,2195659727.27
+2022,naics,46,423850,Service Establishment Equipment and Supplies Merchant Wholesalers,2105169948.71
+2022,naics,47,237310,"Highway, Street, and Bridge Construction",2091949654.4
+2022,naics,48,334290,Other Communications Equipment Manufacturing,2087971813.22
+2022,naics,49,541690,Other Scientific and Technical Consulting Services,2034084933.41
+2022,naics,50,562211,Hazardous Waste Treatment and Disposal,1956612624.26
+2022,naics,51,424210,Drugs and Druggists' Sundries Merchant Wholesalers,1781431332.46
+2022,naics,52,541614,"Process, Physical Distribution, and Logistics Consulting Services",1758866461.55
+2022,naics,53,621511,Medical Laboratories,1742484601.37
+2022,naics,54,423450,"Medical, Dental, and Hospital Equipment and Supplies Merchant Wholesalers",1695678809.05
+2022,naics,55,561720,Janitorial Services,1645653389.88
+2022,naics,56,311999,All Other Miscellaneous Food Manufacturing,1623798422.52
+2022,naics,57,331491,"Nonferrous Metal (except Copper and Aluminum) Rolling, Drawing, and Extruding",1583006867.42
+2022,naics,58,336419,Other Guided Missile and Space Vehicle Parts and Auxiliary Equipment Manufacturing,1548903426.26
+2022,naics,59,622110,General Medical and Surgical Hospitals,1543874343.42
+2022,naics,60,541810,Advertising Agencies,1536117229.89
+2022,naics,61,561990,All Other Support Services,1505938869.12
+2022,naics,62,311812,Commercial Bakeries,1462326517.21
+2022,naics,63,611519,Other Technical and Trade Schools,1383048120.01
+2022,naics,64,624110,Child and Youth Services,1363757077.38
+2022,naics,65,339113,Surgical Appliance and Supplies Manufacturing,1288807777.98
+2022,naics,66,336111,Automobile Manufacturing,1273298944.64
+2022,naics,67,541720,Research and Development in the Social Sciences and Humanities,1259524772.31
+2022,naics,68,561320,Temporary Help Services,1258421571.85
+2022,naics,69,522390,Other Activities Related to Credit Intermediation,1196067305.55
+2022,naics,70,541211,Offices of Certified Public Accountants,1177525008.52
+2022,naics,71,334516,Analytical Laboratory Instrument Manufacturing,1142971342.58
+2022,naics,72,541620,Environmental Consulting Services,1137379772.46
+2022,naics,73,339112,Surgical and Medical Instrument Manufacturing,1134249161.59
+2022,naics,74,722310,Food Service Contractors,1127710578.96
+2022,naics,75,517410,Satellite Telecommunications,1081053566.93
+2022,naics,76,115310,Support Activities for Forestry,1041401843.96
+2022,naics,77,517919,All Other Telecommunications,1034090613.17
+2022,naics,78,621999,All Other Miscellaneous Ambulatory Health Care Services,1026500466.89
+2022,naics,79,238220,"Plumbing, Heating, and Air-Conditioning Contractors",998721200.03
+2022,naics,80,332994,"Small Arms, Ordnance, and Ordnance Accessories Manufacturing",974951834.38
+2022,naics,81,221122,Electric Power Distribution,972986263.88
+2022,naics,82,334419,Other Electronic Component Manufacturing,952623170.12
+2022,naics,83,541711,Research and Development in Biotechnology,945329797.29
+2022,naics,84,561110,Office Administrative Services,915682029.0
+2022,naics,85,541618,Other Management Consulting Services,913197929.32
+2022,naics,86,237110,Water and Sewer Line and Related Structures Construction,889030211.19
+2022,naics,87,611430,Professional and Management Development Training,873577433.7
+2022,naics,88,333318,Other Commercial and Service Industry Machinery Manufacturing,866888932.85
+2022,naics,89,561422,Telemarketing Bureaus and Other Contact Centers,860262088.1
+2022,naics,90,541612,Human Resources Consulting Services,857600801.77
+2022,naics,91,493190,Other Warehousing and Storage,856181870.22
+2022,naics,92,238210,Electrical Contractors and Other Wiring Installation Contractors,852838632.11
+2022,naics,93,611512,Flight Training,846680450.04
+2022,naics,94,541310,Architectural Services,833047230.79
+2022,naics,95,623110,Nursing Care Facilities (Skilled Nursing Facilities),823202044.41
+2022,naics,96,311421,Fruit and Vegetable Canning,817265401.87
+2022,naics,97,333314,Optical Instrument and Lens Manufacturing,812831070.42
+2022,naics,98,334519,Other Measuring and Controlling Device Manufacturing,787600871.11
+2022,naics,99,332992,Small Arms Ammunition Manufacturing,777359112.99
+2022,naics,100,238990,All Other Specialty Trade Contractors,745005289.48
+2023,naics,1,336411,Aircraft Manufacturing,60107187929.66
+2023,naics,2,541330,Engineering Services,47915435779.23
+2023,naics,3,541715,"Research and Development in the Physical, Engineering, and Life Sciences (except Nanotechnology and Biotechnology)",42569911902.88
+2023,naics,4,524114,Direct Health and Medical Insurance Carriers,39254956121.34
+2023,naics,5,561210,Facilities Support Services,36514389164.16
+2023,naics,6,236220,Commercial and Institutional Building Construction,32930026584.75
+2023,naics,7,541512,Computer Systems Design Services,30519633045.23
+2023,naics,8,336611,Ship Building and Repairing,26905847983.14
+2023,naics,9,336414,Guided Missile and Space Vehicle Manufacturing,26898443584.04
+2023,naics,10,541519,Other Computer Related Services,25443954551.09
+2023,naics,11,334511,"Search, Detection, Navigation, Guidance, Aeronautical, and Nautical System and Instrument Manufacturing",16973262654.3
+2023,naics,12,336413,Other Aircraft Parts and Auxiliary Equipment Manufacturing,16202103069.23
+2023,naics,13,541990,"All Other Professional, Scientific, and Technical Services",14443731026.39
+2023,naics,14,541611,Administrative Management and General Management Consulting Services,14229699219.48
+2023,naics,15,336412,Aircraft Engine and Engine Parts Manufacturing,13678761124.7
+2023,naics,16,325412,Pharmaceutical Preparation Manufacturing,12775984028.51
+2023,naics,17,324110,Petroleum Refineries,12660905226.12
+2023,naics,18,541712,"Research and Development in the Physical, Engineering, and Life Sciences (except Biotechnology)",11047496975.49
+2023,naics,19,541511,Custom Computer Programming Services,10493134966.8
+2023,naics,20,541710,"Research and Development in the Physical, Engineering, and Life Sciences",9436769025.67
+2023,naics,21,237990,Other Heavy and Civil Engineering Construction,9122614269.03
+2023,naics,22,332993,Ammunition (except Small Arms) Manufacturing,8029536685.01
+2023,naics,23,336992,"Military Armored Vehicle, Tank, and Tank Component Manufacturing",7960018123.8
+2023,naics,24,488190,Other Support Activities for Air Transportation,6582529531.98
+2023,naics,25,562910,Remediation Services,6581697390.15
+2023,naics,26,561612,Security Guards and Patrol Services,5558287666.43
+2023,naics,27,511210,Software Publishers,5298177849.9
+2023,naics,28,541714,Research and Development in Biotechnology (except Nanobiotechnology),5123084503.64
+2023,naics,29,334220,Radio and Television Broadcasting and Wireless Communications Equipment Manufacturing,4353214184.94
+2023,naics,30,339999,All Other Miscellaneous Manufacturing,3859265486.44
+2023,naics,31,334111,Electronic Computer Manufacturing,3669870320.36
+2023,naics,32,541513,Computer Facilities Management Services,3339862642.45
+2023,naics,33,325411,Medicinal and Botanical Manufacturing,3276101567.97
+2023,naics,34,483111,Deep Sea Freight Transportation,3259641212.15
+2023,naics,35,423850,Service Establishment Equipment and Supplies Merchant Wholesalers,3154915865.33
+2023,naics,36,518210,"Computing Infrastructure Providers, Data Processing, Web Hosting, and Related Services",3035199961.31
+2023,naics,37,621111,Offices of Physicians (except Mental Health Specialists),2924241744.66
+2023,naics,38,481212,Nonscheduled Chartered Freight Air Transportation,2855178013.72
+2023,naics,39,237310,"Highway, Street, and Bridge Construction",2796970524.97
+2023,naics,40,481211,Nonscheduled Chartered Passenger Air Transportation,2729228111.08
+2023,naics,41,561990,All Other Support Services,2606157642.11
+2023,naics,42,517110,Wired Telecommunications Carriers,2496909435.58
+2023,naics,43,334290,Other Communications Equipment Manufacturing,2246846672.96
+2023,naics,44,541614,"Process, Physical Distribution, and Logistics Consulting Services",2174293559.38
+2023,naics,45,541810,Advertising Agencies,2073031898.93
+2023,naics,46,541690,Other Scientific and Technical Consulting Services,2039490801.35
+2023,naics,47,331410,Nonferrous Metal (except Aluminum) Smelting and Refining,2026317579.08
+2023,naics,48,424210,Drugs and Druggists' Sundries Merchant Wholesalers,2018981079.38
+2023,naics,49,325413,In-Vitro Diagnostic Substance Manufacturing,1954068283.28
+2023,naics,50,811219,Other Electronic and Precision Equipment Repair and Maintenance,1883969991.25
+2023,naics,51,541711,Research and Development in Biotechnology,1847901432.95
+2023,naics,52,423450,"Medical, Dental, and Hospital Equipment and Supplies Merchant Wholesalers",1832861623.95
+2023,naics,53,562211,Hazardous Waste Treatment and Disposal,1805793655.93
+2023,naics,54,541310,Architectural Services,1796260508.26
+2023,naics,55,336415,Guided Missile and Space Vehicle Propulsion Unit and Propulsion Unit Parts Manufacturing,1705964788.69
+2023,naics,56,561720,Janitorial Services,1683751909.21
+2023,naics,57,622110,General Medical and Surgical Hospitals,1634365939.85
+2023,naics,58,336419,Other Guided Missile and Space Vehicle Parts and Auxiliary Equipment Manufacturing,1591405356.24
+2023,naics,59,311812,Commercial Bakeries,1590954075.73
+2023,naics,60,336111,Automobile Manufacturing,1572910202.69
+2023,naics,61,339113,Surgical Appliance and Supplies Manufacturing,1571845603.99
+2023,naics,62,339112,Surgical and Medical Instrument Manufacturing,1549914140.78
+2023,naics,63,332410,Power Boiler and Heat Exchanger Manufacturing,1462447702.13
+2023,naics,64,541211,Offices of Certified Public Accountants,1456452517.22
+2023,naics,65,541620,Environmental Consulting Services,1403743714.14
+2023,naics,66,336212,Truck Trailer Manufacturing,1379946445.22
+2023,naics,67,611519,Other Technical and Trade Schools,1372955899.9
+2023,naics,68,334419,Other Electronic Component Manufacturing,1335828196.07
+2023,naics,69,522390,Other Activities Related to Credit Intermediation,1317977491.74
+2023,naics,70,561320,Temporary Help Services,1317829875.21
+2023,naics,71,311999,All Other Miscellaneous Food Manufacturing,1309032132.25
+2023,naics,72,238990,All Other Specialty Trade Contractors,1303272836.93
+2023,naics,73,115310,Support Activities for Forestry,1236269911.55
+2023,naics,74,722310,Food Service Contractors,1210975658.44
+2023,naics,75,237110,Water and Sewer Line and Related Structures Construction,1169219779.48
+2023,naics,76,332994,"Small Arms, Ordnance, and Ordnance Accessories Manufacturing",1168898867.09
+2023,naics,77,541720,Research and Development in the Social Sciences and Humanities,1113646899.61
+2023,naics,78,334516,Analytical Laboratory Instrument Manufacturing,1107859605.5
+2023,naics,79,236210,Industrial Building Construction,1106971355.86
+2023,naics,80,325920,Explosives Manufacturing,1087820643.51
+2023,naics,81,517410,Satellite Telecommunications,1080356863.56
+2023,naics,82,541612,Human Resources Consulting Services,1056283036.36
+2023,naics,83,238220,"Plumbing, Heating, and Air-Conditioning Contractors",1016197600.21
+2023,naics,84,334519,Other Measuring and Controlling Device Manufacturing,991472167.54
+2023,naics,85,611430,Professional and Management Development Training,973824018.08
+2023,naics,86,221122,Electric Power Distribution,973089989.34
+2023,naics,87,331491,"Nonferrous Metal (except Copper and Aluminum) Rolling, Drawing, and Extruding",972047603.89
+2023,naics,88,238210,Electrical Contractors and Other Wiring Installation Contractors,944941036.67
+2023,naics,89,517919,All Other Telecommunications,928499309.97
+2023,naics,90,561422,Telemarketing Bureaus and Other Contact Centers,915500442.95
+2023,naics,91,623110,Nursing Care Facilities (Skilled Nursing Facilities),902434517.31
+2023,naics,92,493190,Other Warehousing and Storage,890935032.13
+2023,naics,93,311421,Fruit and Vegetable Canning,885496842.01
+2023,naics,94,332992,Small Arms Ammunition Manufacturing,874817181.04
+2023,naics,95,541618,Other Management Consulting Services,864357983.93
+2023,naics,96,611512,Flight Training,852563731.43
+2023,naics,97,561110,Office Administrative Services,850233907.88
+2023,naics,98,611310,"Colleges, Universities, and Professional Schools",799543471.75
+2023,naics,99,541219,Other Accounting Services,773403928.13
+2023,naics,100,334517,Irradiation Apparatus Manufacturing,773246453.04
+2024,naics,1,541330,Engineering Services,52511719168.74
+2024,naics,2,336411,Aircraft Manufacturing,44225826527.71
+2024,naics,3,524114,Direct Health and Medical Insurance Carriers,43850444647.97
+2024,naics,4,541715,"Research and Development in the Physical, Engineering, and Life Sciences (except Nanotechnology and Biotechnology)",43209502022.34
+2024,naics,5,561210,Facilities Support Services,37500266704.67
+2024,naics,6,541512,Computer Systems Design Services,33359394511.66
+2024,naics,7,236220,Commercial and Institutional Building Construction,30854512403.8
+2024,naics,8,336414,Guided Missile and Space Vehicle Manufacturing,27802619634.8
+2024,naics,9,541519,Other Computer Related Services,25295228290.78
+2024,naics,10,336611,Ship Building and Repairing,24190847530.77
+2024,naics,11,334511,"Search, Detection, Navigation, Guidance, Aeronautical, and Nautical System and Instrument Manufacturing",17077501281.4
+2024,naics,12,336413,Other Aircraft Parts and Auxiliary Equipment Manufacturing,16846585562.92
+2024,naics,13,541611,Administrative Management and General Management Consulting Services,14951572781.59
+2024,naics,14,541990,"All Other Professional, Scientific, and Technical Services",14183447567.44
+2024,naics,15,324110,Petroleum Refineries,11720524265.63
+2024,naics,16,541511,Custom Computer Programming Services,10779483226.46
+2024,naics,17,237990,Other Heavy and Civil Engineering Construction,10238429894.29
+2024,naics,18,325412,Pharmaceutical Preparation Manufacturing,10077399803.55
+2024,naics,19,541710,"Research and Development in the Physical, Engineering, and Life Sciences",9733637120.56
+2024,naics,20,541712,"Research and Development in the Physical, Engineering, and Life Sciences (except Biotechnology)",9402587339.9
+2024,naics,21,332993,Ammunition (except Small Arms) Manufacturing,9062903803.68
+2024,naics,22,336412,Aircraft Engine and Engine Parts Manufacturing,8369312033.69
+2024,naics,23,562910,Remediation Services,7381488032.89
+2024,naics,24,488190,Other Support Activities for Air Transportation,7162926917.15
+2024,naics,25,336992,"Military Armored Vehicle, Tank, and Tank Component Manufacturing",6838918406.1
+2024,naics,26,511210,Software Publishers,6092444688.44
+2024,naics,27,561612,Security Guards and Patrol Services,5579589557.11
+2024,naics,28,621111,Offices of Physicians (except Mental Health Specialists),5129000061.99
+2024,naics,29,334220,Radio and Television Broadcasting and Wireless Communications Equipment Manufacturing,5050226011.37
+2024,naics,30,481212,Nonscheduled Chartered Freight Air Transportation,4378609472.93
+2024,naics,31,325411,Medicinal and Botanical Manufacturing,4192027527.86
+2024,naics,32,339999,All Other Miscellaneous Manufacturing,4035239795.97
+2024,naics,33,541714,Research and Development in Biotechnology (except Nanobiotechnology),3856074763.68
+2024,naics,34,334111,Electronic Computer Manufacturing,3605437145.01
+2024,naics,35,423850,Service Establishment Equipment and Supplies Merchant Wholesalers,3467968923.71
+2024,naics,36,483111,Deep Sea Freight Transportation,3291027455.31
+2024,naics,37,541513,Computer Facilities Management Services,3289242436.83
+2024,naics,38,518210,"Computing Infrastructure Providers, Data Processing, Web Hosting, and Related Services",3046921070.31
+2024,naics,39,541614,"Process, Physical Distribution, and Logistics Consulting Services",2648521078.66
+2024,naics,40,237310,"Highway, Street, and Bridge Construction",2578218699.74
+2024,naics,41,334290,Other Communications Equipment Manufacturing,2523692141.91
+2024,naics,42,481211,Nonscheduled Chartered Passenger Air Transportation,2390046872.97
+2024,naics,43,541690,Other Scientific and Technical Consulting Services,2343421398.76
+2024,naics,44,424210,Drugs and Druggists' Sundries Merchant Wholesalers,2219138376.65
+2024,naics,45,332410,Power Boiler and Heat Exchanger Manufacturing,2215033805.0
+2024,naics,46,517110,Wired Telecommunications Carriers,2202056185.27
+2024,naics,47,562211,Hazardous Waste Treatment and Disposal,2006508966.43
+2024,naics,48,339112,Surgical and Medical Instrument Manufacturing,1980726145.56
+2024,naics,49,561990,All Other Support Services,1970220654.51
+2024,naics,50,423450,"Medical, Dental, and Hospital Equipment and Supplies Merchant Wholesalers",1890729444.41
+2024,naics,51,336419,Other Guided Missile and Space Vehicle Parts and Auxiliary Equipment Manufacturing,1826293526.43
+2024,naics,52,541810,Advertising Agencies,1777646565.96
+2024,naics,53,561720,Janitorial Services,1716048468.1
+2024,naics,54,332994,"Small Arms, Ordnance, and Ordnance Accessories Manufacturing",1661000170.31
+2024,naics,55,236210,Industrial Building Construction,1533349396.76
+2024,naics,56,336111,Automobile Manufacturing,1494415074.38
+2024,naics,57,622110,General Medical and Surgical Hospitals,1465297572.95
+2024,naics,58,311812,Commercial Bakeries,1458086854.76
+2024,naics,59,541620,Environmental Consulting Services,1450001832.19
+2024,naics,60,541211,Offices of Certified Public Accountants,1406176461.3
+2024,naics,61,517410,Satellite Telecommunications,1399899850.38
+2024,naics,62,336212,Truck Trailer Manufacturing,1377458401.26
+2024,naics,63,811210,Electronic and Precision Equipment Repair and Maintenance,1354083588.53
+2024,naics,64,334419,Other Electronic Component Manufacturing,1350297364.64
+2024,naics,65,332992,Small Arms Ammunition Manufacturing,1321290390.27
+2024,naics,66,811219,Other Electronic and Precision Equipment Repair and Maintenance,1317125955.81
+2024,naics,67,522390,Other Activities Related to Credit Intermediation,1307270119.96
+2024,naics,68,541720,Research and Development in the Social Sciences and Humanities,1306816699.6
+2024,naics,69,115310,Support Activities for Forestry,1304026817.05
+2024,naics,70,611519,Other Technical and Trade Schools,1301459230.14
+2024,naics,71,722310,Food Service Contractors,1267022367.36
+2024,naics,72,541618,Other Management Consulting Services,1266938848.09
+2024,naics,73,541711,Research and Development in Biotechnology,1266748737.13
+2024,naics,74,339113,Surgical Appliance and Supplies Manufacturing,1258354546.45
+2024,naics,75,311999,All Other Miscellaneous Food Manufacturing,1203291722.91
+2024,naics,76,237110,Water and Sewer Line and Related Structures Construction,1153159444.18
+2024,naics,77,238220,"Plumbing, Heating, and Air-Conditioning Contractors",1131371444.1
+2024,naics,78,325920,Explosives Manufacturing,1124334318.45
+2024,naics,79,492110,Couriers and Express Delivery Services,1113928922.65
+2024,naics,80,331410,Nonferrous Metal (except Aluminum) Smelting and Refining,1098581256.61
+2024,naics,81,336415,Guided Missile and Space Vehicle Propulsion Unit and Propulsion Unit Parts Manufacturing,1086401118.92
+2024,naics,82,334516,Analytical Laboratory Instrument Manufacturing,1068103849.77
+2024,naics,83,561422,Telemarketing Bureaus and Other Contact Centers,1061962625.11
+2024,naics,84,611430,Professional and Management Development Training,1037836339.56
+2024,naics,85,331491,"Nonferrous Metal (except Copper and Aluminum) Rolling, Drawing, and Extruding",1037651782.36
+2024,naics,86,311421,Fruit and Vegetable Canning,1010121153.74
+2024,naics,87,333120,Construction Machinery Manufacturing,1001936648.4
+2024,naics,88,325414,Biological Product (except Diagnostic) Manufacturing,989953846.97
+2024,naics,89,541310,Architectural Services,964633098.06
+2024,naics,90,561320,Temporary Help Services,961629726.23
+2024,naics,91,513210,Software Publishers,956535776.91
+2024,naics,92,221122,Electric Power Distribution,944217221.73
+2024,naics,93,336211,Motor Vehicle Body Manufacturing,927036261.83
+2024,naics,94,333310,Commercial and Service Industry Machinery Manufacturing,913955692.92
+2024,naics,95,334517,Irradiation Apparatus Manufacturing,891319921.06
+2024,naics,96,,,874599598.57
+2024,naics,97,611512,Flight Training,843933457.52
+2024,naics,98,541612,Human Resources Consulting Services,837041495.02
+2024,naics,99,311991,Perishable Prepared Food Manufacturing,836058240.03
+2024,naics,100,517919,All Other Telecommunications,834070832.05
+2025,naics,1,336411,Aircraft Manufacturing,61230512659.85
+2025,naics,2,541330,Engineering Services,51661562995.62
+2025,naics,3,524114,Direct Health and Medical Insurance Carriers,47617583508.31
+2025,naics,4,541715,"Research and Development in the Physical, Engineering, and Life Sciences (except Nanotechnology and Biotechnology)",46386299120.21
+2025,naics,5,336611,Ship Building and Repairing,37201672554.47
+2025,naics,6,561210,Facilities Support Services,37099261252.46
+2025,naics,7,336414,Guided Missile and Space Vehicle Manufacturing,32781202275.25
+2025,naics,8,541512,Computer Systems Design Services,31694217859.58
+2025,naics,9,236220,Commercial and Institutional Building Construction,30635557941.77
+2025,naics,10,541519,Other Computer Related Services,24856654021.59
+2025,naics,11,336413,Other Aircraft Parts and Auxiliary Equipment Manufacturing,19814862375.28
+2025,naics,12,334511,"Search, Detection, Navigation, Guidance, Aeronautical, and Nautical System and Instrument Manufacturing",18355725238.56
+2025,naics,13,325412,Pharmaceutical Preparation Manufacturing,13091182478.49
+2025,naics,14,336412,Aircraft Engine and Engine Parts Manufacturing,12022550327.78
+2025,naics,15,541990,"All Other Professional, Scientific, and Technical Services",11920088459.9
+2025,naics,16,541611,Administrative Management and General Management Consulting Services,11294384308.62
+2025,naics,17,237990,Other Heavy and Civil Engineering Construction,10301814623.76
+2025,naics,18,541511,Custom Computer Programming Services,10271479690.23
+2025,naics,19,332993,Ammunition (except Small Arms) Manufacturing,9061772056.03
+2025,naics,20,541712,"Research and Development in the Physical, Engineering, and Life Sciences (except Biotechnology)",8840970441.53
+2025,naics,21,541710,"Research and Development in the Physical, Engineering, and Life Sciences",8575225796.97
+2025,naics,22,621111,Offices of Physicians (except Mental Health Specialists),8487198210.1
+2025,naics,23,324110,Petroleum Refineries,8262182907.15
+2025,naics,24,488190,Other Support Activities for Air Transportation,7429795286.78
+2025,naics,25,562910,Remediation Services,6534280050.64
+2025,naics,26,336992,"Military Armored Vehicle, Tank, and Tank Component Manufacturing",6526040323.48
+2025,naics,27,561612,Security Guards and Patrol Services,5988115216.63
+2025,naics,28,511210,Software Publishers,5968614169.73
+2025,naics,29,325411,Medicinal and Botanical Manufacturing,4960131180.08
+2025,naics,30,423850,Service Establishment Equipment and Supplies Merchant Wholesalers,4541611599.95
+2025,naics,31,334220,Radio and Television Broadcasting and Wireless Communications Equipment Manufacturing,4482831021.99
+2025,naics,32,339999,All Other Miscellaneous Manufacturing,4296264350.88
+2025,naics,33,562119,Other Waste Collection,4031532875.69
+2025,naics,34,481212,Nonscheduled Chartered Freight Air Transportation,3895281642.51
+2025,naics,35,541513,Computer Facilities Management Services,3445713887.78
+2025,naics,36,518210,"Computing Infrastructure Providers, Data Processing, Web Hosting, and Related Services",3344994288.97
+2025,naics,37,483111,Deep Sea Freight Transportation,3266729249.88
+2025,naics,38,334111,Electronic Computer Manufacturing,3240024876.95
+2025,naics,39,424210,Drugs and Druggists' Sundries Merchant Wholesalers,2838946449.97
+2025,naics,40,334290,Other Communications Equipment Manufacturing,2693038900.67
+2025,naics,41,336419,Other Guided Missile and Space Vehicle Parts and Auxiliary Equipment Manufacturing,2484732309.33
+2025,naics,42,423450,"Medical, Dental, and Hospital Equipment and Supplies Merchant Wholesalers",2453669070.99
+2025,naics,43,332410,Power Boiler and Heat Exchanger Manufacturing,2192708069.16
+2025,naics,44,481211,Nonscheduled Chartered Passenger Air Transportation,2180563359.17
+2025,naics,45,517110,Wired Telecommunications Carriers,2167008075.85
+2025,naics,46,541690,Other Scientific and Technical Consulting Services,2166683560.95
+2025,naics,47,541614,"Process, Physical Distribution, and Logistics Consulting Services",1997873528.13
+2025,naics,48,336212,Truck Trailer Manufacturing,1936525779.17
+2025,naics,49,562211,Hazardous Waste Treatment and Disposal,1876248264.53
+2025,naics,50,332994,"Small Arms, Ordnance, and Ordnance Accessories Manufacturing",1847353136.52
+2025,naics,51,561990,All Other Support Services,1837946496.56
+2025,naics,52,561720,Janitorial Services,1788621191.74
+2025,naics,53,325920,Explosives Manufacturing,1647860795.45
+2025,naics,54,339112,Surgical and Medical Instrument Manufacturing,1610780047.44
+2025,naics,55,811210,Electronic and Precision Equipment Repair and Maintenance,1592787510.1
+2025,naics,56,513210,Software Publishers,1536268714.99
+2025,naics,57,311999,All Other Miscellaneous Food Manufacturing,1489784739.63
+2025,naics,58,541714,Research and Development in Biotechnology (except Nanobiotechnology),1488787605.54
+2025,naics,59,331410,Nonferrous Metal (except Aluminum) Smelting and Refining,1485771783.98
+2025,naics,60,336111,Automobile Manufacturing,1472908706.01
+2025,naics,61,334419,Other Electronic Component Manufacturing,1460477899.08
+2025,naics,62,622110,General Medical and Surgical Hospitals,1451143656.85
+2025,naics,63,811219,Other Electronic and Precision Equipment Repair and Maintenance,1395235565.82
+2025,naics,64,722310,Food Service Contractors,1375656950.0
+2025,naics,65,522390,Other Activities Related to Credit Intermediation,1371971781.93
+2025,naics,66,621492,Kidney Dialysis Centers,1344897970.07
+2025,naics,67,336415,Guided Missile and Space Vehicle Propulsion Unit and Propulsion Unit Parts Manufacturing,1342667047.35
+2025,naics,68,517410,Satellite Telecommunications,1316235161.88
+2025,naics,69,332992,Small Arms Ammunition Manufacturing,1303967723.93
+2025,naics,70,115310,Support Activities for Forestry,1195521026.01
+2025,naics,71,339113,Surgical Appliance and Supplies Manufacturing,1188702740.93
+2025,naics,72,611519,Other Technical and Trade Schools,1179852058.15
+2025,naics,73,237310,"Highway, Street, and Bridge Construction",1179639929.16
+2025,naics,74,236210,Industrial Building Construction,1177343059.53
+2025,naics,75,541810,Advertising Agencies,1160789566.52
+2025,naics,76,541620,Environmental Consulting Services,1144635299.42
+2025,naics,77,221122,Electric Power Distribution,1134407640.54
+2025,naics,78,311421,Fruit and Vegetable Canning,1124612234.05
+2025,naics,79,333120,Construction Machinery Manufacturing,1085118979.74
+2025,naics,80,333310,Commercial and Service Industry Machinery Manufacturing,1081578896.53
+2025,naics,81,237130,Power and Communication Line and Related Structures Construction,1062261139.18
+2025,naics,82,311812,Commercial Bakeries,1060206388.95
+2025,naics,83,561422,Telemarketing Bureaus and Other Contact Centers,1059781805.05
+2025,naics,84,,,1057192611.19
+2025,naics,85,541211,Offices of Certified Public Accountants,1041669041.18
+2025,naics,86,238220,"Plumbing, Heating, and Air-Conditioning Contractors",1018057443.76
+2025,naics,87,611512,Flight Training,986241443.37
+2025,naics,88,311991,Perishable Prepared Food Manufacturing,981705518.37
+2025,naics,89,237110,Water and Sewer Line and Related Structures Construction,973171518.43
+2025,naics,90,517310,Telecommunications Resellers,918037659.65
+2025,naics,91,623110,Nursing Care Facilities (Skilled Nursing Facilities),902796630.78
+2025,naics,92,561320,Temporary Help Services,882969005.87
+2025,naics,93,517919,All Other Telecommunications,873153481.12
+2025,naics,94,334516,Analytical Laboratory Instrument Manufacturing,860167841.16
+2025,naics,95,334517,Irradiation Apparatus Manufacturing,855571845.91
+2025,naics,96,561611,Investigation and Personal Background Check Services,852390712.6
+2025,naics,97,541618,Other Management Consulting Services,843190249.64
+2025,naics,98,492110,Couriers and Express Delivery Services,839365641.0
+2025,naics,99,334412,Bare Printed Circuit Board Manufacturing,839216124.9
+2025,naics,100,611310,"Colleges, Universities, and Professional Schools",834738968.36

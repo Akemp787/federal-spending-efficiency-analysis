@@ -1,259 +1,180 @@
-# Federal Contract Spending Intelligence Dashboard: Trend, Concentration, and Efficiency Analysis (2021–2024)
+# Federal Contract Spending Efficiency Analysis
 
-## Current Status
-**Project stage:** Data cleaning and consolidation completed  
+**FY2021–FY2025 · $3.58 trillion in federal contract obligations · 69 agencies**
 
-**Completed so far:**
-- Downloaded and organized FY2021–FY2024 federal contract data from USAspending  
-- Cleaned and standardized raw contract files across all four years  
-- Combined yearly files into master cleaned datasets  
-- Created a lean analysis-ready dataset for downstream KPI analysis and dashboard development  
+An end-to-end analytics project that takes US federal contract data from a public API through a
+reproducible pipeline, a DuckDB warehouse, a validated metrics layer, and a composite index — to
+a set of findings about where the government's contracting dollars are least exposed to a market
+test, and where oversight effort would be best spent.
 
-**Current focus:**
-- Exploratory analysis  
-- KPI development  
-- SQL query development  
-- Power BI dashboard construction  
+[**Executive summary**](docs/EXECUTIVE_SUMMARY.md) ·
+[Methodology](docs/METHODOLOGY.md) ·
+[Data dictionary](docs/DATA_DICTIONARY.md) ·
+[Limitations](docs/LIMITATIONS.md) ·
+[Interactive dashboard](outputs/dashboard.html)
 
 ---
 
-## Project Summary
+## Headline findings
 
-This project analyzes U.S. federal contract spending from fiscal years 2021 through 2024 to identify spending trends, agency concentration, and high-growth areas that may warrant closer review.
+**1 · Four-fifths of the headline growth is the price level.**
+Nominal contract obligations rose 22.9% from FY2021 to FY2025 ($633.2B → $778.4B). In constant
+FY2025 dollars the increase is **4.3%** — roughly **$118B** of the $145B nominal rise is the GDP
+deflator, not additional goods and services.
 
-It is structured to reflect real-world analytical workflows and demonstrate the ability to work with large-scale datasets, design business-relevant metrics, and communicate insights effectively.
+**2 · Competition fell to a five-year low, and 93% of the drop is one department.**
+The competed share of obligations fell from 70.3% to **66.3%** in FY2025. A shift-share
+decomposition separates behaviour from budget composition and reconciles exactly (residual
+< 1e-15): the decline is **−3.06 pp within-agency** versus −0.76 pp mix. The Department of
+Defense alone contributes **−3.67 of the −3.97 pp**, its own competed share falling from
+**58.0% to 52.7%** while its share of federal contract dollars grew. Had DoD merely held its
+FY2024 rate, **$25.9B more** would have been competed.
 
-The objective is not just to report total spending, but to transform raw federal contract data into decision-ready insights that highlight:
-- where contract obligations are concentrated  
-- which agencies are driving growth  
-- where year-over-year changes may signal potential inefficiencies or areas for further review  
+**3 · The year-end surge is the highest in five years.**
+September carried **19.0%** of FY2025 obligations against an 8.3% even pace — **$83.4B above a
+level pace**, up from 16.2% in FY2023.
 
-To accomplish this, the project builds an end-to-end analytics pipeline that:
-- ingests large-scale public spending data (millions of records per year)  
-- standardizes and consolidates multi-year datasets  
-- develops KPI-driven analysis using Python and SQL  
-- delivers insights through a business-focused dashboard  
+**4 · FY2025 split the portfolio.**
+Defense (+$45.6B), Veterans Affairs (+$11.4B) and Homeland Security (+$4.7B) grew while HHS
+(−28.7%), USAID (−44.9%) and GSA (−10.2%) contracted. HUD posted **net-negative obligations** for
+the full year. Agency-level HHI rose from 3,800 to **4,158**.
 
-The final output is designed to support analytical thinking aligned with roles in government contracting, financial analysis, and operations strategy, with a focus on scale, clarity, and decision relevance.
+**5 · The ranking is published with its own uncertainty.**
+The Contract Efficiency Index scores 19 agencies across five dimensions — and is re-scored under
+**2,000 random weightings**. Only 3 of 19 hold their quartile. The documentation states plainly
+that **the middle of the ranking is not separable**, because an index whose weights are a
+judgement should be presented as a triage device, not a verdict.
 
----
-
-## Business Problem
-
-Federal contract spending represents a significant portion of government expenditures and is distributed across numerous agencies, programs, and service areas. However, without structured analysis, it is difficult to quickly understand where spending is concentrated, how it is changing over time, and which areas may require closer review.
-
-Decision-makers need a clear and consistent way to:
-- monitor multi-year spending trends  
-- identify which agencies control the largest share of contract obligations  
-- detect unusually high growth or volatility in spending  
-- prioritize areas for deeper review or resource optimization  
-
-Raw contract-level data alone does not provide these insights. It must be transformed into aggregated, comparable, and decision-ready metrics.
-
-This project addresses that gap by converting large-scale federal contract data into a structured analytical framework that supports trend analysis, concentration analysis, and growth detection across agencies.
+> Nothing here identifies waste, fraud, or abuse. Every output is a prioritisation signal.
+> See [Limitations](docs/LIMITATIONS.md).
 
 ---
 
-## Project Objective
+## Quick start
 
-The objective of this project is to use federal contract data to answer practical business and oversight questions such as:
-- How did federal contract obligations change from 2021 to 2024?  
-- Which agencies accounted for the largest share of contract spending?  
-- Which agencies experienced the fastest year-over-year growth?  
-- How concentrated is contract spending among the top agencies?  
-- Which agencies show unusual volatility or sharp spending changes over time?  
-- What patterns suggest opportunities for closer spending review or resource optimization?  
+```bash
+git clone https://github.com/Akemp787/federal-spending-efficiency-analysis.git
+cd federal-spending-efficiency-analysis
+pip install -e ".[dev]"
+make all
+```
 
----
+`make all` runs `ingest → analyse → warehouse → validate → report` and reproduces every number in
+this README from the public API in roughly 15 minutes. Responses are cached under a hash of the
+request body, so the second run is instant and offline.
 
-## Data Source
-
-This project uses federal contract award data from the USAspending Award Data Archive.
-
-**Primary source:**  
-https://www.usaspending.gov/download_center/award_data_archive  
-
-**Supporting reference:**  
-https://www.usaspending.gov/#/federal_spending  
+```bash
+make test        # 63 known-answer tests, no network
+make validate    # 10 data-quality contracts
+fedspend query --sql "SELECT * FROM v_gov_headline"
+```
 
 ---
 
-## Scope
-- **Award Type:** Contracts  
-- **Time Period:** FY2021–FY2024  
-- **Primary Focus:** Federal contract obligations, agency-level trends, growth patterns, and spending concentration  
-- **Analytical Goal:** Produce an executive-style dashboard and supporting analysis that can inform review, prioritization, and decision-making  
+## What the pipeline does
+
+```
+USAspending v2 API ──▶ data/raw/_api_cache/   content-addressed responses
+                              │
+       FRED GDPDEF ───────────┤
+                              ▼
+                       data/interim/          11 tidy long extracts
+                              ▼
+                       data/curated/          21 analytical tables + fedspend.duckdb
+                              ▼
+                       outputs/               dashboard.html · 16 BI-ready CSVs
+```
+
+**Ingestion.** A retrying, rate-limited, disk-cached client pulls agency × fiscal-year
+cross-tabulations by extent-of-competition (9 FPDS codes), contract pricing type (16 codes),
+fiscal month (12 slices), set-aside status, and per-agency vendor breakdowns — building 345
+agency-years of measures. Failures on individual agency-year queries are recorded in the run
+manifest rather than aborting the run or silently zeroing a value.
+
+**Why the API and not the 30GB bulk archive.** The aggregation endpoints compute every
+cross-tabulation this analysis needs server-side, which makes the repository something a reviewer
+can clone and reproduce rather than only read. The transaction-level path is implemented in
+[`bulk_archive.py`](src/fedspend/ingest/bulk_archive.py) for the three measures that genuinely
+require row-level fields — single-offer rate, ceiling growth, untruncated vendor HHI.
+
+**Transformation.** Every dollar figure is published in nominal **and** constant FY2025 dollars,
+using the BEA GDP implicit price deflator averaged over the four quarters of each federal fiscal
+year. Cumulative FY2021–FY2025 inflation is 17.9%, which is the entire reason finding 1 exists.
+
+**Warehouse.** DuckDB, loaded from parquet, with the analytic layer expressed as SQL views in
+[`sql/`](sql/) — an independent expression of the same metrics.
+
+**Validation.** Ten contracts, ERROR-severity failures break CI. The important one is
+reconciliation: the competition table is assembled from nine separate API calls per agency-year,
+so if those slices do not sum back to the independently-retrieved agency total, every downstream
+figure is suspect. **All 325 agency-years reconcile within 1%.**
 
 ---
 
-## Business Questions Being Solved
+## Technical choices worth a look
 
-### Trend Analysis
-- How has total federal contract spending changed from 2021 to 2024?  
-- Are spending increases consistent year-over-year, or are there periods of acceleration or slowdown?  
-
-### Agency Concentration
-- Which agencies account for the largest share of total contract obligations?  
-- How concentrated is federal contract spending among the top agencies?  
-
-### Growth and Change Detection
-- Which agencies have experienced the largest absolute increases in spending?  
-- Which agencies are growing the fastest in percentage terms?  
-- Are there agencies whose growth significantly outpaces the overall trend?  
-
-### Oversight and Review Prioritization
-- Which agencies combine high total spending with high growth?  
-- Which agencies show volatility or sharp year-over-year changes that may warrant further review?  
-
-### Decision Support
-- If leadership had to prioritize oversight or analysis efforts, which agencies should be reviewed first based on scale, growth, and variability?  
+| Choice | Why |
+|---|---|
+| **Robust (MAD) outlier detection** | A classical z-score is masked by the outlier it is meant to find. In the project's own test case a value 100× the others scores a classical z of 2.6 — below any threshold — while the robust score exceeds 500. |
+| **Shift-share decomposition** | Separates "agencies changed behaviour" from "money moved between agencies". The two carry opposite implications, and the terms reconcile with no residual, making the attribution a result rather than a story. |
+| **Centred mix term** | Since `Σ Δw = 0`, centring on the base rate leaves the total identical but makes each agency's contribution readable. Uncentred, a growing agency always shows a positive mix term regardless of whether it competes above or below average. |
+| **Truncation handled explicitly** | Vendor HHI uses top-100 recipients but computes shares against *true* agency totals, making it a strict lower bound rather than a biased estimate. `coverage_share` ships alongside every value. |
+| **Weight sensitivity by Dirichlet sampling** | The index weights are a judgement, so the index is re-scored 2,000 times under weightings drawn uniformly from the simplex — and the honest conclusion, that most ranks are not separable, is the headline rather than a footnote. |
+| **Config-driven assumptions** | Competition taxonomy, FAR-grounded pricing-risk buckets, materiality floor, and index weights all live in [`config/pipeline.yml`](config/pipeline.yml), so a reviewer can change an assumption without reading the code. |
+| **Growth suppressed off a non-positive base** | Publishing a 40,000% jump because an agency obligated $12k in the base year is how a portfolio project loses credibility. |
 
 ---
 
-## KPIs Tracked
+## Repository layout
 
-### Scale Metrics
-- **Total Contract Obligations**  
-- **Total Obligations by Year**
-
-### Growth Metrics
-- **Year-over-Year Growth (%)**  
-- **Absolute Change in Obligations**  
-- **Agency-Level Growth Rate**
-
-### Concentration Metrics
-- **Top 10 Agencies by Contract Spending**  
-- **Top Agencies’ Share of Total Spend (%)**  
-- **Spending Concentration Ratio**
-
-### Oversight and Prioritization Metrics
-- **High Spend + High Growth Agencies**  
-- **Spending Volatility**  
-- **Multi-Year Growth Trend**
-
----
-
-## Analytical Approach
-
-### 1. Data Acquisition
-- Downloaded FY2021–FY2024 contract data from USAspending  
-
-### 2. Data Cleaning and Standardization
-- Standardized schemas across years  
-- Converted data types  
-- Handled missing values  
-- Removed duplicates  
-
-### 3. Scalable Data Processing
-- Implemented chunk-based processing for large datasets  
-- Processed multi-million-row files efficiently  
-
-### 4. Dataset Consolidation
-- Combined yearly data into a unified master dataset  
-- Added fiscal year indicators  
-
-### 5. Data Validation
-- Verified row counts and totals  
-- Checked data consistency and missingness  
-
-### 6. Exploratory Analysis (In Progress)
-- Trend analysis and distribution review  
-
-### 7. SQL-Based Analysis (Planned)
-- KPI and aggregation queries  
-
-### 8. Dashboard Development (Planned)
-- Power BI dashboard with executive KPIs  
-
-### 9. Insight Generation (Planned)
-- Translate analytical results into actionable business insights  
+```
+config/pipeline.yml          every analytical assumption, in one reviewable file
+src/fedspend/
+  ingest/                    API client (cache + retry), extract orchestration, bulk archive
+  transform/                 GDP deflator → constant dollars
+  metrics/                   concentration · competition · pricing_risk · timing
+                             growth · anomaly · decomposition · efficiency_index
+  warehouse/                 DuckDB build, SQL view installation
+  validate/                  data-quality contracts
+  report/                    inline-SVG charts, dashboard, BI exports
+  analysis.py                extracts → 21 curated tables
+  cli.py                     fedspend <stage>
+sql/                         analytic views over the warehouse
+tests/                       63 known-answer tests
+docs/                        executive summary · methodology · data dictionary · limitations
+data/samples/                committed outputs, so a clone verifies findings without re-pulling
+outputs/                     dashboard.html · star-schema CSVs for Power BI/Tableau
+```
 
 ---
 
-## Techniques Used
-- Data cleaning and transformation  
-- Multi-year schema standardization  
-- Exploratory data analysis  
-- Aggregation and summarization  
-- Trend and growth analysis  
-- Ranking and concentration analysis  
-- KPI design  
-- Dashboard storytelling  
+## The dashboard
+
+[`outputs/dashboard.html`](outputs/dashboard.html) is a single self-contained file — no CDN, no
+build step, no external requests. Charts are generated as inline SVG with colours bound to CSS
+custom properties, so it renders offline and follows the reader's light/dark theme. Every
+sentence in it is built from the curated tables at render time, so the prose cannot drift from
+the data.
+
+The palette is validated for colour-vision-deficiency separation and surface contrast in both
+themes; every chart carries a legend, direct labels, a hover layer, and an expandable table view
+of its underlying figures.
 
 ---
 
-## Tools and Technologies
+## Data sources
 
-- **Python (Pandas)** — large-scale data cleaning and transformation  
-- **Jupyter Notebook** — workflow and documentation  
-- **SQL** — aggregation and KPI analysis  
-- **Power BI** — dashboard development  
-- **Excel** — validation and quick checks  
-- **Git / GitHub** — version control and project documentation  
+- **[USAspending API v2](https://api.usaspending.gov/)** — federal contract award transactions
+  (award types A, B, C, D; `action_date` basis)
+- **[BEA GDP implicit price deflator](https://fred.stlouisfed.org/series/GDPDEF)** via FRED —
+  quarterly, fiscal-year averaged
 
----
-
-## Data Availability
-
-The full datasets are too large to store in this repository.
-
-This repo includes:
-- code and notebooks  
-- SQL queries  
-- project documentation  
-- a small sample dataset  
-
-To reproduce:
-1. Download FY2021–FY2024 contract data from USAspending  
-2. Place files in `data_raw/`  
-3. Run the cleaning notebook  
-4. Generate cleaned datasets locally  
+Public data, no API key required.
 
 ---
 
-## Repository Structure
+## Author
 
-federal-spending-efficiency-analysis/
-│
-├── README.md
-├── .gitignore
-│
-├── data_cleaned/
-│ └── sample/
-│ └── sample_contracts_2021_2024_1000_rows.csv
-│
-├── notebooks/
-│ └── 01_data_cleaning.ipynb
-│
-├── sql/ # (in progress)
-├── dashboards/ # (in progress)
-└── outputs/ # (in progress)
+**Andrew Kemp** — [GitHub](https://github.com/Akemp787)
 
----
-## Key Insights (Preview)
-
-Preliminary analysis of FY2021–FY2024 federal contract data reveals several notable patterns:
-
-- **Steady Growth in Federal Contract Spending**  
-  Total contract obligations increased consistently from 2021 through 2023, indicating sustained expansion in federal contracting activity, followed by a slight stabilization in 2024.
-
-- **High Concentration Among Top Agencies**  
-  A small number of agencies account for a disproportionately large share of total contract obligations, suggesting that federal spending is highly concentrated rather than evenly distributed.
-
-- **Variation in Agency Growth Rates**  
-  While overall spending trends upward, growth is not uniform across agencies. Some agencies exhibit significantly higher growth rates than the overall trend, indicating potential shifts in priorities or funding allocation.
-
-- **Emergence of High-Growth Agencies**  
-  Certain agencies show both high total spending and strong year-over-year growth, making them key candidates for further analysis and oversight.
-
-- **Potential Areas for Deeper Review**  
-  Agencies with large spending levels combined with volatility or sudden increases may warrant closer examination to understand underlying drivers.
-
-*Note: These insights are based on initial exploratory analysis and will be refined through further SQL-based analysis and dashboard development.*
-
-## Next Steps
-
-- Complete exploratory analysis  
-- Build SQL query layer  
-- Develop Power BI dashboard  
-- Generate key insights and executive summary  
+MIT licensed.

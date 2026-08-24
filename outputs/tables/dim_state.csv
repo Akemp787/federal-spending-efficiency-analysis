@@ -1,0 +1,299 @@
+fiscal_year,category,rank,code,name,obligations
+2021,state_territory,1,VA,Virginia,77921530461.33
+2021,state_territory,2,TX,Texas,55097189841.97
+2021,state_territory,3,CA,California,52103335762.91
+2021,state_territory,4,MD,Maryland,39171106379.25
+2021,state_territory,5,DC,District Of Columbia,31008979200.93
+2021,state_territory,6,NY,New York,30829386201.62
+2021,state_territory,7,FL,Florida,25671074788.88
+2021,state_territory,8,MA,Massachusetts,24230999549.31
+2021,state_territory,9,CT,Connecticut,18381488965.28
+2021,state_territory,10,PA,Pennsylvania,17563087679.7
+2021,state_territory,11,AZ,Arizona,16460421097.89
+2021,state_territory,12,WA,Washington,15601001919.04
+2021,state_territory,13,MO,Missouri,13278864659.83
+2021,state_territory,14,AL,Alabama,13129343795.08
+2021,state_territory,15,CO,Colorado,12779367326.54
+2021,state_territory,16,IL,Illinois,11932834008.07
+2021,state_territory,17,KY,Kentucky,11806127103.75
+2021,state_territory,18,NM,New Mexico,11608936133.95
+2021,state_territory,19,GA,Georgia,11135543809.68
+2021,state_territory,20,TN,Tennessee,10794792727.92
+2021,state_territory,21,NJ,New Jersey,8896529908.37
+2021,state_territory,22,OH,Ohio,8372372075.84
+2021,state_territory,23,MI,Michigan,6790739285.48
+2021,state_territory,24,NC,North Carolina,6673633193.73
+2021,state_territory,25,SC,South Carolina,6671868300.04
+2021,state_territory,26,IN,Indiana,6294850885.57
+2021,state_territory,27,WI,Wisconsin,5776762441.06
+2021,state_territory,28,MS,Mississippi,4865574993.48
+2021,state_territory,29,OK,Oklahoma,4515774794.28
+2021,state_territory,30,UT,Utah,4022231666.87
+2021,state_territory,31,LA,Louisiana,3989569119.98
+2021,state_territory,32,NV,Nevada,3050847937.07
+2021,state_territory,33,KS,Kansas,2918971150.87
+2021,state_territory,34,ID,Idaho,2835135703.8
+2021,state_territory,35,HI,Hawaii,2825854743.13
+2021,state_territory,36,MN,Minnesota,2628503977.66
+2021,state_territory,37,IA,Iowa,2541881384.75
+2021,state_territory,38,ME,Maine,2418362685.92
+2021,state_territory,39,AK,Alaska,2334751036.48
+2021,state_territory,40,GU,Guam,2062828194.38
+2021,state_territory,41,OR,Oregon,1790165268.06
+2021,state_territory,42,NH,New Hampshire,1753350195.07
+2021,state_territory,43,WV,West Virginia,1507599725.51
+2021,state_territory,44,AR,Arkansas,1489254821.33
+2021,state_territory,45,NE,Nebraska,1255999874.39
+2021,state_territory,46,RI,Rhode Island,927785757.88
+2021,state_territory,47,ND,North Dakota,779989690.06
+2021,state_territory,48,PR,Puerto Rico,711545403.48
+2021,state_territory,49,MT,Montana,690662757.99
+2021,state_territory,50,SD,South Dakota,623642801.75
+2021,state_territory,51,VT,Vermont,393542285.53
+2021,state_territory,52,WY,Wyoming,389644230.35
+2021,state_territory,53,DE,Delaware,321049747.83
+2021,state_territory,54,,,111957513.62
+2021,state_territory,55,MP,Northern Mariana Islands,76171708.75
+2021,state_territory,56,VI,U.S. Virgin Islands,69276018.95
+2021,state_territory,57,,,7354544.12
+2021,state_territory,58,,,5900261.96
+2021,state_territory,59,AS,American Samoa,3139670.14
+2022,state_territory,1,VA,Virginia,89388796488.5
+2022,state_territory,2,TX,Texas,67580380127.98
+2022,state_territory,3,CA,California,57535356692.52
+2022,state_territory,4,MD,Maryland,42110468635.21
+2022,state_territory,5,DC,District Of Columbia,31619064494.38
+2022,state_territory,6,NY,New York,29406826073.35
+2022,state_territory,7,FL,Florida,26600630543.08
+2022,state_territory,8,CT,Connecticut,22335368250.05
+2022,state_territory,9,PA,Pennsylvania,19710889896.88
+2022,state_territory,10,MA,Massachusetts,17913182603.82
+2022,state_territory,11,AZ,Arizona,15339209697.82
+2022,state_territory,12,AL,Alabama,14097173090.78
+2022,state_territory,13,CO,Colorado,13985832714.2
+2022,state_territory,14,IL,Illinois,13560383271.71
+2022,state_territory,15,WA,Washington,12073161380.9
+2022,state_territory,16,KY,Kentucky,11855222524.21
+2022,state_territory,17,NM,New Mexico,11656945716.4
+2022,state_territory,18,TN,Tennessee,11425260843.51
+2022,state_territory,19,MO,Missouri,11153198850.63
+2022,state_territory,20,NJ,New Jersey,9287794514.68
+2022,state_territory,21,MI,Michigan,9042035838.34
+2022,state_territory,22,NC,North Carolina,8594051729.09
+2022,state_territory,23,GA,Georgia,8510091347.34
+2022,state_territory,24,IN,Indiana,8165935917.13
+2022,state_territory,25,OH,Ohio,7760381908.24
+2022,state_territory,26,SC,South Carolina,7163068753.76
+2022,state_territory,27,UT,Utah,5261077285.11
+2022,state_territory,28,WI,Wisconsin,5210038493.12
+2022,state_territory,29,MS,Mississippi,4994954582.33
+2022,state_territory,30,OK,Oklahoma,4992438979.78
+2022,state_territory,31,KS,Kansas,4202971701.61
+2022,state_territory,32,LA,Louisiana,3699047161.6
+2022,state_territory,33,HI,Hawaii,3519023953.42
+2022,state_territory,34,AK,Alaska,3306063620.17
+2022,state_territory,35,NV,Nevada,3258013960.7
+2022,state_territory,36,ME,Maine,2747113789.99
+2022,state_territory,37,IA,Iowa,2720761117.41
+2022,state_territory,38,ID,Idaho,2456525116.48
+2022,state_territory,39,MN,Minnesota,2435903705.77
+2022,state_territory,40,OR,Oregon,1901588127.98
+2022,state_territory,41,GU,Guam,1791541948.11
+2022,state_territory,42,NH,New Hampshire,1729973969.56
+2022,state_territory,43,WV,West Virginia,1499343798.45
+2022,state_territory,44,PR,Puerto Rico,1495839409.88
+2022,state_territory,45,AR,Arkansas,1374412851.49
+2022,state_territory,46,NE,Nebraska,1306564165.94
+2022,state_territory,47,RI,Rhode Island,1217229120.25
+2022,state_territory,48,SD,South Dakota,1167383513.65
+2022,state_territory,49,ND,North Dakota,972597485.45
+2022,state_territory,50,MT,Montana,925388757.28
+2022,state_territory,51,WY,Wyoming,559182583.09
+2022,state_territory,52,VT,Vermont,505780381.3
+2022,state_territory,53,,,228084419.03
+2022,state_territory,54,MP,Northern Mariana Islands,107708429.1
+2022,state_territory,55,DE,Delaware,81317836.97
+2022,state_territory,56,VI,U.S. Virgin Islands,41932191.09
+2022,state_territory,57,,,33855986.43
+2022,state_territory,58,AS,American Samoa,13782007.84
+2022,state_territory,59,,,9453372.9
+2023,state_territory,1,VA,Virginia,106242558774.47
+2023,state_territory,2,TX,Texas,81867958236.05
+2023,state_territory,3,CA,California,61450359972.07
+2023,state_territory,4,MD,Maryland,41659940030.73
+2023,state_territory,5,DC,District Of Columbia,33925614223.46
+2023,state_territory,6,FL,Florida,29010140076.65
+2023,state_territory,7,CT,Connecticut,25996917306.55
+2023,state_territory,8,PA,Pennsylvania,23264630886.78
+2023,state_territory,9,AZ,Arizona,19763215578.04
+2023,state_territory,10,MA,Massachusetts,18288413716.43
+2023,state_territory,11,NY,New York,16493324022.27
+2023,state_territory,12,MO,Missouri,15556006731.28
+2023,state_territory,13,CO,Colorado,14892070569.52
+2023,state_territory,14,AL,Alabama,14875916727.16
+2023,state_territory,15,IL,Illinois,12986686290.33
+2023,state_territory,16,WA,Washington,12980535732.75
+2023,state_territory,17,KY,Kentucky,12539259227.4
+2023,state_territory,18,NM,New Mexico,12363470858.49
+2023,state_territory,19,TN,Tennessee,11242158971.98
+2023,state_territory,20,GA,Georgia,11118488726.28
+2023,state_territory,21,SC,South Carolina,10146292714.08
+2023,state_territory,22,OH,Ohio,10062137859.5
+2023,state_territory,23,NJ,New Jersey,9164325904.93
+2023,state_territory,24,MS,Mississippi,8702580817.71
+2023,state_territory,25,MI,Michigan,8392098196.37
+2023,state_territory,26,NC,North Carolina,6964986405.59
+2023,state_territory,27,UT,Utah,6287006252.35
+2023,state_territory,28,IN,Indiana,5980188872.57
+2023,state_territory,29,WI,Wisconsin,5314895353.52
+2023,state_territory,30,OK,Oklahoma,4946899886.56
+2023,state_territory,31,LA,Louisiana,4513702105.09
+2023,state_territory,32,HI,Hawaii,4410963073.02
+2023,state_territory,33,AK,Alaska,3828726515.96
+2023,state_territory,34,ME,Maine,3717485535.85
+2023,state_territory,35,NV,Nevada,3709340304.08
+2023,state_territory,36,IA,Iowa,3374659396.69
+2023,state_territory,37,ID,Idaho,3209480118.43
+2023,state_territory,38,KS,Kansas,3025716565.87
+2023,state_territory,39,MN,Minnesota,2726225537.73
+2023,state_territory,40,OR,Oregon,2548651655.01
+2023,state_territory,41,GU,Guam,2360355769.06
+2023,state_territory,42,PR,Puerto Rico,2034414498.45
+2023,state_territory,43,NE,Nebraska,2031302278.87
+2023,state_territory,44,NH,New Hampshire,1905142957.84
+2023,state_territory,45,WV,West Virginia,1717142990.47
+2023,state_territory,46,AR,Arkansas,1342059248.66
+2023,state_territory,47,SD,South Dakota,1020590135.74
+2023,state_territory,48,RI,Rhode Island,1018506430.32
+2023,state_territory,49,MT,Montana,1000908470.9
+2023,state_territory,50,ND,North Dakota,802955256.4
+2023,state_territory,51,WY,Wyoming,469953941.17
+2023,state_territory,52,VT,Vermont,423928615.93
+2023,state_territory,53,,,411442591.24
+2023,state_territory,54,DE,Delaware,325435387.89
+2023,state_territory,55,MP,Northern Mariana Islands,318682212.98
+2023,state_territory,56,,,151309397.69
+2023,state_territory,57,VI,U.S. Virgin Islands,26676547.97
+2023,state_territory,58,,,17828689.89
+2023,state_territory,59,AS,American Samoa,5276215.67
+2024,state_territory,1,VA,Virginia,109903270918.31
+2024,state_territory,2,CA,California,61719345263.91
+2024,state_territory,3,TX,Texas,59273241968.82
+2024,state_territory,4,MD,Maryland,46277895813.61
+2024,state_territory,5,DC,District Of Columbia,35962041019.82
+2024,state_territory,6,FL,Florida,31320417699.9
+2024,state_territory,7,PA,Pennsylvania,26575809291.72
+2024,state_territory,8,CT,Connecticut,20002700292.63
+2024,state_territory,9,AZ,Arizona,18046953106.76
+2024,state_territory,10,MA,Massachusetts,17816428734.05
+2024,state_territory,11,AL,Alabama,17347986808.93
+2024,state_territory,12,MO,Missouri,16184081304.99
+2024,state_territory,13,WA,Washington,15355186651.07
+2024,state_territory,14,NY,New York,15080246330.01
+2024,state_territory,15,CO,Colorado,14996505426.94
+2024,state_territory,16,IL,Illinois,13381698177.25
+2024,state_territory,17,NM,New Mexico,13103413922.24
+2024,state_territory,18,KY,Kentucky,12307044993.82
+2024,state_territory,19,TN,Tennessee,10771312989.01
+2024,state_territory,20,SC,South Carolina,10622309196.73
+2024,state_territory,21,GA,Georgia,10401192851.48
+2024,state_territory,22,NJ,New Jersey,9812712561.53
+2024,state_territory,23,OH,Ohio,8996203292.75
+2024,state_territory,24,WI,Wisconsin,8857965175.3
+2024,state_territory,25,MI,Michigan,8037859137.61
+2024,state_territory,26,NC,North Carolina,7194327259.91
+2024,state_territory,27,UT,Utah,7158672730.57
+2024,state_territory,28,HI,Hawaii,6653539660.53
+2024,state_territory,29,MS,Mississippi,6530806399.3
+2024,state_territory,30,OK,Oklahoma,5453076790.93
+2024,state_territory,31,IN,Indiana,5284729616.6
+2024,state_territory,32,NV,Nevada,4012416021.8
+2024,state_territory,33,LA,Louisiana,3854303059.37
+2024,state_territory,34,AK,Alaska,3826478635.8
+2024,state_territory,35,ID,Idaho,3766556983.86
+2024,state_territory,36,ME,Maine,3685845906.29
+2024,state_territory,37,KS,Kansas,3328471925.51
+2024,state_territory,38,IA,Iowa,3021983788.64
+2024,state_territory,39,MN,Minnesota,2970869962.74
+2024,state_territory,40,NH,New Hampshire,2877049482.95
+2024,state_territory,41,GU,Guam,2529121952.9
+2024,state_territory,42,OR,Oregon,2445163491.26
+2024,state_territory,43,WV,West Virginia,1993406830.98
+2024,state_territory,44,AR,Arkansas,1917634611.26
+2024,state_territory,45,PR,Puerto Rico,1475872200.08
+2024,state_territory,46,NE,Nebraska,1291835887.63
+2024,state_territory,47,SD,South Dakota,1286315051.2
+2024,state_territory,48,RI,Rhode Island,1196745503.0
+2024,state_territory,49,MT,Montana,1106736232.61
+2024,state_territory,50,ND,North Dakota,979558496.58
+2024,state_territory,51,VT,Vermont,920189797.64
+2024,state_territory,52,WY,Wyoming,532289141.08
+2024,state_territory,53,,,477089997.15
+2024,state_territory,54,DE,Delaware,337436452.59
+2024,state_territory,55,MP,Northern Mariana Islands,99571030.16
+2024,state_territory,56,,,36857782.73
+2024,state_territory,57,VI,U.S. Virgin Islands,35659165.18
+2024,state_territory,58,AS,American Samoa,19810590.59
+2024,state_territory,59,,,16859105.67
+2025,state_territory,1,VA,Virginia,120579074852.76
+2025,state_territory,2,TX,Texas,86351734337.16
+2025,state_territory,3,CA,California,62029740868.77
+2025,state_territory,4,MD,Maryland,39688818390.19
+2025,state_territory,5,CT,Connecticut,35140349618.72
+2025,state_territory,6,FL,Florida,32457301939.71
+2025,state_territory,7,DC,District Of Columbia,31421767942.7
+2025,state_territory,8,PA,Pennsylvania,26942498771.95
+2025,state_territory,9,AZ,Arizona,23316988877.15
+2025,state_territory,10,MA,Massachusetts,19326882449.96
+2025,state_territory,11,AL,Alabama,18144286516.66
+2025,state_territory,12,CO,Colorado,16107937735.66
+2025,state_territory,13,WA,Washington,15816512516.54
+2025,state_territory,14,MO,Missouri,13971470765.74
+2025,state_territory,15,NM,New Mexico,13487737856.2
+2025,state_territory,16,IL,Illinois,12368513465.5
+2025,state_territory,17,NY,New York,12073011979.99
+2025,state_territory,18,GA,Georgia,11649424979.8
+2025,state_territory,19,TN,Tennessee,10952678091.55
+2025,state_territory,20,KY,Kentucky,10423491136.32
+2025,state_territory,21,OH,Ohio,9831404678.83
+2025,state_territory,22,NC,North Carolina,9337979383.41
+2025,state_territory,23,NJ,New Jersey,9331281587.17
+2025,state_territory,24,SC,South Carolina,8325921137.92
+2025,state_territory,25,MS,Mississippi,8001989812.64
+2025,state_territory,26,IN,Indiana,7003577319.63
+2025,state_territory,27,OK,Oklahoma,6801260723.11
+2025,state_territory,28,MI,Michigan,6607691064.67
+2025,state_territory,29,WI,Wisconsin,6264175591.54
+2025,state_territory,30,HI,Hawaii,5514960690.82
+2025,state_territory,31,UT,Utah,5224448152.84
+2025,state_territory,32,LA,Louisiana,4754557522.61
+2025,state_territory,33,NV,Nevada,4031346684.76
+2025,state_territory,34,ID,Idaho,3936748127.13
+2025,state_territory,35,ME,Maine,3927761251.88
+2025,state_territory,36,AK,Alaska,3851106276.59
+2025,state_territory,37,IA,Iowa,3613341097.36
+2025,state_territory,38,KS,Kansas,3581984066.38
+2025,state_territory,39,GU,Guam,3317442598.18
+2025,state_territory,40,NH,New Hampshire,2914447921.56
+2025,state_territory,41,MN,Minnesota,2488651625.0
+2025,state_territory,42,OR,Oregon,2081718588.58
+2025,state_territory,43,WV,West Virginia,1876457181.23
+2025,state_territory,44,NE,Nebraska,1266208803.4
+2025,state_territory,45,AR,Arkansas,1263088578.28
+2025,state_territory,46,MT,Montana,1146352888.3
+2025,state_territory,47,PR,Puerto Rico,919905532.85
+2025,state_territory,48,RI,Rhode Island,905584032.86
+2025,state_territory,49,VT,Vermont,877181358.97
+2025,state_territory,50,ND,North Dakota,821216880.8
+2025,state_territory,51,SD,South Dakota,804276681.92
+2025,state_territory,52,WY,Wyoming,496865115.18
+2025,state_territory,53,DE,Delaware,368123755.57
+2025,state_territory,54,,,260410256.26
+2025,state_territory,55,VI,U.S. Virgin Islands,48776045.57
+2025,state_territory,56,MP,Northern Mariana Islands,34739574.35
+2025,state_territory,57,,,16366386.43
+2025,state_territory,58,,,15532357.1
+2025,state_territory,59,AS,American Samoa,12234762.71
+2025,state_territory,60,,,12119739.39
+2025,state_territory,61,,,6769073.32
+2025,state_territory,62,,,713061.35

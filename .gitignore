@@ -1,42 +1,66 @@
-# ========================
-# DATA
-# ========================
+# ===========================================================================
+# What is and is not committed, and why.
+#
+# COMMITTED (deliberately):
+#   data/raw/_api_cache/   ~4MB of API responses, keyed by request hash. This is
+#                          what makes `make all` reproduce the published numbers
+#                          with no network access and no drift as USAspending
+#                          posts corrections. It is the snapshot the findings
+#                          were computed from.
+#   data/raw/*.csv         the deflator source series, same reason.
+#   data/samples/          curated outputs small enough to ship, so a fresh clone
+#                          can verify the findings and run the tests immediately.
+#   outputs/               the dashboard and BI exports are the deliverable.
+#
+# NOT COMMITTED (regenerable in seconds from the above):
+#   data/interim/          tidy extracts
+#   data/curated/*.parquet analytical tables
+#   *.duckdb               the warehouse
+# ===========================================================================
 
-# Raw data (never track)
-data/data_raw/
+# --- regenerable derived data ---
+data/interim/
+data/curated/*.parquet
+data/curated/*.csv
+*.duckdb
+*.duckdb.wal
 
-# Cleaned data (ignore large files)
-data/data_cleaned/*.csv
-data/data_cleaned/*.parquet
+# --- bulk archive: far too large to track ---
+data/raw/archive/
+data/interim/transactions/
 
-# Other processed data
-data/processed/
+# --- keep the reproducibility snapshot ---
+!data/raw/_api_cache/
+!data/raw/_api_cache/**
+!data/raw/*.csv
+!data/curated/_manifest.json
 
-# Allow sample data
-!data/data_cleaned/sample/
-!data/data_cleaned/sample/*.csv
+# --- python ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.eggs/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+coverage.xml
 
-# ========================
-# JUPYTER
-# ========================
+# --- environments ---
+.venv/
+venv/
+env/
+.env
+.envrc
+
+# --- notebooks ---
 .ipynb_checkpoints/
 
-# ========================
-# PYTHON
-# ========================
-__pycache__/
-*.pyc
-
-# ========================
-# ENVIRONMENT / IDE
-# ========================
-.env
-venv/
-.envrc
+# --- editors / OS ---
 .vscode/
-
-# ========================
-# OPERATING SYSTEM FILES
-# ========================
+.idea/
 .DS_Store
 Thumbs.db
+desktop.ini

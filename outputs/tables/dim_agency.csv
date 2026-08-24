@@ -1,0 +1,72 @@
+agency_name,agency_code,agency_slug,peak_obligations,latest_obligations,is_material,years_present
+Department of Defense,DOD,department-of-defense,491685487925.19,491685487925.19,True,5
+Department of Veterans Affairs,VA,department-of-veterans-affairs,78313337208.43,78313337208.43,True,5
+Department of Energy,DOE,department-of-energy,48549337828.87,48549337828.87,True,5
+Department of Health and Human Services,HHS,department-of-health-and-human-services,34263471655.44,21290230376.02,True,5
+Department of Homeland Security,DHS,department-of-homeland-security,28336601669.43,28336601669.43,True,5
+General Services Administration,GSA,general-services-administration,26502128197.23,23810677070.15,True,5
+National Aeronautics and Space Administration,NASA,national-aeronautics-and-space-administration,16129104644.29,15782680383.9,True,5
+Department of State,DOS,department-of-state,11949724607.11,9865475459.76,True,5
+Department of Agriculture,USDA,department-of-agriculture,11597506288.99,9569572358.2,True,5
+Department of the Treasury,TREAS,department-of-the-treasury,10257934018.66,8556933934.18,True,5
+Department of Justice,DOJ,department-of-justice,9960834896.24,8531620050.47,True,5
+Department of Transportation,DOT,department-of-transportation,9022525885.22,9022525885.22,True,5
+Department of the Interior,DOI,department-of-the-interior,8121263990.93,6554582845.32,True,5
+Agency for International Development,USAID,agency-for-international-development,7444753388.62,4099062195.34,True,5
+Department of Commerce,DOC,department-of-commerce,5185009413.32,4158787229.18,True,5
+Department of Education,ED,department-of-education,2724859964.87,2502613339.39,True,5
+Department of Labor,DOL,department-of-labor,2478804629.44,1754211419.51,True,5
+Environmental Protection Agency,EPA,environmental-protection-agency,2212865855.25,1697433936.71,True,5
+Social Security Administration,SSA,social-security-administration,1937692238.12,1746308710.84,True,5
+Department of Housing and Urban Development,HUD,department-of-housing-and-urban-development,1525527557.97,-1331998929.39,True,5
+Small Business Administration,SBA,small-business-administration,1153700308.19,110860869.48,True,5
+National Science Foundation,NSF,national-science-foundation,775662102.55,711037984.7,False,5
+Securities and Exchange Commission,SEC,securities-and-exchange-commission,701649736.64,498159347.29,False,5
+Office of Personnel Management,OPM,office-of-personnel-management,537335615.43,198566615.13,False,5
+Smithsonian Institution,SI,,492068915.06,427132309.7,False,5
+Pension Benefit Guaranty Corporation,PBGC,pension-benefit-guaranty-corporation,394364864.13,291626660.21,False,5
+Federal Communications Commission,FCC,federal-communications-commission,370700197.03,62776338.86,False,5
+National Archives and Records Administration,NARA,national-archives-and-records-administration,241073877.84,207686582.24,False,5
+Nuclear Regulatory Commission,NRC,nuclear-regulatory-commission,192923805.28,183407577.41,False,5
+Consumer Financial Protection Bureau,CFPB,consumer-financial-protection-bureau,188349630.21,116253350.41,False,5
+U.S. Agency for Global Media,USAGM,us-agency-for-global-media,165534334.8,71779188.65,False,5
+Peace Corps,PC,peace-corps,146158049.97,68629163.35,False,5
+Government Accountability Office,GAO,government-accountability-office,131976560.0,117398587.27,False,5
+Federal Trade Commission,FTC,federal-trade-commission,112541952.24,93093005.65,False,5
+Millennium Challenge Corporation,MCC,millennium-challenge-corporation,110069411.09,40397428.54,False,5
+U.S. International Development Finance Corporation,DFC,us-international-development-finance-corporation,103623017.2,87384127.33,False,5
+District of Columbia Courts,DC COURTS,district-of-columbia-courts,101489317.2,62556684.96,False,5
+Corporation for National and Community Service,CNCS,corporation-for-national-and-community-service,97557285.71,30258572.84,False,5
+Commodity Futures Trading Commission,CFTC,commodity-futures-trading-commission,89630205.84,67873876.61,False,5
+Executive Office of the President,EOP,executive-office-of-the-president,77299042.68,62096197.61,False,5
+Railroad Retirement Board,RRB,railroad-retirement-board,65461149.07,42984847.65,False,5
+Equal Employment Opportunity Commission,EEOC,equal-employment-opportunity-commission,63561516.23,48610300.69,False,5
+National Gallery of Art,NGA,,56650291.51,53802966.77,False,5
+Consumer Product Safety Commission,CPSC,consumer-product-safety-commission,52138540.15,32912664.46,False,5
+Export-Import Bank of the United States,EXIM,export-import-bank-of-the-united-states,51694299.83,51694299.83,False,5
+Court Services and Offender Supervision Agency,CSOSA,court-services-and-offender-supervision-agency,47336503.54,36968224.75,False,5
+National Labor Relations Board,NLRB,national-labor-relations-board,30688482.68,27337929.65,False,5
+National Transportation Safety Board,NTSB,national-transportation-safety-board,29684092.31,29684092.31,False,5
+United States Trade and Development Agency,USTDA,united-states-trade-and-development-agency,25834919.75,14868872.02,False,5
+International Trade Commission,USITC,international-trade-commission,17797015.35,17797015.35,False,5
+Federal Election Commission,FEC,federal-election-commission,17511776.98,13729726.06,False,5
+Institute of Museum and Library Services,IMLS,institute-of-museum-and-library-services,12719460.59,11866490.63,False,5
+John F. Kennedy Center for the Performing Arts,KENNEDY CENTER,john-f-kennedy-center-for-the-performing-arts,8661193.45,7462114.87,False,4
+Federal Mediation and Conciliation Service,FMCS,federal-mediation-and-conciliation-service,8113545.54,1527484.73,False,5
+Defense Nuclear Facilities Safety Board,DNFSB,defense-nuclear-facilities-safety-board,7481001.09,5948705.18,False,5
+Selective Service System,SSS,selective-service-system,7423930.26,7423930.26,False,5
+Federal Maritime Commission,FMC,federal-maritime-commission,6547801.39,5141006.49,False,5
+National Endowment for the Arts,NEA,national-endowment-for-the-arts,5454582.58,3864613.57,False,5
+Merit Systems Protection Board,MSPB,merit-systems-protection-board,4934015.12,3201752.74,False,5
+Council of the Inspectors General on Integrity and Efficiency,CIGIE,council-of-the-inspectors-general-on-integrity-and-efficiency,4609437.29,4609437.29,False,5
+Committee for Purchase from People Who Are Blind or Severely Disabled,ABILITYONE,committee-for-purchase-from-people-who-are-blind-or-severely-disabled,4079143.84,2064250.29,False,5
+Federal Mine Safety and Health Review Commission,FMSHRC,federal-mine-safety-and-health-review-commission,3904432.29,-461436.78,False,5
+National Endowment for the Humanities,NEH,national-endowment-for-the-humanities,3605567.22,1948159.64,False,5
+Federal Labor Relations Authority,FLRA,federal-labor-relations-authority,2518056.56,1616655.84,False,5
+United States Chemical Safety Board,CSB,united-states-chemical-safety-board,2423077.79,1648617.8,False,4
+Morris K. Udall and Stewart L. Udall Foundation,UDALL,morris-k-udall-and-stewart-l-udall-foundation,1939583.56,311296.71,False,5
+Occupational Safety and Health Review Commission,OSHRC,occupational-safety-and-health-review-commission,1859174.11,1556962.33,False,5
+Federal Housing Finance Agency,FHFA,,992056.0,387811.87,False,5
+American Battle Monuments Commission,ABMC,american-battle-monuments-commission,278000.0,278000.0,False,1
+Administrative Conference of the U.S.,ACUS,administrative-conference-of-the-us,194608.16,26500.0,False,5
+Nuclear Waste Technical Review Board,NWTRB,nuclear-waste-technical-review-board,29835.08,29835.08,False,1

@@ -1,0 +1,54 @@
+{
+  "generated_at_utc": "2026-08-24T21:28:41+00:00",
+  "snapshot_date": "2026-08-24",
+  "fiscal_years": [
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+  ],
+  "award_type_codes": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ],
+  "api_base": "https://api.usaspending.gov/api/v2",
+  "deflator_series": "GDPDEF",
+  "deflator_base_fy": 2025,
+  "competition_competed_codes": [
+    "A",
+    "D",
+    "F",
+    "CDO"
+  ],
+  "notes": "Obligations are transaction-level federal_action_obligation summed server-side by USAspending. Negative values are de-obligations and are retained, so annual figures are net obligations.",
+  "material_agencies": [
+    "Agency for International Development",
+    "Department of Agriculture",
+    "Department of Commerce",
+    "Department of Defense",
+    "Department of Education",
+    "Department of Energy",
+    "Department of Health and Human Services",
+    "Department of Homeland Security",
+    "Department of Housing and Urban Development",
+    "Department of Justice",
+    "Department of Labor",
+    "Department of State",
+    "Department of Transportation",
+    "Department of Veterans Affairs",
+    "Department of the Interior",
+    "Department of the Treasury",
+    "Environmental Protection Agency",
+    "General Services Administration",
+    "National Aeronautics and Space Administration",
+    "Small Business Administration",
+    "Social Security Administration"
+  ],
+  "materiality_floor_usd": 1000000000,
+  "agency_vendor_query_failures": [],
+  "api_cache_hits": 320,
+  "api_network_calls": 0
+}

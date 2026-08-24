@@ -1,0 +1,139 @@
+# ---------------------------------------------------------------------------
+# Federal Contract Spending Efficiency Analysis - pipeline configuration
+#
+# Every analytical choice that is a *judgement call* lives in this file rather
+# than in code, so that reviewers can see and change the assumptions without
+# reading the implementation. Anything derived from these values is reproducible
+# by re-running `fedspend run-all`.
+# ---------------------------------------------------------------------------
+
+project:
+  name: "Federal Contract Spending Efficiency Analysis"
+  base_fiscal_year: 2021
+  latest_fiscal_year: 2025
+  # FY2025 closed 2025-09-30. USAspending contract transactions are considered
+  # settled after roughly 90 days, so FY2025 is treated as complete as of the
+  # snapshot date recorded in data/curated/_manifest.json.
+  fiscal_years: [2021, 2022, 2023, 2024, 2025]
+
+source:
+  api_base: "https://api.usaspending.gov/api/v2"
+  # Procurement award type codes (definitive contracts, purchase orders,
+  # delivery orders and BPA calls). Excludes IDV *vehicles* (award_type_codes
+  # IDV_*) because obligations are recorded on the orders placed against them;
+  # counting both would double count.
+  award_type_codes: ["A", "B", "C", "D"]
+  date_type: "action_date"
+  request_timeout_seconds: 120
+  max_retries: 8
+  retry_backoff_seconds: 2
+  # Cache every API response body to disk keyed by request hash. Re-running the
+  # pipeline is then free and offline-reproducible.
+  cache_enabled: true
+
+deflator:
+  # BEA GDP implicit price deflator, quarterly, via FRED's keyless CSV endpoint.
+  # Fiscal-year deflator = mean of the four quarters Oct(y-1) .. Sep(y).
+  # Chosen over CPI-U because the subject is government purchases of goods and
+  # services, not household consumption.
+  series_id: "GDPDEF"
+  url: "https://fred.stlouisfed.org/graph/fredgraph.csv?id=GDPDEF"
+  base_fiscal_year: 2025   # all real dollars expressed in constant FY2025 USD
+
+# ---------------------------------------------------------------------------
+# Competition taxonomy (FPDS extent_competed)
+#
+# Follows the FPDS-NG / agency competition-rate convention: an action counts as
+# competed only when the *current* action was competed. Code E (follow-on to a
+# competed action) is therefore NOT competed, even though the parent award was.
+# `sensitivity.competition_treat_E_as_competed` re-runs the index under the
+# opposite convention so the finding can be stress-tested.
+# ---------------------------------------------------------------------------
+competition:
+  competed:
+    A: "Full and open competition"
+    D: "Full and open after exclusion of sources"
+    F: "Competed under Simplified Acquisition Procedures"
+    CDO: "Competitive delivery order"
+  not_competed:
+    B: "Not available for competition"
+    C: "Not competed"
+    E: "Follow-on to competed action"
+    G: "Not competed under Simplified Acquisition Procedures"
+    NDO: "Non-competitive delivery order"
+
+# ---------------------------------------------------------------------------
+# Contract pricing risk taxonomy (FPDS type_of_contract_pricing)
+#
+# Ordered by who bears cost-overrun risk. FAR 16.301-2 restricts cost-
+# reimbursement to cases where cost uncertainty prevents a fixed price, and FAR
+# 16.601(c) makes time-and-materials the least preferred vehicle, usable only
+# with a determination that no other type is suitable. Dollars in those buckets
+# are therefore a defensible proxy for government-borne performance risk.
+# ---------------------------------------------------------------------------
+pricing_risk:
+  fixed_price:            # government risk: low
+    A: "Fixed price redetermination"
+    B: "Fixed price level of effort"
+    J: "Firm fixed price"
+    K: "Fixed price with economic price adjustment"
+    L: "Fixed price incentive"
+    M: "Fixed price award fee"
+  cost_reimbursement:     # government risk: high
+    R: "Cost plus award fee"
+    S: "Cost no fee"
+    T: "Cost sharing"
+    U: "Cost plus fixed fee"
+    V: "Cost plus incentive fee"
+  labor_hour:             # government risk: high (FAR 16.601(c) least preferred)
+    Y: "Time and materials"
+    Z: "Labor hours"
+  other:
+    "1": "Order dependent"
+    "2": "Combination"
+    "3": "Other"
+
+# Small-business set-aside codes used to measure set-aside dollar share.
+# NOTE: this measures dollars obligated under a set-aside, which is narrower
+# than total dollars to small businesses (a small firm can win full and open).
+small_business_setaside_codes:
+  ["SBA", "SBP", "8A", "8AN", "HZC", "HZS", "SDVOSBC", "SDVOSBS", "WOSB",
+   "WOSBSS", "EDWOSB", "EDWOSBSS", "HS2", "HS3", "ESB", "SBIR", "STTR",
+   "VSA", "VSS", "RSB", "SB2"]
+
+# ---------------------------------------------------------------------------
+# Analysis parameters
+# ---------------------------------------------------------------------------
+analysis:
+  # Agencies below this FY2025 obligation floor are excluded from the ranked
+  # efficiency index: percentage metrics on a $20M base are too volatile to
+  # rank meaningfully against a $490B base. They remain in all totals.
+  materiality_floor_usd: 1_000_000_000
+  top_n_agencies: 20
+  top_n_vendors: 50
+  # Fiscal Q4 = Jul-Sep; September alone is the "use it or lose it" window.
+  fiscal_q4_months: [7, 8, 9]
+  year_end_month: 9
+  anomaly_robust_z_threshold: 3.0
+
+# ---------------------------------------------------------------------------
+# Composite Contract Efficiency Index (CEI)
+#
+# Five equally-defensible dimensions, each min-max normalised across the ranked
+# agency set to 0-100 where 100 = most efficient. Weights are a stated judgement
+# and are stress-tested in `fedspend sensitivity`.
+# ---------------------------------------------------------------------------
+efficiency_index:
+  weights:
+    competition:      0.30   # share of obligations competed
+    pricing_risk:     0.25   # share NOT in cost-reimbursement or labor-hour
+    vendor_diversity: 0.20   # inverse of vendor HHI within the agency
+    spend_discipline: 0.15   # inverse of September obligation concentration
+    stability:        0.10   # inverse of real YoY growth volatility
+  # Winsorise each raw dimension at these percentiles before normalising so a
+  # single extreme agency cannot compress the whole scale.
+  winsorize: [0.05, 0.95]
+  sensitivity:
+    n_random_weightings: 2000
+    competition_treat_E_as_competed: true
+    equal_weights: true
