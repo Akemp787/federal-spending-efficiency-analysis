@@ -143,7 +143,7 @@ Produced by re-scoring under 2,000 weightings drawn from a flat Dirichlet.
 | `quartile_confidence_pct` | float | Max of the two tail percentages |
 | `quartile_verdict` | str | `robustly bottom quartile` / `robustly top quartile` / **`not separable`** |
 
-> Only 3 of 19 agencies are separable. Treat `not separable` as meaning the rank carries no
+> Only 4 of 19 agencies are separable. Treat `not separable` as meaning the rank carries no
 > information.
 
 ---

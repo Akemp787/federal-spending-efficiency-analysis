@@ -172,7 +172,7 @@ is unambiguous:
 
 A composite Contract Efficiency Index scores 19 material agencies across five dimensions. It is
 published **with** a sensitivity analysis re-scoring every agency under 2,000 random weightings,
-and that analysis is candid: only three agencies hold the same quartile across the weighting
+and that analysis is candid: only four agencies hold the same quartile across the weighting
 distribution. **The ranking's middle is not separable and should not be read as one.** The index
 is a triage device for allocating review effort, not a performance verdict.
 

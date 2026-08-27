@@ -166,7 +166,7 @@ are still being made deliberately or have become the default.
 ### The finding
 
 The Contract Efficiency Index combines five dimensions into one score. Re-scored under 2,000
-weightings drawn uniformly from the simplex, **only 3 of 19 agencies hold their quartile**. Most
+weightings drawn uniformly from the simplex, **only 4 of 19 agencies hold their quartile**. Most
 ranks move enough across defensible weightings that the ordering carries no information.
 
 ### Recommendation

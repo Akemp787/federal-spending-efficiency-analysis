@@ -99,7 +99,7 @@ figure is a magnitude for the surge, not a quantification of waste.
 
 - **The weights are a judgement.** This is the reason the sensitivity analysis exists and is
   published alongside every rank.
-- **Only 3 of 19 agencies hold the same quartile** across 2,000 random weightings. The middle of
+- **Only 4 of 19 agencies hold the same quartile** across 2,000 random weightings. The middle of
   the ranking is **not separable** and should not be reported as an ordering.
 - **The five dimensions are not independent.** An agency with a thin vendor base likely also
   competes less; the composite double-counts to an unquantified degree. A factor analysis would

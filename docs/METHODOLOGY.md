@@ -265,7 +265,7 @@ with negative net obligations has no denominator at all.
 | Normalisation is scale-dependent | Winsorisation before min-max scaling |
 | Aggregation hides the driver | Component sub-scores returned alongside every composite |
 
-**The sensitivity result is reported honestly.** Only 3 of 19 agencies hold the same quartile
+**The sensitivity result is reported honestly.** Only 4 of 19 agencies hold the same quartile
 across the weighting distribution. The middle of the ranking is **not separable**, and the
 documentation says so rather than presenting 19 ranks as equally meaningful. The index is a
 triage device for allocating review effort.
