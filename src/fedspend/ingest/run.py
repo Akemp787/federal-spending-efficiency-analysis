@@ -27,6 +27,8 @@ EXTRACT_FILES = {
     "naics": "naics_fy.parquet",
     "psc": "psc_fy.parquet",
     "state": "state_fy.parquet",
+    "subagency": "subagency_fy.parquet",
+    "agency_psc": "agency_psc_fy.parquet",
     "deflator": "deflator_fy.parquet",
 }
 
@@ -97,6 +99,15 @@ def run_ingest(cfg: Config, *, skip_existing: bool = False) -> dict[str, pd.Data
     if need("agency_vendors"):
         frame, vendor_failures = ex.agency_vendor_totals(agencies, top_n=100)
         out["agency_vendors"] = _save(frame, cfg, "agency_vendors")
+    if need("subagency"):
+        out["subagency"] = _save(ex.subagency_breakdown(agencies), cfg, "subagency")
+    if need("agency_psc"):
+        # Two most recent years only: the portfolio control is a latest-year
+        # comparison, and PSC-level detail for the whole window would quadruple
+        # the call count for no additional finding.
+        out["agency_psc"] = _save(
+            ex.agency_psc_breakdown(agencies, cfg.fiscal_years[-2:]), cfg, "agency_psc"
+        )
     if need("naics"):
         out["naics"] = _save(ex.category_totals("naics", top_n=100), cfg, "naics")
     if need("psc"):

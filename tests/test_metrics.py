@@ -21,6 +21,7 @@ from fedspend.metrics import (
     timing,
 )
 from fedspend.metrics import efficiency_index as cei
+from fedspend.metrics import standardization as stdz
 
 
 # --------------------------------------------------------------- concentration
@@ -367,3 +368,89 @@ class TestEfficiencyIndex:
         s = pd.Series([0, 1, 2, 3, 100])
         out = cei.winsorize(s, 0.0, 0.75)
         assert out.max() == pytest.approx(3.0)
+
+
+# ------------------------------------------------------------ standardisation
+class TestStandardisation:
+    @staticmethod
+    def _frame():
+        # Two agencies. "Hard" buys mostly hardware (1410, a low-competition
+        # stratum); "Easy" buys mostly professional services (R425). Within each
+        # stratum their rates are IDENTICAL - 20% on hardware, 90% on services -
+        # so every point of the observed gap is portfolio, and the standardised
+        # rates must come out equal.
+        return pd.DataFrame(
+            {
+                "agency_name": ["Hard", "Hard", "Easy", "Easy"],
+                "psc_code": ["1410", "R425", "1410", "R425"],
+                "obligations": [900.0, 100.0, 100.0, 900.0],
+                "competed_obligations": [180.0, 90.0, 20.0, 810.0],
+            }
+        )
+
+    def test_psc_category_maps_letters_and_digits(self):
+        assert stdz.psc_category("R425") == "Professional & management support"
+        assert stdz.psc_category("1510") == "Products & equipment"
+        assert stdz.psc_category("AC13") == "R&D"
+        assert stdz.psc_category(None) == "Unclassified"
+
+    def test_identical_within_category_rates_standardise_to_the_same_value(self):
+        out = stdz.standardise_rate(
+            stdz.prepare_strata(self._frame(), min_stratum_share=0.0)
+        ).set_index("agency_name")
+        # observed differs (portfolio), standardised does not (practice)
+        assert out.loc["Hard", "observed_rate"] == pytest.approx(0.27)
+        assert out.loc["Easy", "observed_rate"] == pytest.approx(0.83)
+        assert out.loc["Hard", "standardised_rate"] == pytest.approx(
+            out.loc["Easy", "standardised_rate"]
+        )
+
+    def test_portfolio_effect_is_observed_minus_standardised(self):
+        out = stdz.standardise_rate(stdz.prepare_strata(self._frame(), min_stratum_share=0.0))
+        assert out["portfolio_effect"].values == pytest.approx(
+            (out["observed_rate"] - out["standardised_rate"]).values
+        )
+
+    def test_standardised_rate_never_exceeds_one(self):
+        # Regression guard. The numerator and denominator come from separate API
+        # queries, so a cell can report more competed dollars than total dollars.
+        # Such a cell must be dropped, not propagated into a rate above 100%.
+        df = pd.DataFrame(
+            {
+                "agency_name": ["X", "X"],
+                "psc_code": ["1410", "R425"],
+                "obligations": [100.0, 100.0],
+                "competed_obligations": [400.0, 50.0],  # first stratum is impossible
+            }
+        )
+        out = stdz.standardise_rate(stdz.prepare_strata(df, min_stratum_share=0.0))
+        assert (out["standardised_rate"] <= 1.0).all()
+        assert (out["observed_rate"] <= 1.0).all()
+        assert out["strata_dropped_inconsistent"].iloc[0] == 1
+
+    def test_thin_strata_fold_into_other(self):
+        df = pd.DataFrame(
+            {
+                "agency_name": ["X"] * 3,
+                "psc_code": ["1410", "R425", "U001"],
+                "obligations": [1000.0, 1000.0, 1.0],
+                "competed_obligations": [500.0, 500.0, 1.0],
+            }
+        )
+        out = stdz.prepare_strata(df, min_stratum_share=0.01)
+        assert "Other" in set(out["stratum"])
+
+    def test_coverage_is_reported_when_an_agency_misses_categories(self):
+        df = pd.DataFrame(
+            {
+                "agency_name": ["Full", "Full", "Narrow"],
+                "psc_code": ["1410", "R425", "1410"],
+                "obligations": [500.0, 500.0, 500.0],
+                "competed_obligations": [250.0, 400.0, 250.0],
+            }
+        )
+        out = stdz.standardise_rate(
+            stdz.prepare_strata(df, min_stratum_share=0.0)
+        ).set_index("agency_name")
+        assert out.loc["Full", "reference_coverage"] == pytest.approx(1.0)
+        assert out.loc["Narrow", "reference_coverage"] < 1.0

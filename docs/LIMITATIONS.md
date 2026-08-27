@@ -45,11 +45,10 @@ obligation is attributed to the awarding agency. This materially affects GSA's p
 particular, and it is the reason a franchise-fund agency should not be compared to a
 mission agency without adjustment.
 
-**Top-tier agencies only.** Analysis is at the department level. DoD is treated as one entity
-though Army, Navy, Air Force, and the defence agencies have distinct contracting practices —
-which means the FY2025 DoD competition finding, while robust at department level, does not
-identify *which* component drove it. That is the natural next analysis and requires the
-sub-agency breakdown.
+**Two tiers, not four.** Analysis runs at department and sub-agency level. FPDS carries further
+levels — contracting office, major command — and the Navy finding would be more actionable still
+if it named the command. Office-level attribution is the natural next step and is supported by the
+same API pattern.
 
 ---
 
@@ -65,11 +64,13 @@ sub-agency breakdown.
   not expose. It is implemented in the bulk-archive path
   ([`bulk_archive.py`](../src/fedspend/ingest/bulk_archive.py)) but is **not** in the published
   headline figures.
-- **No control for what is being bought.** An agency buying nuclear propulsion systems has fewer
-  qualified sources than one buying office furniture. Some of the cross-agency variation in
-  competition rate is procurement-category composition, not contracting practice. A properly
-  controlled comparison would decompose by PSC/NAICS — the data for which is collected here
-  (`category_psc`, `category_naics`) but not yet used for that purpose.
+- **The category control is coarse.** Cross-agency comparison is now portfolio-adjusted by
+  direct standardisation (see `METHODOLOGY.md` §3b), which removes the composition objection at
+  the level of PSC first character. But "guided missiles" contains both a sole-source integration
+  contract and a competitive components buy, so the residual gap is an **upper bound** on the
+  practice difference. Finer strata would shrink it; how much is unknown.
+- **Portfolio adjustment covers one fiscal year.** The PSC extract runs for the two most recent
+  years only, so the adjusted rate is a latest-year snapshot rather than a trend.
 
 ### Contract-type risk
 
@@ -133,13 +134,18 @@ figure can be traced to the exact vintage used.
 
 Honest statement of the next steps, in rough order of value:
 
-1. **Sub-agency decomposition of the DoD competition finding** — identify which components drove
-   the 5.3 pp decline. Requires the tier-2 agency breakdown, which the API supports.
-2. **Single-offer rate** via the bulk archive — turns "competed" into "actually contested".
-3. **Category controls** — decompose cross-agency competition differences into procurement-mix
-   versus practice, so agencies are compared on comparable work.
-4. **Corporate-family rollup** of recipients — current vendor HHI understates concentration.
-5. **Outlay linkage** — connect obligations to actual spending to test whether the September
+1. **September quality contrast** — compare the competition rate and fixed-price share of
+   year-end awards against the same agency's October–August baseline. This turns the timing
+   observation into a process finding or retires it. A ~60-call extract; the highest-value next
+   build, and the open question behind recommendation R3.
+2. **Single-offer rate** via the bulk archive — turns "competed" into "actually contested". A
+   competed award drawing one bid satisfied the process without obtaining price discipline.
+3. **Contract-type standardisation** — apply the same portfolio adjustment used for competition
+   to `government_risk_share`, which would settle whether the HHS shift is composition or
+   practice (recommendation R4).
+4. **Contracting-office attribution** within Navy — take the finding from a service to a command.
+5. **Corporate-family rollup** of recipients — current vendor HHI understates concentration.
+6. **Outlay linkage** — connect obligations to actual spending to test whether the September
    surge translates into different execution outcomes.
-6. **Award-level modification analysis** — ceiling growth is implemented but not yet integrated
+7. **Award-level modification analysis** — ceiling growth is implemented but not yet integrated
    into the published findings.

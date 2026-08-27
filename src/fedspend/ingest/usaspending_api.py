@@ -268,6 +268,104 @@ class Extractor:
             log.warning("agency_vendor: %d agency-year queries failed", len(failures))
         return pd.DataFrame(rows), failures
 
+    def subagency_breakdown(self, agencies: list[str]) -> pd.DataFrame:
+        """fiscal_year x sub-agency -> total and competed obligations.
+
+        Sub-tier is where contracting is actually run. "The Department of
+        Defense" does not award contracts; Navy, Army, Air Force and the defence
+        agencies do, under different acquisition commands. A department-level
+        competition finding that cannot say which component moved is not
+        actionable, so this extract exists to close that gap.
+
+        Queried one department at a time rather than government-wide. The
+        unfiltered ``awarding_subagency`` aggregation silently truncates its
+        result set - it stops at roughly 166 sub-agencies and drops the tail,
+        which cost the Department of the Interior its largest component
+        (Departmental Offices, $2.2B in FY2025) and left the roll-up 33% short.
+        Filtering by department returns the complete list and reconciles exactly
+        to the agency total, which the validation suite now asserts.
+        """
+        competed = self.cfg.competed_codes
+        rows: dict[tuple, dict[str, Any]] = {}
+        for fy in self.cfg.fiscal_years:
+            for agency in agencies:
+                base = self._base_filters(fy, agencies=self._agency_filter(agency))
+                try:
+                    totals = self.client.paged_category("awarding_subagency", base)
+                    comp = self.client.paged_category(
+                        "awarding_subagency",
+                        self._base_filters(
+                            fy,
+                            agencies=self._agency_filter(agency),
+                            extent_competed_type_codes=competed,
+                        ),
+                    )
+                except Exception as exc:  # noqa: BLE001 - recorded by the caller
+                    log.warning("subagency FY%s %s FAILED: %s", fy, agency, exc)
+                    continue
+                for r in totals:
+                    key = (fy, agency, r.get("name"))
+                    rows[key] = {
+                        "fiscal_year": fy,
+                        "agency_name": agency,
+                        "subagency_name": r.get("name"),
+                        "subagency_code": r.get("code"),
+                        "obligations": r.get("amount"),
+                        "competed_obligations": 0.0,
+                    }
+                for r in comp:
+                    key = (fy, agency, r.get("name"))
+                    if key in rows:
+                        rows[key]["competed_obligations"] = r.get("amount") or 0.0
+            log.info("subagency FY%s done (%s cumulative rows)", fy, len(rows))
+        return pd.DataFrame(list(rows.values()))
+
+    def agency_psc_breakdown(self, agencies: list[str], fiscal_years: list[int]) -> pd.DataFrame:
+        """agency x product/service code x fiscal_year -> total and competed obligations.
+
+        Feeds the portfolio-adjusted competition rate. Without it, comparing one
+        agency's competition rate to another's compares what they buy as much as
+        how they buy it: an agency procuring nuclear propulsion has fewer
+        qualified sources than one procuring office furniture, and no amount of
+        contracting reform changes that.
+        """
+        competed = self.cfg.competed_codes
+        rows: dict[tuple, dict[str, Any]] = {}
+        for fy in fiscal_years:
+            for agency in agencies:
+                base = self._base_filters(fy, agencies=self._agency_filter(agency))
+                try:
+                    totals = self.client.paged_category("psc", base, page_limit=100, max_pages=3)
+                    comp = self.client.paged_category(
+                        "psc",
+                        self._base_filters(
+                            fy,
+                            agencies=self._agency_filter(agency),
+                            extent_competed_type_codes=competed,
+                        ),
+                        page_limit=100,
+                        max_pages=3,
+                    )
+                except Exception as exc:  # noqa: BLE001 - recorded by the caller
+                    log.warning("psc FY%s %s FAILED: %s", fy, agency, exc)
+                    continue
+                for r in totals:
+                    key = (fy, agency, r.get("code"))
+                    rows[key] = {
+                        "fiscal_year": fy,
+                        "agency_name": agency,
+                        "psc_code": r.get("code"),
+                        "psc_name": r.get("name"),
+                        "obligations": r.get("amount"),
+                        "competed_obligations": 0.0,
+                    }
+                for r in comp:
+                    key = (fy, agency, r.get("code"))
+                    if key in rows:
+                        rows[key]["competed_obligations"] = r.get("amount") or 0.0
+            log.info("agency_psc FY%s done (%s cumulative rows)", fy, len(rows))
+        return pd.DataFrame(list(rows.values()))
+
     def category_totals(self, category: str, top_n: int = 100) -> pd.DataFrame:
         """fiscal_year -> top values of an arbitrary spending category."""
         rows = []

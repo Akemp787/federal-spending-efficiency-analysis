@@ -238,6 +238,76 @@ def check_decomposition_reconciles(cfg: Config, tolerance: float = 1e-9) -> Chec
     )
 
 
+
+def check_standardised_rates_bounded(cfg: Config) -> CheckResult:
+    """Portfolio-adjusted rates must lie in [0, 1].
+
+    The numerator and denominator of each stratum come from two separate API
+    queries, so a cell can report more competed dollars than total dollars and
+    push a standardised rate above 100%. That defect shipped once; this check
+    exists so it cannot ship silently again.
+    """
+    path = cfg.curated_dir / "portfolio_adjusted_competition.parquet"
+    if not path.exists():
+        return CheckResult(
+            "standardised_rates_bounded", True, WARN, "table not built", {}
+        )
+    df = pd.read_parquet(path)
+    bad = df[
+        (df["standardised_rate"] > 1 + 1e-9)
+        | (df["standardised_rate"] < -1e-9)
+        | (df["observed_rate"] > 1 + 1e-9)
+    ]
+    return CheckResult(
+        "standardised_rates_bounded",
+        bad.empty,
+        ERROR,
+        f"{len(bad)} of {len(df)} agencies have a rate outside [0, 1]",
+        {
+            "offenders": bad["agency_name"].tolist(),
+            "dropped_inconsistent_cells": int(
+                df["strata_dropped_inconsistent"].sum()
+            ),
+        },
+    )
+
+
+def check_subagency_rolls_up_to_agency(cfg: Config, tolerance: float = 0.02) -> CheckResult:
+    """Sub-agency obligations must sum to their parent department's total.
+
+    The sub-agency extract is retrieved independently of the agency extract, so
+    agreement between them is a genuine cross-check rather than a tautology.
+    """
+    sub_path = cfg.curated_dir / "subagency_competition.parquet"
+    if not sub_path.exists():
+        return CheckResult("subagency_rolls_up", True, WARN, "table not built", {})
+
+    sub = pd.read_parquet(sub_path)
+    agency = pd.read_parquet(cfg.interim_dir / "agency_fy.parquet")
+    rolled = sub.groupby(["fiscal_year", "agency_name"], as_index=False)["obligations"].sum()
+    merged = agency.merge(
+        rolled, on=["fiscal_year", "agency_name"], how="inner", suffixes=("_total", "_rolled")
+    )
+    merged = merged[merged["obligations_total"].abs() > 1e9]
+    merged["rel_diff"] = (
+        merged["obligations_rolled"] - merged["obligations_total"]
+    ) / merged["obligations_total"]
+    breaches = merged[merged["rel_diff"].abs() > tolerance]
+    return CheckResult(
+        "subagency_rolls_up_to_agency",
+        breaches.empty,
+        ERROR,
+        f"{len(breaches)} of {len(merged)} agency-years exceed {tolerance:.0%} tolerance",
+        {
+            "agency_years_checked": int(len(merged)),
+            "max_abs_rel_diff": float(merged["rel_diff"].abs().max()) if len(merged) else 0.0,
+            "worst": breaches.nlargest(3, "rel_diff")[
+                ["fiscal_year", "agency_name", "rel_diff"]
+            ].to_dict("records"),
+        },
+    )
+
+
 # ---------------------------------------------------------------------------
 def run_all(cfg: Config) -> pd.DataFrame:
     """Run the full suite and return one row per check."""
@@ -254,6 +324,8 @@ def run_all(cfg: Config) -> pd.DataFrame:
         check_negative_obligations(fact),
         check_index_population(cfg),
         check_decomposition_reconciles(cfg),
+        check_standardised_rates_bounded(cfg),
+        check_subagency_rolls_up_to_agency(cfg),
     ]
 
     for r in results:

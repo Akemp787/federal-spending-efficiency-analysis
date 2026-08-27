@@ -108,6 +108,59 @@ agency's contribution readable. Uncentred, a growing agency always shows a posit
 regardless of whether it competes more or less than average, which inverts the sign of the thing
 the reader is trying to understand.
 
+### Sub-agency attribution
+
+The same decomposition runs a level down, within each department, over its sub-agencies. This is
+not a refinement but the level at which the finding becomes actionable: a department is an
+accounting entity, while its components are the organisations that run acquisition.
+
+**A data defect found by validation.** The first implementation retrieved all sub-agencies in one
+government-wide query. The roll-up contract (`subagency_rolls_up_to_agency`) failed immediately:
+the Department of the Interior came up 33% short in every year. The unfiltered
+`awarding_subagency` aggregation silently truncates at roughly 166 rows and drops the tail — in
+Interior's case its *largest* component, Departmental Offices at $2.2B. Querying per department
+returns complete lists that reconcile exactly. The check is the only reason this was caught
+before publication, which is the argument for writing reconciliation contracts at all.
+
+---
+
+## 3b. Portfolio adjustment (direct standardisation)
+
+Comparing agency competition rates compares *what they buy* as much as *how they buy it*. An
+agency procuring nuclear propulsion has a handful of qualified sources; one procuring office
+furniture has hundreds.
+
+The fix is the technique epidemiology uses to compare mortality across populations with different
+age structures. With ``w_as`` the agency's own share of spend in product category *s*, ``W_s`` the
+government-wide share, and ``r_as`` the agency's within-category rate:
+
+```
+observed      R_a  = sum_s ( w_as * r_as )
+standardised  R*_a = sum_s ( W_s  * r_as )
+```
+
+`R*_a` is what the agency's rate would be if it bought the government's basket, so it compares
+practice to practice. `R_a − R*_a` is the portfolio effect.
+
+**Strata.** Product and Service Code first character — letters are services (A is R&D), digits are
+the Federal Supply Classification. Categories below 0.5% of reference spend are folded into
+"Other", because a within-category rate on a negligible base is not stable.
+
+**Two guards.**
+1. *Coverage.* Where an agency has no spend in a reference category its rate is undefined.
+   Reference weights are renormalised over the categories it does participate in, and
+   `reference_coverage` reports how much of the basket that represents. A standardised rate on
+   thin coverage is published but must not be ranked.
+2. *Internally inconsistent cells.* The numerator and denominator come from two separate API
+   queries, so a cell can report more competed dollars than total dollars and drive a
+   standardised rate above 100% — which it did, once, at 153.8%. Such cells are **dropped rather
+   than clamped**, because clamping silently retains a value known to be wrong, and the count is
+   reported per agency. A validation contract now asserts every rate lies in [0, 1].
+
+**What it does not fix.** PSC categories are coarse: "guided missiles" contains both a sole-source
+integration contract and a competitive components buy. The residual gap is therefore an *upper
+bound* on the practice difference, not a point estimate.
+
 ---
 
 ## 4. Contract-type risk
@@ -224,7 +277,7 @@ competition-only, risk-weighted) with the rank spread reported per agency.
 
 ## 9. Validation
 
-Ten contracts run on every build; ERROR-severity failures fail CI.
+Twelve contracts run on every build; ERROR-severity failures fail CI.
 
 The most important is **cross-tab reconciliation**. The competition table is assembled from nine
 separate API calls per agency-year, one per FPDS code; the pricing table from sixteen. If those
@@ -241,6 +294,8 @@ every downstream figure is suspect.
 | Shares within [0, 1] | PASS |
 | Deflator monotonic | PASS |
 | Shift-share reconciles exactly | PASS — max residual 3.4e-16 |
+| Standardised rates within [0, 1] | PASS — 19/19 agencies |
+| Sub-agency rolls up to agency | PASS — 98/98 agency-years within 2% |
 | Index population above floor | PASS |
 | Net-negative obligations | WARN — 4 agency-years flagged for interpretation |
 
@@ -259,16 +314,17 @@ src/fedspend/
   ingest/                   cached, retrying API client + extract orchestration
   transform/                deflator and normalisation
   metrics/                  concentration · competition · pricing_risk · timing
-                            growth · anomaly · decomposition · efficiency_index
+                            growth · anomaly · decomposition · standardization
+                            efficiency_index
   warehouse/                DuckDB build + SQL view installation
   validate/                 data-quality contracts
   report/                   SVG charts, dashboard, BI exports
   analysis.py               orchestration: extracts → curated tables
   cli.py                    fedspend <stage>
 sql/                        analytic views (independent expression of the metrics)
-tests/                      63 known-answer tests, no network
+tests/                      69 known-answer tests, no network
 ```
 
 Data flows one way: `data/raw` (cache) → `data/interim` (tidy extracts) →
-`data/curated` (analytical tables + DuckDB) → `outputs` (dashboard, CSV exports).
+`data/curated` (25 analytical tables + DuckDB) → `outputs` (dashboard, CSV exports).
 Each stage reads the previous stage from disk, so any stage can be re-run alone.

@@ -407,3 +407,70 @@ def legend(names: list[str]) -> str:
         for i, n in enumerate(names)
     )
     return f'<div class="legend">{items}</div>'
+
+
+def dumbbell_chart(
+    labels: list[str],
+    left_values: list[float],
+    right_values: list[float],
+    *,
+    title: str,
+    desc: str,
+    left_name: str,
+    right_name: str,
+    value_fmt=lambda v: f"{v:.1f}%",
+    width: int = 720,
+    row_height: int = 26,
+    label_width: int = 230,
+) -> str:
+    """Paired-dot rows connected by a rule.
+
+    The right form for "same subject, two measures" - here an agency's observed
+    competition rate against its portfolio-adjusted rate. A grouped bar chart
+    would encode the same numbers but bury the thing that matters, which is the
+    length and direction of the gap between the pair.
+    """
+    height = len(labels) * row_height + 46
+    box = Box(width, height, left=label_width, right=76, top=16, bottom=30)
+
+    everything = [v for v in (*left_values, *right_values)]
+    lo, hi = min(everything), max(everything)
+    pad = (hi - lo) * 0.10 or 1.0
+    lo, hi = lo - pad, hi + pad
+
+    def x_of(v: float) -> float:
+        return box.left + (v - lo) / (hi - lo) * box.plot_w
+
+    out = [_svg_open(box, title, desc)]
+    for i, (label, a, b) in enumerate(zip(labels, left_values, right_values, strict=True)):
+        y = box.top + i * row_height + (row_height - 10) / 2 + 5
+        xa, xb = x_of(a), x_of(b)
+        out.append(
+            f'<line class="dumbbell" x1="{xa:.1f}" y1="{y:.1f}" x2="{xb:.1f}" y2="{y:.1f}" />'
+        )
+        out.append(
+            f'<circle class="dot" cx="{xa:.1f}" cy="{y:.1f}" r="5" '
+            f'style="fill:{SERIES[0]}" '
+            f'data-tip="&lt;strong&gt;{esc(label)}&lt;/strong&gt;'
+            f'&lt;span class=\'tt-row\'&gt;{esc(left_name)}: &lt;b&gt;{esc(value_fmt(a))}'
+            f'&lt;/b&gt;&lt;/span&gt;&lt;span class=\'tt-row\'&gt;{esc(right_name)}: '
+            f'&lt;b&gt;{esc(value_fmt(b))}&lt;/b&gt;&lt;/span&gt;" />'
+        )
+        out.append(
+            f'<circle class="dot" cx="{xb:.1f}" cy="{y:.1f}" r="5" '
+            f'style="fill:{SERIES[1]}" '
+            f'data-tip="&lt;strong&gt;{esc(label)}&lt;/strong&gt;'
+            f'&lt;span class=\'tt-row\'&gt;{esc(left_name)}: &lt;b&gt;{esc(value_fmt(a))}'
+            f'&lt;/b&gt;&lt;/span&gt;&lt;span class=\'tt-row\'&gt;{esc(right_name)}: '
+            f'&lt;b&gt;{esc(value_fmt(b))}&lt;/b&gt;&lt;/span&gt;" />'
+        )
+        out.append(
+            f'<text class="row-label" x="{box.left - 10}" y="{y + 4:.1f}" '
+            f'text-anchor="end">{esc(label)}</text>'
+        )
+        out.append(
+            f'<text class="value-label" x="{box.left + box.plot_w + 8}" y="{y + 4:.1f}" '
+            f'text-anchor="start">{esc(value_fmt(b))}</text>'
+        )
+    out.append("</svg>")
+    return "".join(out)

@@ -123,6 +123,8 @@ svg.chart{display:block;width:100%;height:auto;min-width:520px}
 .marker{stroke:var(--surface-1);stroke-width:2}
 .bar{stroke:var(--surface-1);stroke-width:1}
 .range,.range-cap{stroke:var(--text-muted);stroke-width:1.5}
+.dumbbell{stroke:var(--border-strong);stroke-width:2;stroke-linecap:round}
+.dot{stroke:var(--surface-1);stroke-width:1.5}
 .tick{font:400 11px var(--mono);fill:var(--text-muted)}
 .row-label{font:400 12px var(--sans);fill:var(--text-secondary)}
 .value-label{font:400 11.5px var(--mono);fill:var(--text-secondary)}

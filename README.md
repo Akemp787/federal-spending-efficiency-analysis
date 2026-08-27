@@ -10,6 +10,7 @@ test, and where oversight effort would be best spent.
 [**Executive summary**](docs/EXECUTIVE_SUMMARY.md) ·
 [Methodology](docs/METHODOLOGY.md) ·
 [Data dictionary](docs/DATA_DICTIONARY.md) ·
+[**Recommendations**](docs/RECOMMENDATIONS.md) ·
 [Limitations](docs/LIMITATIONS.md) ·
 [Interactive dashboard](outputs/dashboard.html)
 
@@ -30,20 +31,36 @@ Defense alone contributes **−3.67 of the −3.97 pp**, its own competed share 
 **58.0% to 52.7%** while its share of federal contract dollars grew. Had DoD merely held its
 FY2024 rate, **$25.9B more** would have been competed.
 
-**3 · The year-end surge is the highest in five years.**
+**3 · One component drives it: the Navy.**
+Running the same decomposition a level down localises the Defense move to the **Department of
+the Navy**, which contributed −3.98 pp of Defense's −5.25 pp. Navy's competed share fell from
+**45.8% to 36.6%** on $176.6B — while the Air Force moved the *other way*. Chaining the two
+decompositions, **Navy alone accounts for roughly 70% of the entire government-wide decline**,
+worth **$16.2B** against its own prior-year rate.
+
+**4 · The "we buy harder things" defence explains 6 points of a 30-point gap.**
+Direct standardisation holds the product mix at the government-wide basket so only
+within-category practice varies. Defense's observed 50.9% becomes **57.0%** adjusted, against a
+civilian median of **80.5%**. Its portfolio explains **6.1 points**; the remaining **23.5** is
+competing less than other agencies *within the same product categories*.
+
+**5 · The year-end surge is the highest in five years.**
 September carried **19.0%** of FY2025 obligations against an 8.3% even pace — **$83.4B above a
 level pace**, up from 16.2% in FY2023.
 
-**4 · FY2025 split the portfolio.**
+**6 · FY2025 split the portfolio.**
 Defense (+$45.6B), Veterans Affairs (+$11.4B) and Homeland Security (+$4.7B) grew while HHS
 (−28.7%), USAID (−44.9%) and GSA (−10.2%) contracted. HUD posted **net-negative obligations** for
 the full year. Agency-level HHI rose from 3,800 to **4,158**.
 
-**5 · The ranking is published with its own uncertainty.**
+**7 · The ranking is published with its own uncertainty.**
 The Contract Efficiency Index scores 19 agencies across five dimensions — and is re-scored under
 **2,000 random weightings**. Only 3 of 19 hold their quartile. The documentation states plainly
 that **the middle of the ranking is not separable**, because an index whose weights are a
 judgement should be presented as a triage device, not a verdict.
+
+Six costed recommendations, each with the evidence that would falsify it, are in
+[**docs/RECOMMENDATIONS.md**](docs/RECOMMENDATIONS.md).
 
 > Nothing here identifies waste, fraud, or abuse. Every output is a prioritisation signal.
 > See [Limitations](docs/LIMITATIONS.md).
@@ -64,8 +81,8 @@ this README from the public API in roughly 15 minutes. Responses are cached unde
 request body, so the second run is instant and offline.
 
 ```bash
-make test        # 63 known-answer tests, no network
-make validate    # 10 data-quality contracts
+make test        # 69 known-answer tests, no network
+make validate    # 12 data-quality contracts
 fedspend query --sql "SELECT * FROM v_gov_headline"
 ```
 
@@ -78,17 +95,17 @@ USAspending v2 API ──▶ data/raw/_api_cache/   content-addressed responses
                               │
        FRED GDPDEF ───────────┤
                               ▼
-                       data/interim/          11 tidy long extracts
+                       data/interim/          13 tidy long extracts
                               ▼
-                       data/curated/          21 analytical tables + fedspend.duckdb
+                       data/curated/          25 analytical tables + fedspend.duckdb
                               ▼
-                       outputs/               dashboard.html · 16 BI-ready CSVs
+                       outputs/               dashboard.html · 18 BI-ready CSVs
 ```
 
 **Ingestion.** A retrying, rate-limited, disk-cached client pulls agency × fiscal-year
 cross-tabulations by extent-of-competition (9 FPDS codes), contract pricing type (16 codes),
-fiscal month (12 slices), set-aside status, and per-agency vendor breakdowns — building 345
-agency-years of measures. Failures on individual agency-year queries are recorded in the run
+fiscal month (12 slices), set-aside status, per-agency vendor breakdowns, sub-agency
+competition, and agency x product-category cross-tabs — building 345 agency-years of measures. Failures on individual agency-year queries are recorded in the run
 manifest rather than aborting the run or silently zeroing a value.
 
 **Why the API and not the 30GB bulk archive.** The aggregation endpoints compute every
@@ -104,7 +121,7 @@ year. Cumulative FY2021–FY2025 inflation is 17.9%, which is the entire reason 
 **Warehouse.** DuckDB, loaded from parquet, with the analytic layer expressed as SQL views in
 [`sql/`](sql/) — an independent expression of the same metrics.
 
-**Validation.** Ten contracts, ERROR-severity failures break CI. The important one is
+**Validation.** Twelve contracts, ERROR-severity failures break CI. The important one is
 reconciliation: the competition table is assembled from nine separate API calls per agency-year,
 so if those slices do not sum back to the independently-retrieved agency total, every downstream
 figure is suspect. **All 325 agency-years reconcile within 1%.**
@@ -121,6 +138,8 @@ figure is suspect. **All 325 agency-years reconcile within 1%.**
 | **Truncation handled explicitly** | Vendor HHI uses top-100 recipients but computes shares against *true* agency totals, making it a strict lower bound rather than a biased estimate. `coverage_share` ships alongside every value. |
 | **Weight sensitivity by Dirichlet sampling** | The index weights are a judgement, so the index is re-scored 2,000 times under weightings drawn uniformly from the simplex — and the honest conclusion, that most ranks are not separable, is the headline rather than a footnote. |
 | **Config-driven assumptions** | Competition taxonomy, FAR-grounded pricing-risk buckets, materiality floor, and index weights all live in [`config/pipeline.yml`](config/pipeline.yml), so a reviewer can change an assumption without reading the code. |
+| **Direct standardisation** | Borrowed from epidemiology's age-standardised mortality rate: hold the product mix constant so cross-agency comparison measures practice rather than mission. It converts the most common objection to a competition league table into a testable, and rejected, hypothesis. |
+| **A validation check that caught a real defect** | The sub-agency roll-up contract failed on first run: the government-wide `awarding_subagency` query silently truncates and had dropped Interior's largest component. Switching to per-department queries fixed it. The check is why it was found rather than published. |
 | **Growth suppressed off a non-positive base** | Publishing a 40,000% jump because an agency obligated $12k in the base year is how a portfolio project loses credibility. |
 
 ---
@@ -133,15 +152,17 @@ src/fedspend/
   ingest/                    API client (cache + retry), extract orchestration, bulk archive
   transform/                 GDP deflator → constant dollars
   metrics/                   concentration · competition · pricing_risk · timing
-                             growth · anomaly · decomposition · efficiency_index
+                             growth · anomaly · decomposition · standardization
+                             efficiency_index
   warehouse/                 DuckDB build, SQL view installation
   validate/                  data-quality contracts
   report/                    inline-SVG charts, dashboard, BI exports
-  analysis.py                extracts → 21 curated tables
+  analysis.py                extracts → 25 curated tables
   cli.py                     fedspend <stage>
 sql/                         analytic views over the warehouse
-tests/                       63 known-answer tests
-docs/                        executive summary · methodology · data dictionary · limitations
+tests/                       69 known-answer tests
+docs/                        executive summary · recommendations · methodology
+                             data dictionary · limitations
 data/samples/                committed outputs, so a clone verifies findings without re-pulling
 outputs/                     dashboard.html · star-schema CSVs for Power BI/Tableau
 ```

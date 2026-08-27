@@ -65,7 +65,49 @@ explanation.
 
 ---
 
-## Finding 3 — The year-end surge is the highest in five years
+## Finding 3 — Inside Defense, the Navy accounts for three-quarters of the move
+
+Departments do not award contracts; their components do, under separate acquisition commands.
+Running the same decomposition one level down localises Defense's −5.25 pp internal change:
+
+| Component | FY2025 obligations | Competed FY2024 → FY2025 | Contribution |
+|---|---:|---:|---:|
+| **Department of the Navy** | $176.6B | **45.8% → 36.6%** | **−3.98 pp (76%)** |
+| Department of the Army | $107.4B | 61.5% → 55.1% | −1.45 pp |
+| Department of the Air Force | $98.5B | 46.4% → **49.6%** | **+0.92 pp** |
+| Defense Logistics Agency | $55.9B | 82.6% → 81.4% | −0.27 pp |
+
+Chaining the two decompositions, **the Navy alone accounts for roughly 70% of the
+government-wide decline**. Had it held its FY2024 rate, **$16.2B more** would have been competed.
+Navy's non-competed obligations totalled **$112.0B**.
+
+The Air Force moved the *other* way, which is what makes this a Navy question rather than a
+defence-wide one — and what a department-level metric conceals.
+
+---
+
+## Finding 4 — The "we buy harder things" defence explains 6 points of a 30-point gap
+
+The standard objection to a low competition rate is that the mission requires sole-source buying.
+Direct standardisation tests it: hold the product mix at the government-wide basket, and let only
+within-category rates vary.
+
+| | Observed | Portfolio-adjusted | Explained by mix |
+|---|---:|---:|---:|
+| Department of Defense | 50.9% | **57.0%** | 6.1 pp |
+| Civilian agency median | — | **80.5%** | — |
+
+Defense's product mix accounts for **6.1 percentage points**. After adjustment it remains
+**23.5 points** below the civilian median — competing less than other agencies *within the same
+product categories*.
+
+**Caveat stated up front:** Product and Service Codes are coarse, so 23.5 pp is an *upper bound*
+on the practice gap. Finer strata would shrink it. Reference coverage is reported per agency
+(Defense: 0.98), so this is not a thin-cell artefact.
+
+---
+
+## Finding 5 — The year-end surge is the highest in five years
 
 Annual appropriations expire on 30 September. In FY2025, September carried **19.0% of the year's
 contract obligations** against an even-pace expectation of 8.3% — **$83.4B above a level pace**,
@@ -79,7 +121,7 @@ larger than it has been at any point in five years.
 
 ---
 
-## Finding 4 — FY2025 split the portfolio
+## Finding 6 — FY2025 split the portfolio
 
 Beneath a +5.1% government-wide move, agency-level changes were unusually large and unusually
 one-directional.
@@ -99,7 +141,7 @@ agencies' share from 79.5% to **83.0%**.
 
 ---
 
-## Finding 5 — A second risk signal is moving independently
+## Finding 7 — A second risk signal is moving independently
 
 Contract-type risk (cost-reimbursement plus time-and-materials dollars, where the government
 rather than the contractor absorbs overruns) was flat government-wide at 33.0%. Underneath that,
@@ -141,5 +183,6 @@ is a triage device for allocating review effort, not a performance verdict.
 Nothing here identifies waste, fraud, or abuse. Sole-source awards are frequently lawful and
 correct; cost-reimbursement contracts are appropriate for research and complex services;
 September awards are often the normal end of a programme cycle. Every output is a prioritisation
-signal indicating where contract-level examination would be most productive. Full treatment in
+signal indicating where contract-level examination would be most productive. Six costed recommendations, each stating what would falsify it, are in
+[`RECOMMENDATIONS.md`](RECOMMENDATIONS.md). Full treatment of the caveats is in
 [`LIMITATIONS.md`](LIMITATIONS.md).

@@ -22,6 +22,7 @@ from .metrics import (
     timing,
 )
 from .metrics import pricing_risk as pricing
+from .metrics import standardization as stdz
 from .transform.deflator import deflate
 
 log = get_logger(__name__)
@@ -48,6 +49,10 @@ CURATED_FILES = {
     "competition_decomposition": "competition_decomposition.parquet",
     "competition_decomposition_series": "competition_decomposition_series.parquet",
     "risk_decomposition_series": "risk_decomposition_series.parquet",
+    "subagency_competition": "subagency_competition.parquet",
+    "subagency_decomposition": "subagency_decomposition.parquet",
+    "portfolio_adjusted_competition": "portfolio_adjusted_competition.parquet",
+    "portfolio_stratum_detail": "portfolio_stratum_detail.parquet",
 }
 
 
@@ -452,6 +457,7 @@ def run_analysis(cfg: Config) -> dict[str, pd.DataFrame]:
         "top_vendors",
     )
 
+    floor = float(cfg["analysis"]["materiality_floor_usd"])
     material = fact[fact["is_material"]]
     out["agency_trend"] = _save(
         growth.trend_summary(material, ["agency_name"]), cfg, "agency_trend"
@@ -540,6 +546,57 @@ def run_analysis(cfg: Config) -> dict[str, pd.DataFrame]:
         ),
         cfg,
         "risk_migration",
+    )
+
+    # ---- sub-agency: where contracting is actually run ---------------------
+    sub = _read(cfg, "subagency_fy.parquet")
+    sub["competed_share"] = (
+        sub["competed_obligations"].clip(lower=0) / sub["obligations"].clip(lower=0)
+    ).where(sub["obligations"] > 0)
+    sub["not_competed_obligations"] = (
+        sub["obligations"].clip(lower=0) - sub["competed_obligations"].clip(lower=0)
+    )
+    out["subagency_competition"] = _save(sub, cfg, "subagency_competition")
+
+    # Decompose each department's own competition move across its components.
+    frames = []
+    for agency, grp in sub.dropna(subset=["competed_share"]).groupby("agency_name"):
+        if grp["fiscal_year"].nunique() < 2 or grp["subagency_name"].nunique() < 2:
+            continue
+        contrib, summary = decomposition.shift_share(
+            grp,
+            group_col="subagency_name",
+            weight_col="obligations",
+            rate_col="competed_share",
+            base_period=cfg.latest_fy - 1,
+            latest_period=cfg.latest_fy,
+        )
+        contrib["agency_name"] = agency
+        contrib["agency_total_change"] = summary["total_change"]
+        frames.append(contrib)
+    out["subagency_decomposition"] = _save(
+        pd.concat(frames, ignore_index=True) if frames else pd.DataFrame(),
+        cfg,
+        "subagency_decomposition",
+    )
+
+    # ---- portfolio-adjusted competition ------------------------------------
+    psc = _read(cfg, "agency_psc_fy.parquet")
+    scored = set(
+        fact[(fact["fiscal_year"] == cfg.latest_fy) & (fact["obligations"] >= floor)][
+            "agency_name"
+        ]
+    )
+    psc_latest = stdz.prepare_strata(
+        psc[(psc["fiscal_year"] == cfg.latest_fy) & (psc["agency_name"].isin(scored))]
+    )
+    adjusted = stdz.standardise_rate(psc_latest)
+    adjusted["fiscal_year"] = cfg.latest_fy
+    out["portfolio_adjusted_competition"] = _save(
+        adjusted, cfg, "portfolio_adjusted_competition"
+    )
+    out["portfolio_stratum_detail"] = _save(
+        stdz.stratum_detail(psc_latest), cfg, "portfolio_stratum_detail"
     )
 
     for key, fname in (
