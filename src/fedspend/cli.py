@@ -11,6 +11,7 @@ what the Makefile and CI invoke.
     fedspend report      render dashboard + tables -> outputs/
     fedspend sample      refresh the committed sample extracts
     fedspend powerbi     build the Power BI star schema + theme -> powerbi/
+    fedspend deck        build the PowerPoint leave-behind -> outputs/*.pptx
     fedspend query       run ad-hoc SQL against the warehouse
     fedspend all         ingest -> analyse -> warehouse -> validate -> report -> powerbi
 """
@@ -78,6 +79,32 @@ def cmd_powerbi(args: argparse.Namespace) -> int:
     from .report.powerbi import build_powerbi_package
 
     build_powerbi_package(_cfg(args))
+    return 0
+
+
+def cmd_deck(args: argparse.Namespace) -> int:
+    """Refresh the deck's data, then run the PowerPoint generator."""
+    import shutil
+    import subprocess
+
+    from .report.deck_data import write_deck_data
+
+    cfg = _cfg(args)
+    write_deck_data(cfg)
+
+    node = shutil.which("node")
+    if node is None:
+        log.warning(
+            "node not found - deck/deck_data.json refreshed, but the .pptx was not "
+            "rebuilt. Install Node.js and run: node deck/build_deck.js"
+        )
+        return 0
+    script = cfg.root / "deck" / "build_deck.js"
+    result = subprocess.run([node, str(script)], cwd=cfg.root, capture_output=True, text=True)
+    if result.returncode != 0:
+        log.error("deck generator failed:\n%s", result.stderr.strip()[:2000])
+        return result.returncode
+    log.info("%s", result.stdout.strip())
     return 0
 
 
@@ -158,6 +185,9 @@ def build_parser() -> argparse.ArgumentParser:
     sub.add_parser(
         "powerbi", help="build the Power BI star schema and theme"
     ).set_defaults(func=cmd_powerbi)
+    sub.add_parser(
+        "deck", help="build the PowerPoint leave-behind (requires Node.js)"
+    ).set_defaults(func=cmd_deck)
 
     q = sub.add_parser("query", help="run SQL against the warehouse")
     q.add_argument("--sql", help="SQL string")

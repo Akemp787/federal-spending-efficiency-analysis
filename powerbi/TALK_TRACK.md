@@ -11,7 +11,7 @@ this can't tell you.*
 
 ## Page 1 · Executive summary — 60 seconds
 
-> "This is five years of federal contract data — $3.58 trillion across 69 agencies, pulled from
+> "This is five years of federal contract data — $3.58 trillion across 71 agencies, pulled from
 > the USAspending API and run through a pipeline I built. Four things came out of it. Spending
 > looks like it grew 23%, but nearly all of that is inflation. Competition fell to a five-year
 > low, and almost all of the drop traces to a single organisation. September spending hit a

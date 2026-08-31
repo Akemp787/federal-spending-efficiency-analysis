@@ -3,7 +3,7 @@
 
 PY ?= python
 
-.PHONY: help install ingest analyse warehouse validate report powerbi sample all test lint clean distclean
+.PHONY: help install ingest analyse warehouse validate report powerbi deck sample all test lint clean distclean
 
 help:
 	@echo "install    editable install with dev extras"
@@ -13,6 +13,7 @@ help:
 	@echo "validate   run data-quality contracts (fails the build on ERROR)"
 	@echo "report     render dashboard and BI exports into outputs/"
 	@echo "powerbi    build the Power BI star schema + theme into powerbi/"
+	@echo "deck       build the PowerPoint leave-behind (needs Node.js)"
 	@echo "all        ingest -> analyse -> warehouse -> validate -> report -> powerbi"
 	@echo "test       run the pytest suite"
 	@echo "lint       ruff check"
@@ -38,6 +39,9 @@ report:
 
 powerbi:
 	$(PY) -m fedspend.cli powerbi
+
+deck:
+	$(PY) -m fedspend.cli deck
 
 sample:
 	$(PY) -m fedspend.cli sample

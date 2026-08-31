@@ -21,6 +21,7 @@ clean checkout.
 | [**Findings notebook**](notebooks/02_findings.ipynb) | The analysis with charts, rendered on GitHub — no setup needed. |
 | [Interactive dashboard](outputs/dashboard.html) | The whole story as one page. Download and open it; it works offline. |
 | [**Power BI report**](powerbi/README.md) | A modelled star schema, DAX measures, theme and page-by-page build guide for a ten-page deck. |
+| [**Slide deck**](outputs/Federal_Contract_Efficiency.pptx) | A twelve-slide PowerPoint walkthrough, generated from the analysis tables. |
 
 For how the project treats the limits of its own conclusions, see
 [Limitations](docs/LIMITATIONS.md) — the section most worth a reviewer's attention.
@@ -225,7 +226,22 @@ notebooks/              pipeline walkthrough · findings · index deep-dive
 data/samples/           committed results, so a fresh clone can verify the findings
 outputs/                dashboard.html · CSVs formatted for Power BI / Tableau
 powerbi/                star schema, DAX, theme, build guide and talk track
+deck/                   PowerPoint generator, driven by the analysis tables
 ```
+
+---
+
+## The slide deck
+
+[`outputs/Federal_Contract_Efficiency.pptx`](outputs/Federal_Contract_Efficiency.pptx) is a
+twelve-slide walkthrough: the seven findings, a recommendations slide and a limitations slide,
+opening and closing on the method.
+
+It is **generated, not hand-built**. `fedspend deck` writes every figure into
+`deck/deck_data.json` from the curated tables, and [`deck/build_deck.js`](deck/build_deck.js)
+renders the slides from that file alone. A number in the deck therefore cannot drift from the
+analysis, and speaker notes ship in the file. Charts are native PowerPoint objects rather than
+images, so they stay editable.
 
 ---
 
