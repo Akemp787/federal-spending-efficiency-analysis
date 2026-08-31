@@ -20,6 +20,7 @@ clean checkout.
 | [**Recommendations**](docs/RECOMMENDATIONS.md) | Six actions, each sized in dollars and paired with the evidence that would prove it wrong. |
 | [**Findings notebook**](notebooks/02_findings.ipynb) | The analysis with charts, rendered on GitHub — no setup needed. |
 | [Interactive dashboard](outputs/dashboard.html) | The whole story as one page. Download and open it; it works offline. |
+| [**Power BI report**](powerbi/README.md) | A modelled star schema, DAX measures, theme and page-by-page build guide for a ten-page deck. |
 
 For how the project treats the limits of its own conclusions, see
 [Limitations](docs/LIMITATIONS.md) — the section most worth a reviewer's attention.
@@ -223,7 +224,25 @@ docs/                   executive summary · recommendations · methodology
 notebooks/              pipeline walkthrough · findings · index deep-dive
 data/samples/           committed results, so a fresh clone can verify the findings
 outputs/                dashboard.html · CSVs formatted for Power BI / Tableau
+powerbi/                star schema, DAX, theme, build guide and talk track
 ```
+
+---
+
+## The Power BI report
+
+[`powerbi/`](powerbi/README.md) contains everything needed to assemble a ten-page Power BI
+presentation: 25 model-ready tables in a star schema, ~40 documented DAX measures, a theme file
+carrying the validated palette, a page-by-page build guide, and a talk track.
+
+The data is shaped for the visuals it feeds — legend-driven charts get long tables rather than
+wide ones — and the model's structural guarantees are enforced by 35 contract tests, because a
+duplicate key or an orphan foreign key in Power BI does not raise an error, it just quietly
+returns the wrong number. The recommendations and limitations pages are bound to data tables
+rather than typed into text boxes, so the deck regenerates with the analysis.
+
+`.pbix` files can only be authored in Power BI Desktop, so the file itself is assembled by hand
+from the guide — roughly an hour of mechanical work.
 
 ---
 

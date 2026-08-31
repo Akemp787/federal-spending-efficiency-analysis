@@ -1,0 +1,592 @@
+fiscal_year,agency_name,subagency_name,subagency_code,obligations,competed_obligations,competed_share,not_competed_obligations,subagency_key
+2021,Agency for International Development,Agency for International Development,USAID,5483257661.31,5261687251.3,0.9595914648378816,221570410.01000023,Agency for International Development | Agency for International Development
+2021,Department of Agriculture,Agricultural Marketing Service,AMS,5672257210.63,5620825948.45,0.9909328402661967,51431262.180000305,Department of Agriculture | Agricultural Marketing Service
+2021,Department of Agriculture,Forest Service,FS,1860292677.59,1371211725.58,0.7370946207004363,489080952.01,Department of Agriculture | Forest Service
+2021,Department of Agriculture,Office of the Chief Financial Officer,OCFO,1121273418.76,976319780.58,0.8707240930224655,144953638.17999995,Department of Agriculture | Office of the Chief Financial Officer
+2021,Department of Agriculture,Agricultural Research Service,ARS,299740994.52,221832329.5,0.7400800476265799,77908665.01999998,Department of Agriculture | Agricultural Research Service
+2021,Department of Agriculture,Under Secretary for Farm and Foreign Agricultural Services,,236487109.36,199197365.2,0.8423180685792284,37289744.160000026,Department of Agriculture | Under Secretary for Farm and Foreign Agricultural Services
+2021,Department of Agriculture,Animal and Plant Health Inspection Service,APHIS,229596468.16,165337628.98,0.7201227018212683,64258839.18000001,Department of Agriculture | Animal and Plant Health Inspection Service
+2021,Department of Agriculture,Rural Housing Service,RHS,121401889.05,96982118.69,0.7988518090526369,24419770.36,Department of Agriculture | Rural Housing Service
+2021,Department of Agriculture,Food and Nutrition Service,FNS,110627756.56,107485311.13,0.97159442143893,3142445.430000007,Department of Agriculture | Food and Nutrition Service
+2021,Department of Agriculture,Food Safety and Inspection Service,FSIS,61676267.0,52082325.9,0.8444467934481183,9593941.100000001,Department of Agriculture | Food Safety and Inspection Service
+2021,Department of Agriculture,Office of the Inspector General,OIG,9151429.38,8056724.12,0.8803787676718103,1094705.2600000007,Department of Agriculture | Office of the Inspector General
+2021,Department of Agriculture,Farm Service Agency,FSA,3693711.41,4355915.96,1.179278908527399,-662204.5499999998,Department of Agriculture | Farm Service Agency
+2021,Department of Agriculture,Natural Resources Conservation Service,NRCS,3170048.95,2189314.88,0.6906249444507788,980734.0700000003,Department of Agriculture | Natural Resources Conservation Service
+2021,Department of Commerce,National Oceanic and Atmospheric Administration,NOAA,1811479729.64,1389702718.02,0.7671643768799881,421777011.6200001,Department of Commerce | National Oceanic and Atmospheric Administration
+2021,Department of Commerce,U.S. Patent and Trademark Office,USPTO,974369624.37,731141063.62,0.7503734161383934,243228560.75,Department of Commerce | U.S. Patent and Trademark Office
+2021,Department of Commerce,U.S. Census Bureau,,771259730.85,631163001.15,0.8183533716383709,140096729.70000005,Department of Commerce | U.S. Census Bureau
+2021,Department of Commerce,Office of the Secretary,OS,565901649.44,520359066.19,0.9195220878131957,45542583.25000006,Department of Commerce | Office of the Secretary
+2021,Department of Commerce,National Institute of Standards and Technology,NIST,411063174.77,295214272.57,0.7181725114033377,115848902.19999999,Department of Commerce | National Institute of Standards and Technology
+2021,Department of Defense,Department of the Navy,USN,111745734415.87,48123405486.89,0.4306509392814512,63622328928.979996,Department of Defense | Department of the Navy
+2021,Department of Defense,Department of the Army,USA,109457332462.27,53823540215.88,0.4917307868290413,55633792246.39001,Department of Defense | Department of the Army
+2021,Department of Defense,Department of the Air Force,USAF,79273845788.5,37296739908.36,0.4704797595901487,41977105880.14,Department of Defense | Department of the Air Force
+2021,Department of Defense,Defense Logistics Agency,DLA,39043164036.64,30376418652.67,0.7780214386355392,8666745383.970001,Department of Defense | Defense Logistics Agency
+2021,Department of Defense,Defense Health Agency,DHA,16015846249.21,13587689834.67,0.8483903768332085,2428156414.539999,Department of Defense | Defense Health Agency
+2021,Department of Defense,Missile Defense Agency,MDA,8817318508.25,4342686609.74,0.49251783358815127,4474631898.51,Department of Defense | Missile Defense Agency
+2021,Department of Defense,Defense Information Systems Agency,DISA,6032629220.14,5013955516.37,0.8311393479365271,1018673703.7700005,Department of Defense | Defense Information Systems Agency
+2021,Department of Defense,U.S. Special Operations Command,USSOCOM,4517567059.33,2870912684.99,0.6354997385286816,1646654374.3400002,Department of Defense | U.S. Special Operations Command
+2021,Department of Defense,USTRANSCOM,,3889220793.77,3857197237.84,0.9917660740729102,32023555.92999983,Department of Defense | USTRANSCOM
+2021,Department of Defense,Washington Headquarters Services,WHS,2197261959.16,1280214524.04,0.5826408265537071,917047435.1199999,Department of Defense | Washington Headquarters Services
+2021,Department of Defense,Defense Advanced Research Projects Agency,DARPA,1532296679.37,1267067581.43,0.8269074771805627,265229097.93999982,Department of Defense | Defense Advanced Research Projects Agency
+2021,Department of Defense,Defense Microelectronics Activity,DMEA,1119628157.76,897871011.78,0.8019367908505788,221757145.98000002,Department of Defense | Defense Microelectronics Activity
+2021,Department of Defense,Defense Threat Reduction Agency,DTRA,908399578.67,752461898.9,0.8283380095813008,155937679.76999998,Department of Defense | Defense Threat Reduction Agency
+2021,Department of Defense,Defense Counterintelligence and Security Agency,DCSA,833005443.83,755238031.39,0.9066423718884232,77767412.44000006,Department of Defense | Defense Counterintelligence and Security Agency
+2021,Department of Defense,Defense Finance and Accounting Service,DFAS,340053199.7,331831593.44,0.9758225881501682,8221606.25999999,Department of Defense | Defense Finance and Accounting Service
+2021,Department of Defense,Defense Commissary Agency,DECA,326043685.95,194743769.03,0.597293483732314,131299916.91999999,Department of Defense | Defense Commissary Agency
+2021,Department of Defense,Immediate Office of the Secretary of Defense,SECDEF,243482802.5,243482802.5,1.0,0.0,Department of Defense | Immediate Office of the Secretary of Defense
+2021,Department of Defense,Department of Defense Education Activity,DODEA,234511943.86,196276236.83,0.836956248792061,38235707.03,Department of Defense | Department of Defense Education Activity
+2021,Department of Defense,Defense Human Resources Activity,,225987801.8,136521743.12,0.6041111158770517,89466058.68,Department of Defense | Defense Human Resources Activity
+2021,Department of Defense,Defense Media Activity,DMA,112781365.06,90871861.75,0.8057347213491867,21909503.310000002,Department of Defense | Defense Media Activity
+2021,Department of Defense,U.S. Cyber Command,USCYBERCOM,66772419.23,50006241.07,0.7489056356899652,16766178.159999996,Department of Defense | U.S. Cyber Command
+2021,Department of Defense,Uniformed Services University of the Health Sciences,USUHS,41033903.44,17417066.9,0.4244555218946531,23616836.54,Department of Defense | Uniformed Services University of the Health Sciences
+2021,Department of Defense,Office of the Inspector General,OIG,482321.54,439003.54,0.9101885435180854,43318.0,Department of Defense | Office of the Inspector General
+2021,Department of Defense,Defense Contract Management Agency,DCMA,-21761798.7,373145278.17,,-373145278.17,Department of Defense | Defense Contract Management Agency
+2021,Department of Education,Department of Education,ED,2687507868.02,2555629565.91,0.9509291475276087,131878302.11000013,Department of Education | Department of Education
+2021,Department of Energy,Department of Energy,DOE,37630551250.82,36504268757.73,0.9700699974979651,1126282493.0899963,Department of Energy | Department of Energy
+2021,Department of Energy,Federal Energy Regulatory Commission,FERC,90768191.79,77934232.69,0.8586073067348033,12833959.100000009,Department of Energy | Federal Energy Regulatory Commission
+2021,Department of Health and Human Services,National Institutes of Health,NIH,7519108030.63,6425405590.91,0.8545435927686276,1093702439.7200003,Department of Health and Human Services | National Institutes of Health
+2021,Department of Health and Human Services,Centers for Medicare and Medicaid Services,CMS,7040206252.45,6979911501.32,0.9914356555805425,60294751.130000114,Department of Health and Human Services | Centers for Medicare and Medicaid Services
+2021,Department of Health and Human Services,Centers for Disease Control and Prevention,CDC,4691589319.9,3626542704.07,0.7729880978046261,1065046615.8299994,Department of Health and Human Services | Centers for Disease Control and Prevention
+2021,Department of Health and Human Services,Administration for Children and Families,ACF,4245530022.8,176457928.84,0.041563227180672006,4069072093.96,Department of Health and Human Services | Administration for Children and Families
+2021,Department of Health and Human Services,Office of Assistant Secretary for Preparedness and Response,,3785868311.94,1827730225.41,0.4827770209665356,1958138086.53,Department of Health and Human Services | Office of Assistant Secretary for Preparedness and Response
+2021,Department of Health and Human Services,Office of the Assistant Secretary for Administration,ASA,3046121524.52,1014689887.89,0.33310880072320564,2031431636.63,Department of Health and Human Services | Office of the Assistant Secretary for Administration
+2021,Department of Health and Human Services,Food and Drug Administration,FDA,1699701679.75,1518077897.03,0.8931437293474264,181623782.72000003,Department of Health and Human Services | Food and Drug Administration
+2021,Department of Health and Human Services,Indian Health Service,IHS,1209921673.23,787052935.34,0.6504990800263029,422868737.89,Department of Health and Human Services | Indian Health Service
+2021,Department of Health and Human Services,Health Resources and Services Administration,HRSA,629142903.96,549140018.76,0.8728382936588179,80002885.20000005,Department of Health and Human Services | Health Resources and Services Administration
+2021,Department of Health and Human Services,Substance Abuse and Mental Health Services Administration,SAMHSA,193330372.9,193031207.9,0.9984525711324482,299165.0,Department of Health and Human Services | Substance Abuse and Mental Health Services Administration
+2021,Department of Health and Human Services,Agency for Healthcare Research and Quality,AHRQ,143410858.57,142272320.31,0.9920610038085487,1138538.2599999905,Department of Health and Human Services | Agency for Healthcare Research and Quality
+2021,Department of Health and Human Services,Office of the Inspector General,OIG,60533777.03,51298841.14,0.8474416046197936,9234935.89,Department of Health and Human Services | Office of the Inspector General
+2021,Department of Homeland Security,U.S. Coast Guard,USCG,3636762433.91,2563233094.94,0.7048118048734313,1073529338.9699998,Department of Homeland Security | U.S. Coast Guard
+2021,Department of Homeland Security,U.S. Customs and Border Protection,CBP,3486868471.74,2823470085.19,0.8097437881793821,663398386.5499997,Department of Homeland Security | U.S. Customs and Border Protection
+2021,Department of Homeland Security,Office of Procurement Operations,OPO,3452691032.87,2927794341.95,0.8479746128677818,524896690.9200001,Department of Homeland Security | Office of Procurement Operations
+2021,Department of Homeland Security,Federal Emergency Management Agency,FEMA,2669501882.67,2276192065.46,0.8526654655075138,393309817.21000004,Department of Homeland Security | Federal Emergency Management Agency
+2021,Department of Homeland Security,U.S. Immigration and Customs Enforcement,ICE,2531913298.35,2296620346.3,0.9070691116463839,235292952.0499997,Department of Homeland Security | U.S. Immigration and Customs Enforcement
+2021,Department of Homeland Security,Transportation Security Administration,TSA,2134089678.71,1997482137.33,0.9359879096259086,136607541.3800001,Department of Homeland Security | Transportation Security Administration
+2021,Department of Homeland Security,U.S. Citizenship and Immigration Services,USCIS,1111764557.6,1084048295.05,0.975070025069128,27716262.549999952,Department of Homeland Security | U.S. Citizenship and Immigration Services
+2021,Department of Homeland Security,U.S. Secret Service,USSS,347212452.34,287147842.52,0.8270090562270991,60064609.81999999,Department of Homeland Security | U.S. Secret Service
+2021,Department of Homeland Security,Federal Law Enforcement Training Center,FLETC,322569284.63,288534987.65,0.8944899635467811,34034296.98000002,Department of Homeland Security | Federal Law Enforcement Training Center
+2021,Department of Homeland Security,Office of the Inspector General,IG,43842401.74,41702695.95,0.951195516096742,2139705.789999999,Department of Homeland Security | Office of the Inspector General
+2021,Department of Housing and Urban Development,Department of Housing and Urban Development,HUD,672588364.17,-152464192.75,0.0,672588364.17,Department of Housing and Urban Development | Department of Housing and Urban Development
+2021,Department of Justice,Federal Prison System / Bureau of Prisons,,2394148193.91,1856024687.81,0.7752338357880996,538123506.0999999,Department of Justice | Federal Prison System / Bureau of Prisons
+2021,Department of Justice,Federal Bureau of Investigation,FBI,2327380117.57,2065432199.14,0.8874494473625143,261947918.43000007,Department of Justice | Federal Bureau of Investigation
+2021,Department of Justice,"Offices, Boards and Divisions",,1693338336.8,1380720589.38,0.8153837655321903,312617747.41999984,"Department of Justice | Offices, Boards and Divisions"
+2021,Department of Justice,U.S. Marshals Service,,1101936377.98,1040874827.98,0.9445870458402198,61061550.0,Department of Justice | U.S. Marshals Service
+2021,Department of Justice,Drug Enforcement Administration,DEA,699806481.85,556396320.24,0.7950716872028927,143410161.61,Department of Justice | Drug Enforcement Administration
+2021,Department of Justice,Federal Prison Industries / Unicor,,380482894.96,306786052.57,0.806307081432011,73696842.38999999,Department of Justice | Federal Prison Industries / Unicor
+2021,Department of Justice,"Bureau of Alcohol, Tobacco, Firearms and Explosives Acquisition and Property Management Division",,369891571.75,307763825.15,0.8320379501861412,62127746.600000024,"Department of Justice | Bureau of Alcohol, Tobacco, Firearms and Explosives Acquisition and Property Management Division"
+2021,Department of Justice,Office of Justice Programs,OJP,167250808.15,151903261.37,0.9082363370929996,15347546.780000001,Department of Justice | Office of Justice Programs
+2021,Department of Justice,Office of the Inspector General,OIG,3805402.24,2635923.23,0.692679265884912,1169479.0100000002,Department of Justice | Office of the Inspector General
+2021,Department of Labor,Office of the Assistant Secretary for Administration and Management,,2346044554.94,2229053317.67,0.950132559493103,116991237.26999998,Department of Labor | Office of the Assistant Secretary for Administration and Management
+2021,Department of Labor,Office of Inspector General,OIG,18607393.96,16884044.28,0.9073836087039026,1723349.6799999997,Department of Labor | Office of Inspector General
+2021,Department of Labor,Employment and Training Administration,ETA,492441.0,492441.0,1.0,0.0,Department of Labor | Employment and Training Administration
+2021,Department of State,Department of State,DOS,9492347904.16,7578244076.4,0.7983529631355853,1914103827.7600002,Department of State | Department of State
+2021,Department of State,International Boundary and Water Commission: U.S.-Mexico,IBWC,56005026.44,48564206.21,0.8671401353953186,7440820.229999997,Department of State | International Boundary and Water Commission: U.S.-Mexico
+2021,Department of Transportation,Federal Aviation Administration,FAA,4102363617.11,3322464235.44,0.8098902353713303,779899381.6700001,Department of Transportation | Federal Aviation Administration
+2021,Department of Transportation,Maritime Administration,MARAD,1122977257.73,1067292590.95,0.9504133619833391,55684666.77999997,Department of Transportation | Maritime Administration
+2021,Department of Transportation,Federal Highway Administration,FHWA,1021315288.08,972085671.7,0.951797826827259,49229616.379999995,Department of Transportation | Federal Highway Administration
+2021,Department of Transportation,National Highway Traffic Safety Administration,NHTSA,226915063.51,194021064.6,0.8550382755504005,32893998.909999996,Department of Transportation | National Highway Traffic Safety Administration
+2021,Department of Transportation,Immediate Office of the Secretary of Transportation,OST,195276376.93,155028393.75,0.7938922064575812,40247983.18000001,Department of Transportation | Immediate Office of the Secretary of Transportation
+2021,Department of Transportation,Federal Transit Administration,FTA,97453603.07,95308721.95,0.977990745827434,2144881.11999999,Department of Transportation | Federal Transit Administration
+2021,Department of Transportation,Federal Motor Carrier Safety Administration,FMCSA,76389144.43,74164053.31,0.9708716318712145,2225091.120000005,Department of Transportation | Federal Motor Carrier Safety Administration
+2021,Department of Transportation,Federal Railroad Administration,FRA,70726256.95,67024439.55,0.9476599277321149,3701817.400000006,Department of Transportation | Federal Railroad Administration
+2021,Department of Transportation,Pipeline and Hazardous Materials Safety Administration,PHMSA,48275491.43,37858705.32,0.7842220596530963,10416786.11,Department of Transportation | Pipeline and Hazardous Materials Safety Administration
+2021,Department of Transportation,Saint Lawrence Seaway Development Corporation,SLSDC,10347668.7,9411460.37,0.9095247096575483,936208.3300000001,Department of Transportation | Saint Lawrence Seaway Development Corporation
+2021,Department of Veterans Affairs,Department of Veterans Affairs,VA,47672640624.28,42646186783.53,0.8945631335934433,5026453840.75,Department of Veterans Affairs | Department of Veterans Affairs
+2021,Department of the Interior,Departmental Offices,,1649591966.71,1527861308.48,0.9262055946642468,121730658.23000002,Department of the Interior | Departmental Offices
+2021,Department of the Interior,National Park Service,NPS,1116980789.34,929573119.92,0.8322194336656988,187407669.41999996,Department of the Interior | National Park Service
+2021,Department of the Interior,Bureau of Reclamation,BOR,556732650.06,470597302.81,0.8452841821999896,86135347.24999994,Department of the Interior | Bureau of Reclamation
+2021,Department of the Interior,Bureau of Land Management,BLM,536090245.64,443228597.27,0.8267798208879196,92861648.37,Department of the Interior | Bureau of Land Management
+2021,Department of the Interior,U.S. Geological Survey,USGS,420162492.83,365681285.7,0.8703330067302238,54481207.129999995,Department of the Interior | U.S. Geological Survey
+2021,Department of the Interior,Bureau of Indian Affairs and Bureau of Indian Education,,391365182.03,343841866.01,0.8785704038016414,47523316.01999998,Department of the Interior | Bureau of Indian Affairs and Bureau of Indian Education
+2021,Department of the Interior,U.S. Fish and Wildlife Service,USFWS,324739676.74,254122150.87,0.782541121618042,70617525.87,Department of the Interior | U.S. Fish and Wildlife Service
+2021,Department of the Interior,Bureau of Safety and Environmental Enforcement,BSEE,57663931.41,48696300.57,0.8444845743132102,8967630.839999996,Department of the Interior | Bureau of Safety and Environmental Enforcement
+2021,Department of the Interior,Bureau of Ocean Energy Management,BOEM,22588262.72,17770334.6,0.7867065661612777,4817928.119999997,Department of the Interior | Bureau of Ocean Energy Management
+2021,Department of the Interior,"Office of Surface Mining, Reclamation and Enforcement",OSMRE,4533349.71,3496202.9,0.771218441914555,1037146.81,"Department of the Interior | Office of Surface Mining, Reclamation and Enforcement"
+2021,Department of the Interior,Office of the Inspector General,OIG,2503082.29,2383549.65,0.9522458208914897,119532.64000000013,Department of the Interior | Office of the Inspector General
+2021,Department of the Treasury,United States Mint,USMINT,4808347356.08,4774115693.47,0.992880784170737,34231662.60999966,Department of the Treasury | United States Mint
+2021,Department of the Treasury,Internal Revenue Service,IRS,2950195078.28,2656187151.22,0.9003428860604666,294007927.0600004,Department of the Treasury | Internal Revenue Service
+2021,Department of the Treasury,Bureau of Engraving and Printing,BEP,848062147.84,662850614.61,0.7816061786253158,185211533.23000002,Department of the Treasury | Bureau of Engraving and Printing
+2021,Department of the Treasury,Bureau of the Fiscal Service,,594067590.79,517614442.86,0.8713056407801486,76453147.92999995,Department of the Treasury | Bureau of the Fiscal Service
+2021,Department of the Treasury,Office of the Comptroller of the Currency,OCC,184807681.25,161582498.73,0.8743278290008846,23225182.52000001,Department of the Treasury | Office of the Comptroller of the Currency
+2021,Department of the Treasury,Departmental Offices,DO,170185104.49,114579343.92,0.6732630582644947,55605760.57000001,Department of the Treasury | Departmental Offices
+2021,Department of the Treasury,Office of Inspector General,OIG,11125348.93,10703684.43,0.9620987617868809,421664.5,Department of the Treasury | Office of Inspector General
+2021,Environmental Protection Agency,Environmental Protection Agency,EPA,1180500602.49,1064318843.95,0.9015826351168812,116181758.53999996,Environmental Protection Agency | Environmental Protection Agency
+2021,General Services Administration,Federal Acquisition Service,FAS,14656830845.63,13542024853.07,0.9239394924931958,1114805992.5599995,General Services Administration | Federal Acquisition Service
+2021,General Services Administration,Public Buildings Service,PBS,2818029312.16,2424109329.63,0.8602143771783329,393919982.52999973,General Services Administration | Public Buildings Service
+2021,General Services Administration,Office of Administrative Services,OAS,234189934.65,227201618.18,0.9701596207350067,6988316.469999999,General Services Administration | Office of Administrative Services
+2021,General Services Administration,Office of Inspector General,OIG,2069296.42,2019965.42,0.9761604961361698,49331.0,General Services Administration | Office of Inspector General
+2021,National Aeronautics and Space Administration,National Aeronautics and Space Administration,NASA,15011172932.59,9913419286.33,0.6604027100911932,5097753646.26,National Aeronautics and Space Administration | National Aeronautics and Space Administration
+2021,Small Business Administration,Small Business Administration,SBA,1153700308.19,626395872.18,0.5429450505762025,527304436.0100001,Small Business Administration | Small Business Administration
+2021,Social Security Administration,Social Security Administration,SSA,1715484075.97,1609002761.69,0.9379292901802126,106481314.27999997,Social Security Administration | Social Security Administration
+2022,Agency for International Development,Agency for International Development,USAID,5909270418.25,5640539549.55,0.9545238498698485,268730868.6999998,Agency for International Development | Agency for International Development
+2022,Department of Agriculture,Agricultural Marketing Service,AMS,4457031508.28,4381897141.65,0.9831425094279859,75134366.63000011,Department of Agriculture | Agricultural Marketing Service
+2022,Department of Agriculture,Forest Service,FS,2822319182.13,2414026982.57,0.8553345056983022,408292199.55999994,Department of Agriculture | Forest Service
+2022,Department of Agriculture,Office of the Chief Financial Officer,OCFO,1524012314.99,1313960643.4,0.8621719329142178,210051671.5899999,Department of Agriculture | Office of the Chief Financial Officer
+2022,Department of Agriculture,Agricultural Research Service,ARS,333601984.01,267319717.54,0.8013133325129951,66282266.47,Department of Agriculture | Agricultural Research Service
+2022,Department of Agriculture,Animal and Plant Health Inspection Service,APHIS,310786221.38,206799294.79,0.6654068956845592,103986926.59,Department of Agriculture | Animal and Plant Health Inspection Service
+2022,Department of Agriculture,Under Secretary for Farm and Foreign Agricultural Services,,247867877.0,204649604.29,0.825639880273796,43218272.71000001,Department of Agriculture | Under Secretary for Farm and Foreign Agricultural Services
+2022,Department of Agriculture,Rural Housing Service,RHS,171966939.91,123381199.81,0.7174704619072267,48585740.099999994,Department of Agriculture | Rural Housing Service
+2022,Department of Agriculture,Food and Nutrition Service,FNS,96038980.39,92494447.22,0.963092765504109,3544533.170000002,Department of Agriculture | Food and Nutrition Service
+2022,Department of Agriculture,Food Safety and Inspection Service,FSIS,60063115.78,45753355.35,0.7617546102267824,14309760.43,Department of Agriculture | Food Safety and Inspection Service
+2022,Department of Agriculture,Office of the Inspector General,OIG,15260356.53,12241440.74,0.8021726567092204,3018915.789999999,Department of Agriculture | Office of the Inspector General
+2022,Department of Agriculture,Natural Resources Conservation Service,NRCS,-1077102.93,-857199.23,,0.0,Department of Agriculture | Natural Resources Conservation Service
+2022,Department of Agriculture,Farm Service Agency,FSA,-1494862.12,-1062890.0,,0.0,Department of Agriculture | Farm Service Agency
+2022,Department of Commerce,National Oceanic and Atmospheric Administration,NOAA,1751701961.56,1458226169.0,0.8324624856281821,293475792.55999994,Department of Commerce | National Oceanic and Atmospheric Administration
+2022,Department of Commerce,U.S. Patent and Trademark Office,USPTO,969021921.28,782490870.93,0.8075058507411189,186531050.35000002,Department of Commerce | U.S. Patent and Trademark Office
+2022,Department of Commerce,Office of the Secretary,OS,672318759.42,581953311.67,0.8655913634955582,90365447.75,Department of Commerce | Office of the Secretary
+2022,Department of Commerce,U.S. Census Bureau,,447400028.82,338262252.63,0.7560622057225911,109137776.19,Department of Commerce | U.S. Census Bureau
+2022,Department of Commerce,National Institute of Standards and Technology,NIST,221794830.04,124593024.85,0.5617490039219131,97201805.19,Department of Commerce | National Institute of Standards and Technology
+2022,Department of Defense,Department of the Navy,USN,123926123200.99,53881763538.85,0.4347893902197011,70044359662.14001,Department of Defense | Department of the Navy
+2022,Department of Defense,Department of the Army,USA,112342518924.6,74487783528.42,0.6630417783173738,37854735396.18001,Department of Defense | Department of the Army
+2022,Department of Defense,Department of the Air Force,USAF,78776618954.97,38921964942.21,0.49408016564481433,39854654012.76,Department of Defense | Department of the Air Force
+2022,Department of Defense,Defense Logistics Agency,DLA,48299643510.94,41015112999.52,0.8491804497528012,7284530511.420006,Department of Defense | Defense Logistics Agency
+2022,Department of Defense,Defense Health Agency,DHA,17804358422.1,15205478695.95,0.8540312622035238,2598879726.1499977,Department of Defense | Defense Health Agency
+2022,Department of Defense,Missile Defense Agency,MDA,9848144034.78,3538350625.45,0.3592911124120296,6309793409.330001,Department of Defense | Missile Defense Agency
+2022,Department of Defense,Defense Information Systems Agency,DISA,6286578378.19,5433410302.01,0.8642873714674597,853168076.1799994,Department of Defense | Defense Information Systems Agency
+2022,Department of Defense,U.S. Special Operations Command,USSOCOM,4395268801.34,2920324792.69,0.6644246176251316,1474944008.65,Department of Defense | U.S. Special Operations Command
+2022,Department of Defense,USTRANSCOM,,4227721711.2,4217372044.19,0.9975519516853293,10349667.009999752,Department of Defense | USTRANSCOM
+2022,Department of Defense,Washington Headquarters Services,WHS,2133797643.36,1356241815.12,0.635600015465564,777555828.24,Department of Defense | Washington Headquarters Services
+2022,Department of Defense,Defense Advanced Research Projects Agency,DARPA,1669986931.4,1368427996.47,0.8194243743708856,301558934.93000007,Department of Defense | Defense Advanced Research Projects Agency
+2022,Department of Defense,Defense Threat Reduction Agency,DTRA,913018306.84,742257445.39,0.812971043219263,170760861.45000005,Department of Defense | Defense Threat Reduction Agency
+2022,Department of Defense,Defense Microelectronics Activity,DMEA,903183279.64,729839285.8,0.8080743989092742,173343993.84000003,Department of Defense | Defense Microelectronics Activity
+2022,Department of Defense,Defense Counterintelligence and Security Agency,DCSA,701398144.01,605473938.67,0.8632385811693388,95924205.34000003,Department of Defense | Defense Counterintelligence and Security Agency
+2022,Department of Defense,Immediate Office of the Secretary of Defense,SECDEF,667896467.47,660609592.47,0.9890898135341204,7286875.0,Department of Defense | Immediate Office of the Secretary of Defense
+2022,Department of Defense,Department of Defense Education Activity,DODEA,335892761.08,301445308.43,0.897445087714184,34447452.649999976,Department of Defense | Department of Defense Education Activity
+2022,Department of Defense,Defense Commissary Agency,DECA,329259418.63,231877545.2,0.7042396726715012,97381873.43,Department of Defense | Defense Commissary Agency
+2022,Department of Defense,Defense Finance and Accounting Service,DFAS,258753279.12,245738100.08,0.9497004285925821,13015179.039999992,Department of Defense | Defense Finance and Accounting Service
+2022,Department of Defense,Defense Human Resources Activity,,247405712.2,145142082.02,0.586656147626328,102263630.17999998,Department of Defense | Defense Human Resources Activity
+2022,Department of Defense,Defense Media Activity,DMA,101919179.43,83246533.91,0.8167896795830786,18672645.52000001,Department of Defense | Defense Media Activity
+2022,Department of Defense,U.S. Cyber Command,USCYBERCOM,77471672.77,36935450.13,0.4767607153605031,40536222.63999999,Department of Defense | U.S. Cyber Command
+2022,Department of Defense,Defense Contract Management Agency,DCMA,75628450.5,381633942.97,5.04616900712517,-306005492.47,Department of Defense | Defense Contract Management Agency
+2022,Department of Defense,Uniformed Services University of the Health Sciences,USUHS,40609168.03,14765148.5,0.36359150448717037,25844019.53,Department of Defense | Uniformed Services University of the Health Sciences
+2022,Department of Defense,Office of the Inspector General,OIG,74023.01,74023.01,1.0,0.0,Department of Defense | Office of the Inspector General
+2022,Department of Education,Department of Education,ED,2446949795.3,2330723870.34,0.9525017124653551,116225924.96000004,Department of Education | Department of Education
+2022,Department of Energy,Department of Energy,DOE,41065906264.13,39932098628.78,0.9723905366155197,1133807635.3499985,Department of Energy | Department of Energy
+2022,Department of Energy,Federal Energy Regulatory Commission,FERC,117362826.56,89721497.43,0.7644796913964169,27641329.129999995,Department of Energy | Federal Energy Regulatory Commission
+2022,Department of Health and Human Services,National Institutes of Health,NIH,8458075952.2,7506875806.73,0.8875394178480288,951200145.4700003,Department of Health and Human Services | National Institutes of Health
+2022,Department of Health and Human Services,Centers for Medicare and Medicaid Services,CMS,7252535529.34,7025544161.32,0.9687017916559373,226991368.02000046,Department of Health and Human Services | Centers for Medicare and Medicaid Services
+2022,Department of Health and Human Services,Centers for Disease Control and Prevention,CDC,4957132843.16,3004824553.88,0.6061617973434275,1952308289.2799997,Department of Health and Human Services | Centers for Disease Control and Prevention
+2022,Department of Health and Human Services,Administration for Children and Families,ACF,4035687703.4,512639334.28,0.12702651244498175,3523048369.12,Department of Health and Human Services | Administration for Children and Families
+2022,Department of Health and Human Services,Office of Assistant Secretary for Preparedness and Response,,4004537614.63,2268845393.07,0.5665686307405632,1735692221.56,Department of Health and Human Services | Office of Assistant Secretary for Preparedness and Response
+2022,Department of Health and Human Services,Food and Drug Administration,FDA,1858703942.57,1622249094.24,0.8727850934651499,236454848.32999992,Department of Health and Human Services | Food and Drug Administration
+2022,Department of Health and Human Services,Indian Health Service,IHS,1439971580.82,1001549445.29,0.6955341748617442,438422135.53,Department of Health and Human Services | Indian Health Service
+2022,Department of Health and Human Services,Health Resources and Services Administration,HRSA,580587342.6,504516779.09,0.8689765381908964,76070563.51000005,Department of Health and Human Services | Health Resources and Services Administration
+2022,Department of Health and Human Services,Office of the Assistant Secretary for Administration,ASA,420579526.53,802743482.25,1.9086603879010744,-382163955.72,Department of Health and Human Services | Office of the Assistant Secretary for Administration
+2022,Department of Health and Human Services,Substance Abuse and Mental Health Services Administration,SAMHSA,282552998.47,282244860.47,0.9989094506104393,308138.0,Department of Health and Human Services | Substance Abuse and Mental Health Services Administration
+2022,Department of Health and Human Services,Agency for Healthcare Research and Quality,AHRQ,51361800.0,142208110.04,2.7687524588312713,-90846310.03999999,Department of Health and Human Services | Agency for Healthcare Research and Quality
+2022,Department of Health and Human Services,Office of the Inspector General,OIG,47717433.09,40308912.81,0.8447418521858298,7408520.280000001,Department of Health and Human Services | Office of the Inspector General
+2022,Department of Homeland Security,U.S. Customs and Border Protection,CBP,4654702679.2,3951982240.57,0.8490300053384343,702720438.6299996,Department of Homeland Security | U.S. Customs and Border Protection
+2022,Department of Homeland Security,Office of Procurement Operations,OPO,3501143785.4,3044974662.19,0.869708543501625,456169123.21000004,Department of Homeland Security | Office of Procurement Operations
+2022,Department of Homeland Security,U.S. Coast Guard,USCG,3467374967.24,2672127579.17,0.7706485754833116,795247388.0699997,Department of Homeland Security | U.S. Coast Guard
+2022,Department of Homeland Security,U.S. Immigration and Customs Enforcement,ICE,2853458479.34,2641949664.78,0.9258763300425098,211508814.55999994,Department of Homeland Security | U.S. Immigration and Customs Enforcement
+2022,Department of Homeland Security,Federal Emergency Management Agency,FEMA,2545444158.44,2443905238.53,0.9601095472578629,101538919.90999985,Department of Homeland Security | Federal Emergency Management Agency
+2022,Department of Homeland Security,Transportation Security Administration,TSA,1946888614.84,1734480747.8,0.8908988087860095,212407867.03999996,Department of Homeland Security | Transportation Security Administration
+2022,Department of Homeland Security,U.S. Citizenship and Immigration Services,USCIS,1270320765.1,1176327181.26,0.9260079922942921,93993583.83999991,Department of Homeland Security | U.S. Citizenship and Immigration Services
+2022,Department of Homeland Security,U.S. Secret Service,USSS,333910917.55,258695499.52,0.774744058739148,75215418.03,Department of Homeland Security | U.S. Secret Service
+2022,Department of Homeland Security,Federal Law Enforcement Training Center,FLETC,219078700.82,180918676.87,0.8258159108705272,38160023.94999999,Department of Homeland Security | Federal Law Enforcement Training Center
+2022,Department of Homeland Security,Office of the Inspector General,IG,45397829.11,42663294.34,0.9397650763569739,2734534.769999996,Department of Homeland Security | Office of the Inspector General
+2022,Department of Housing and Urban Development,Department of Housing and Urban Development,HUD,707953531.56,301662479.11,0.4261049146054493,406291052.4499999,Department of Housing and Urban Development | Department of Housing and Urban Development
+2022,Department of Housing and Urban Development,Chief Procurement Officer,,59682337.74,14796200.63,0.2479159025984896,44886137.11,Department of Housing and Urban Development | Chief Procurement Officer
+2022,Department of Justice,Federal Bureau of Investigation,FBI,2310251381.05,1996443768.52,0.864167330402211,313807612.5300002,Department of Justice | Federal Bureau of Investigation
+2022,Department of Justice,Federal Prison System / Bureau of Prisons,,2146165553.97,1665965836.3,0.7762522482099662,480199717.6700001,Department of Justice | Federal Prison System / Bureau of Prisons
+2022,Department of Justice,"Offices, Boards and Divisions",,1831616224.77,1486844187.86,0.8117662246886387,344772036.9100001,"Department of Justice | Offices, Boards and Divisions"
+2022,Department of Justice,U.S. Marshals Service,,1164429445.09,1133774031.84,0.9736734472154897,30655413.25,Department of Justice | U.S. Marshals Service
+2022,Department of Justice,Drug Enforcement Administration,DEA,609723211.57,489090342.67,0.8021514244317881,120632868.90000004,Department of Justice | Drug Enforcement Administration
+2022,Department of Justice,Federal Prison Industries / Unicor,,384320389.05,306729489.27,0.7981088123588845,77590899.78000003,Department of Justice | Federal Prison Industries / Unicor
+2022,Department of Justice,"Bureau of Alcohol, Tobacco, Firearms and Explosives Acquisition and Property Management Division",,326525718.66,274442164.85,0.8404917259695772,52083553.81,"Department of Justice | Bureau of Alcohol, Tobacco, Firearms and Explosives Acquisition and Property Management Division"
+2022,Department of Justice,Office of Justice Programs,OJP,205879508.11,183963985.49,0.8935517049696335,21915522.620000005,Department of Justice | Office of Justice Programs
+2022,Department of Justice,Office of the Inspector General,OIG,6070261.46,4782629.9,0.7878787316683391,1287631.5599999996,Department of Justice | Office of the Inspector General
+2022,Department of Labor,Office of the Assistant Secretary for Administration and Management,,2124413897.08,2057355688.96,0.9684344899964309,67058208.119999886,Department of Labor | Office of the Assistant Secretary for Administration and Management
+2022,Department of Labor,Office of Inspector General,OIG,13485425.4,11541946.06,0.8558829786711808,1943479.3399999999,Department of Labor | Office of Inspector General
+2022,Department of State,Department of State,DOS,11842107745.03,9625199932.52,0.8127944906226333,2216907812.51,Department of State | Department of State
+2022,Department of State,International Boundary and Water Commission: U.S.-Mexico,IBWC,107616862.08,99105906.44,0.9209142928394145,8510955.64,Department of State | International Boundary and Water Commission: U.S.-Mexico
+2022,Department of Transportation,Federal Aviation Administration,FAA,4615596921.87,3783537789.59,0.8197288137667592,832059132.2799997,Department of Transportation | Federal Aviation Administration
+2022,Department of Transportation,Federal Highway Administration,FHWA,1471761402.49,1425628350.19,0.9686545304001384,46133052.29999995,Department of Transportation | Federal Highway Administration
+2022,Department of Transportation,Maritime Administration,MARAD,966394086.31,902169694.4,0.9335422341467039,64224391.90999997,Department of Transportation | Maritime Administration
+2022,Department of Transportation,National Highway Traffic Safety Administration,NHTSA,286692230.95,240234752.57,0.8379534798482128,46457478.379999995,Department of Transportation | National Highway Traffic Safety Administration
+2022,Department of Transportation,Immediate Office of the Secretary of Transportation,OST,239229132.21,176363594.5,0.7372162113817501,62865537.71000001,Department of Transportation | Immediate Office of the Secretary of Transportation
+2022,Department of Transportation,Federal Transit Administration,FTA,125350236.97,121376350.5,0.9682977346827747,3973886.469999999,Department of Transportation | Federal Transit Administration
+2022,Department of Transportation,Federal Motor Carrier Safety Administration,FMCSA,95527441.13,89387725.68,0.9357282538151036,6139715.449999988,Department of Transportation | Federal Motor Carrier Safety Administration
+2022,Department of Transportation,Federal Railroad Administration,FRA,94905742.11,87334424.13,0.9202227619565473,7571317.980000004,Department of Transportation | Federal Railroad Administration
+2022,Department of Transportation,Pipeline and Hazardous Materials Safety Administration,PHMSA,46424681.07,38266874.1,0.8242786642368204,8157806.969999999,Department of Transportation | Pipeline and Hazardous Materials Safety Administration
+2022,Department of Transportation,Saint Lawrence Seaway Development Corporation,SLSDC,18805320.99,18073352.17,0.9610765048685299,731968.8199999966,Department of Transportation | Saint Lawrence Seaway Development Corporation
+2022,Department of Veterans Affairs,Department of Veterans Affairs,VA,56369125066.65,50899805139.01,0.9029731272008718,5469319927.639999,Department of Veterans Affairs | Department of Veterans Affairs
+2022,Department of the Interior,Departmental Offices,,2242726028.05,1954879982.13,0.8716534956477605,287846045.9200001,Department of the Interior | Departmental Offices
+2022,Department of the Interior,National Park Service,NPS,1224560020.07,1067572194.81,0.8718006282362329,156987825.26,Department of the Interior | National Park Service
+2022,Department of the Interior,Bureau of Reclamation,BOR,920779233.72,804798406.66,0.8740405704074895,115980827.06000006,Department of the Interior | Bureau of Reclamation
+2022,Department of the Interior,U.S. Geological Survey,USGS,601085897.13,549567799.49,0.9142916214038908,51518097.639999986,Department of the Interior | U.S. Geological Survey
+2022,Department of the Interior,Bureau of Land Management,BLM,559441857.81,484463981.5,0.8659773571403657,74977876.30999994,Department of the Interior | Bureau of Land Management
+2022,Department of the Interior,Bureau of Indian Affairs and Bureau of Indian Education,,531135408.44,481147019.43,0.905883907915646,49988389.00999999,Department of the Interior | Bureau of Indian Affairs and Bureau of Indian Education
+2022,Department of the Interior,U.S. Fish and Wildlife Service,USFWS,334646968.23,288558107.5,0.8622761742807019,46088860.73000002,Department of the Interior | U.S. Fish and Wildlife Service
+2022,Department of the Interior,Bureau of Safety and Environmental Enforcement,BSEE,69715539.16,64058565.41,0.9188563436765939,5656973.75,Department of the Interior | Bureau of Safety and Environmental Enforcement
+2022,Department of the Interior,Bureau of Ocean Energy Management,BOEM,26920757.1,20173795.28,0.7493769660735136,6746961.82,Department of the Interior | Bureau of Ocean Energy Management
+2022,Department of the Interior,"Office of Surface Mining, Reclamation and Enforcement",OSMRE,4532957.24,3699299.41,0.8160896329125752,833657.8300000001,"Department of the Interior | Office of Surface Mining, Reclamation and Enforcement"
+2022,Department of the Interior,Office of the Inspector General,OIG,2707175.57,2426706.07,0.896397742685008,280469.5,Department of the Interior | Office of the Inspector General
+2022,Department of the Treasury,United States Mint,USMINT,4651824844.17,4620732662.18,0.9933161322638864,31092181.98999977,Department of the Treasury | United States Mint
+2022,Department of the Treasury,Internal Revenue Service,IRS,3093487699.61,2760008016.63,0.8921994475613909,333479682.98,Department of the Treasury | Internal Revenue Service
+2022,Department of the Treasury,Bureau of the Fiscal Service,,638308776.03,547925725.71,0.8584023066670918,90383050.31999993,Department of the Treasury | Bureau of the Fiscal Service
+2022,Department of the Treasury,Bureau of Engraving and Printing,BEP,555735607.04,352566589.57,0.6344142522158445,203169017.46999997,Department of the Treasury | Bureau of Engraving and Printing
+2022,Department of the Treasury,Office of the Comptroller of the Currency,OCC,197216874.35,183890314.91,0.9324268803877837,13326559.439999998,Department of the Treasury | Office of the Comptroller of the Currency
+2022,Department of the Treasury,Departmental Offices,DO,160112932.46,141450907.65,0.8834446129786411,18662024.810000002,Department of the Treasury | Departmental Offices
+2022,Department of the Treasury,Office of Inspector General,OIG,9860644.9,9659503.8,0.9796016282870099,201141.09999999963,Department of the Treasury | Office of Inspector General
+2022,Environmental Protection Agency,Environmental Protection Agency,EPA,1575773239.29,1466016843.64,0.9303475951276764,109756395.64999986,Environmental Protection Agency | Environmental Protection Agency
+2022,General Services Administration,Federal Acquisition Service,FAS,17533083425.66,15640266350.61,0.8920431147735357,1892817075.0499992,General Services Administration | Federal Acquisition Service
+2022,General Services Administration,Public Buildings Service,PBS,2766734093.78,2350031529.13,0.849388285781852,416702564.6500001,General Services Administration | Public Buildings Service
+2022,General Services Administration,Office of Administrative Services,OAS,268739369.62,258695225.32,0.9626249614479541,10044144.300000012,General Services Administration | Office of Administrative Services
+2022,General Services Administration,Office of Inspector General,OIG,4009009.95,3901819.95,0.9732627253768726,107190.0,General Services Administration | Office of Inspector General
+2022,General Services Administration,Technology Transformation Service,TTS,-203657.12,-203657.12,,0.0,General Services Administration | Technology Transformation Service
+2022,National Aeronautics and Space Administration,National Aeronautics and Space Administration,NASA,15239515399.13,9741179362.24,0.639205322945906,5498336036.889999,National Aeronautics and Space Administration | National Aeronautics and Space Administration
+2022,Small Business Administration,Small Business Administration,SBA,660842772.42,428718052.81,0.6487444074481417,232124719.60999995,Small Business Administration | Small Business Administration
+2022,Social Security Administration,Social Security Administration,SSA,1899504963.26,1641549722.67,0.8641987014620442,257955240.5899999,Social Security Administration | Social Security Administration
+2023,Agency for International Development,Agency for International Development,USAID,6684353104.63,6390423308.37,0.9560271889202852,293929796.2600002,Agency for International Development | Agency for International Development
+2023,Department of Agriculture,Agricultural Marketing Service,AMS,4917812905.48,4897683197.53,0.9959067763786684,20129707.94999981,Department of Agriculture | Agricultural Marketing Service
+2023,Department of Agriculture,Forest Service,FS,3276969851.36,2907936362.52,0.8873857540413914,369033488.84000015,Department of Agriculture | Forest Service
+2023,Department of Agriculture,Office of the Chief Financial Officer,OCFO,1621679253.22,1402950685.09,0.8651221764749758,218728568.1300001,Department of Agriculture | Office of the Chief Financial Officer
+2023,Department of Agriculture,Rural Housing Service,RHS,374606313.16,309616897.23,0.8265127584696043,64989415.93000001,Department of Agriculture | Rural Housing Service
+2023,Department of Agriculture,Agricultural Research Service,ARS,358311287.88,304633449.29,0.8501921641721293,53677838.589999974,Department of Agriculture | Agricultural Research Service
+2023,Department of Agriculture,Animal and Plant Health Inspection Service,APHIS,329988675.78,180189529.42,0.5460476151009814,149799146.35999998,Department of Agriculture | Animal and Plant Health Inspection Service
+2023,Department of Agriculture,Under Secretary for Farm and Foreign Agricultural Services,,291598200.2,246894187.41,0.8466931114137927,44704012.78999999,Department of Agriculture | Under Secretary for Farm and Foreign Agricultural Services
+2023,Department of Agriculture,Food and Nutrition Service,FNS,204086217.59,199425959.09,0.9771652463599367,4660258.5,Department of Agriculture | Food and Nutrition Service
+2023,Department of Agriculture,Food Safety and Inspection Service,FSIS,64931165.33,46583599.6,0.7174305183535199,18347565.729999997,Department of Agriculture | Food Safety and Inspection Service
+2023,Department of Agriculture,Office of the Inspector General,OIG,16849799.12,13185159.54,0.7825113786875816,3664639.580000002,Department of Agriculture | Office of the Inspector General
+2023,Department of Agriculture,Farm Service Agency,FSA,-6480.0,-6480.0,,0.0,Department of Agriculture | Farm Service Agency
+2023,Department of Agriculture,Natural Resources Conservation Service,NRCS,-97222.05,-96015.7,,0.0,Department of Agriculture | Natural Resources Conservation Service
+2023,Department of Commerce,National Oceanic and Atmospheric Administration,NOAA,2437261064.27,2096768070.1,0.8602968721071399,340492994.1700001,Department of Commerce | National Oceanic and Atmospheric Administration
+2023,Department of Commerce,U.S. Patent and Trademark Office,USPTO,952879900.04,837336065.2,0.8787424996212538,115543834.83999991,Department of Commerce | U.S. Patent and Trademark Office
+2023,Department of Commerce,Office of the Secretary,OS,818691801.15,683048645.16,0.8343171926243004,135643155.99,Department of Commerce | Office of the Secretary
+2023,Department of Commerce,U.S. Census Bureau,,415999690.68,273909265.55,0.6584362240805116,142090425.13,Department of Commerce | U.S. Census Bureau
+2023,Department of Commerce,National Institute of Standards and Technology,NIST,400919744.58,233606053.75,0.5826753531301474,167313690.82999998,Department of Commerce | National Institute of Standards and Technology
+2023,Department of Defense,Department of the Navy,USN,151875042270.39,59636359002.3,0.3926672750887318,92238683268.09001,Department of Defense | Department of the Navy
+2023,Department of Defense,Department of the Army,USA,111651976835.24,67506773335.02,0.6046178065851608,44145203500.22001,Department of Defense | Department of the Army
+2023,Department of Defense,Department of the Air Force,USAF,92498051362.27,42236357871.07,0.45661889357701896,50261693491.200005,Department of Defense | Department of the Air Force
+2023,Department of Defense,Defense Logistics Agency,DLA,50530529570.33,41695384513.41,0.8251523359828842,8835145056.919998,Department of Defense | Defense Logistics Agency
+2023,Department of Defense,Defense Health Agency,DHA,18507210684.09,15813956440.19,0.8544754101591713,2693254243.8999996,Department of Defense | Defense Health Agency
+2023,Department of Defense,Missile Defense Agency,MDA,7075527126.51,4122132621.64,0.582590179916848,2953394504.8700004,Department of Defense | Missile Defense Agency
+2023,Department of Defense,Defense Information Systems Agency,DISA,6484962748.56,5569648453.34,0.8588558900475954,915314295.2200003,Department of Defense | Defense Information Systems Agency
+2023,Department of Defense,USTRANSCOM,,4685055454.42,4670837402.63,0.9969652329778538,14218051.789999962,Department of Defense | USTRANSCOM
+2023,Department of Defense,U.S. Special Operations Command,USSOCOM,4255791777.18,3023845834.56,0.7105248548047339,1231945942.62,Department of Defense | U.S. Special Operations Command
+2023,Department of Defense,Washington Headquarters Services,WHS,2481860260.92,1554569282.06,0.6263726070877725,927290978.8600001,Department of Defense | Washington Headquarters Services
+2023,Department of Defense,Defense Advanced Research Projects Agency,DARPA,1624506919.22,1382636410.3,0.8511114319930794,241870508.92000008,Department of Defense | Defense Advanced Research Projects Agency
+2023,Department of Defense,Defense Microelectronics Activity,DMEA,1294026401.66,1137749568.9,0.8792321141519792,156276832.76,Department of Defense | Defense Microelectronics Activity
+2023,Department of Defense,Defense Threat Reduction Agency,DTRA,1245398761.56,1062687735.7,0.8532911453748885,182711025.8599999,Department of Defense | Defense Threat Reduction Agency
+2023,Department of Defense,Defense Counterintelligence and Security Agency,DCSA,800796912.25,697464188.46,0.8709626345840097,103332723.78999996,Department of Defense | Defense Counterintelligence and Security Agency
+2023,Department of Defense,Defense Commissary Agency,DECA,394452832.21,247198537.8,0.6266871920148762,147254294.40999997,Department of Defense | Defense Commissary Agency
+2023,Department of Defense,Defense Finance and Accounting Service,DFAS,340582171.64,328419013.41,0.9642871552218047,12163158.22999996,Department of Defense | Defense Finance and Accounting Service
+2023,Department of Defense,Department of Defense Education Activity,DODEA,294317400.26,267110327.95,0.9075587366361443,27207072.310000002,Department of Defense | Department of Defense Education Activity
+2023,Department of Defense,Defense Human Resources Activity,,282033095.16,181802978.02,0.644615760135744,100230117.14000002,Department of Defense | Defense Human Resources Activity
+2023,Department of Defense,Defense Contract Management Agency,DCMA,206039153.91,368489839.8,1.78844570464971,-162450685.89000002,Department of Defense | Defense Contract Management Agency
+2023,Department of Defense,Immediate Office of the Secretary of Defense,SECDEF,130428574.42,123593520.7,0.9475954272260151,6835053.719999999,Department of Defense | Immediate Office of the Secretary of Defense
+2023,Department of Defense,U.S. Cyber Command,USCYBERCOM,123529680.1,54923974.43,0.4446216843234584,68605705.66999999,Department of Defense | U.S. Cyber Command
+2023,Department of Defense,Defense Media Activity,DMA,114992962.37,89733735.95,0.7803411104522535,25259226.42,Department of Defense | Defense Media Activity
+2023,Department of Defense,Uniformed Services University of the Health Sciences,USUHS,49104888.36,29414734.53,0.5990184584954833,19690153.83,Department of Defense | Uniformed Services University of the Health Sciences
+2023,Department of Education,Department of Education,ED,2445985962.83,2340231798.76,0.9567641982917832,105754164.0699997,Department of Education | Department of Education
+2023,Department of Energy,Department of Energy,DOE,44466435868.64,43015841340.97,0.9673777648391867,1450594527.6699982,Department of Energy | Department of Energy
+2023,Department of Energy,Federal Energy Regulatory Commission,FERC,137252802.69,117885828.84,0.8588956038024057,19366973.849999994,Department of Energy | Federal Energy Regulatory Commission
+2023,Department of Health and Human Services,Office of Assistant Secretary for Preparedness and Response,,8755465863.53,6766479394.39,0.7728291675003931,1988986469.1400003,Department of Health and Human Services | Office of Assistant Secretary for Preparedness and Response
+2023,Department of Health and Human Services,National Institutes of Health,NIH,7898511340.68,6972799329.66,0.8827991793526622,925712011.0200005,Department of Health and Human Services | National Institutes of Health
+2023,Department of Health and Human Services,Centers for Medicare and Medicaid Services,CMS,7370607602.88,7325930591.65,0.9939384900625365,44677011.230000496,Department of Health and Human Services | Centers for Medicare and Medicaid Services
+2023,Department of Health and Human Services,Centers for Disease Control and Prevention,CDC,2851188794.59,1995332296.82,0.6998246838673228,855856497.7700002,Department of Health and Human Services | Centers for Disease Control and Prevention
+2023,Department of Health and Human Services,Food and Drug Administration,FDA,1920837238.48,1661484374.23,0.864979260577418,259352864.25,Department of Health and Human Services | Food and Drug Administration
+2023,Department of Health and Human Services,Indian Health Service,IHS,1350335003.01,1028303515.78,0.761517337170282,322031487.23,Department of Health and Human Services | Indian Health Service
+2023,Department of Health and Human Services,Administration for Children and Families,ACF,1107049724.62,160827110.2,0.14527541683387768,946222614.4199998,Department of Health and Human Services | Administration for Children and Families
+2023,Department of Health and Human Services,Office of the Assistant Secretary for Administration,ASA,994400667.19,832216329.0,0.8369024242026062,162184338.19000006,Department of Health and Human Services | Office of the Assistant Secretary for Administration
+2023,Department of Health and Human Services,Health Resources and Services Administration,HRSA,599188010.67,535456432.72,0.893636760390555,63731577.94999993,Department of Health and Human Services | Health Resources and Services Administration
+2023,Department of Health and Human Services,Substance Abuse and Mental Health Services Administration,SAMHSA,303718465.43,302316135.59,0.9953827969003641,1402329.8400000334,Department of Health and Human Services | Substance Abuse and Mental Health Services Administration
+2023,Department of Health and Human Services,Agency for Healthcare Research and Quality,AHRQ,170455216.76,174343328.12,1.0228101634781555,-3888111.3600000143,Department of Health and Human Services | Agency for Healthcare Research and Quality
+2023,Department of Health and Human Services,Office of the Inspector General,OIG,36736013.83,32383340.05,0.881514804514652,4352673.7799999975,Department of Health and Human Services | Office of the Inspector General
+2023,Department of Homeland Security,U.S. Customs and Border Protection,CBP,6701317571.05,5807134208.98,0.8665660368144745,894183362.0700006,Department of Homeland Security | U.S. Customs and Border Protection
+2023,Department of Homeland Security,Office of Procurement Operations,OPO,3963035525.3,3484530608.13,0.8792579793657597,478504917.1700001,Department of Homeland Security | Office of Procurement Operations
+2023,Department of Homeland Security,U.S. Coast Guard,USCG,3144665998.9,2196286083.69,0.6984163292566709,948379915.21,Department of Homeland Security | U.S. Coast Guard
+2023,Department of Homeland Security,U.S. Immigration and Customs Enforcement,ICE,3120255314.93,2870718478.74,0.9200267891553617,249536836.19000006,Department of Homeland Security | U.S. Immigration and Customs Enforcement
+2023,Department of Homeland Security,Federal Emergency Management Agency,FEMA,2733710328.47,2476694960.47,0.9059829546227577,257015368.0,Department of Homeland Security | Federal Emergency Management Agency
+2023,Department of Homeland Security,Transportation Security Administration,TSA,2121187271.86,1877322340.04,0.885033756776146,243864931.81999993,Department of Homeland Security | Transportation Security Administration
+2023,Department of Homeland Security,U.S. Citizenship and Immigration Services,USCIS,1374330087.19,1294464021.17,0.941887275288212,79866066.01999998,Department of Homeland Security | U.S. Citizenship and Immigration Services
+2023,Department of Homeland Security,U.S. Secret Service,USSS,422569414.89,323513899.46,0.7655875888325108,99055515.43,Department of Homeland Security | U.S. Secret Service
+2023,Department of Homeland Security,Federal Law Enforcement Training Center,FLETC,263866751.43,204210926.65,0.7739168559255719,59655824.78,Department of Homeland Security | Federal Law Enforcement Training Center
+2023,Department of Homeland Security,Office of the Inspector General,IG,53068391.74,52178145.77,0.9832245534335841,890245.9699999988,Department of Homeland Security | Office of the Inspector General
+2023,Department of Housing and Urban Development,Department of Housing and Urban Development,HUD,431141789.9,-21207001.55,0.0,431141789.9,Department of Housing and Urban Development | Department of Housing and Urban Development
+2023,Department of Justice,Federal Prison System / Bureau of Prisons,,2737283993.41,2252678008.2,0.822961013041874,484605985.21000004,Department of Justice | Federal Prison System / Bureau of Prisons
+2023,Department of Justice,Federal Bureau of Investigation,FBI,2248303077.17,1849963202.69,0.822826433622374,398339874.48,Department of Justice | Federal Bureau of Investigation
+2023,Department of Justice,"Offices, Boards and Divisions",,2154578910.35,1827117859.76,0.8480162183817136,327461050.5899999,"Department of Justice | Offices, Boards and Divisions"
+2023,Department of Justice,U.S. Marshals Service,,1293852614.49,1263564570.65,0.9765908083341173,30288043.839999914,Department of Justice | U.S. Marshals Service
+2023,Department of Justice,Drug Enforcement Administration,DEA,572320546.3,472041672.77,0.8247854734933182,100278873.52999997,Department of Justice | Drug Enforcement Administration
+2023,Department of Justice,"Bureau of Alcohol, Tobacco, Firearms and Explosives Acquisition and Property Management Division",,382863819.03,306107366.98,0.799520225639327,76756452.04999995,"Department of Justice | Bureau of Alcohol, Tobacco, Firearms and Explosives Acquisition and Property Management Division"
+2023,Department of Justice,Federal Prison Industries / Unicor,,344585536.82,282147792.61,0.8188033520321099,62437744.20999998,Department of Justice | Federal Prison Industries / Unicor
+2023,Department of Justice,Office of Justice Programs,OJP,219312673.29,191266950.27,0.8721199162853907,28045723.01999998,Department of Justice | Office of Justice Programs
+2023,Department of Justice,Office of the Inspector General,OIG,7783725.38,4683089.82,0.6016514703914182,3100635.5599999996,Department of Justice | Office of the Inspector General
+2023,Department of Labor,Office of the Assistant Secretary for Administration and Management,,2471270620.72,2326927025.33,0.9415913440722466,144343595.38999987,Department of Labor | Office of the Assistant Secretary for Administration and Management
+2023,Department of Labor,Office of Inspector General,OIG,7534008.72,6150090.47,0.8163105059427115,1383918.25,Department of Labor | Office of Inspector General
+2023,Department of State,Department of State,DOS,11523501738.27,8410468012.93,0.7298534945326998,3113033725.34,Department of State | Department of State
+2023,Department of State,International Boundary and Water Commission: U.S.-Mexico,IBWC,140503741.27,123225803.89,0.8770286312390946,17277937.38000001,Department of State | International Boundary and Water Commission: U.S.-Mexico
+2023,Department of Transportation,Federal Aviation Administration,FAA,4880219414.04,3947594999.27,0.8088970319475977,932624414.77,Department of Transportation | Federal Aviation Administration
+2023,Department of Transportation,Federal Highway Administration,FHWA,1679369503.87,1599255488.79,0.9522951828675094,80114015.07999992,Department of Transportation | Federal Highway Administration
+2023,Department of Transportation,Maritime Administration,MARAD,1172267500.41,966403903.99,0.8243885492449468,205863596.42000008,Department of Transportation | Maritime Administration
+2023,Department of Transportation,National Highway Traffic Safety Administration,NHTSA,319021089.68,253895006.06,0.7958564943611536,65126083.620000005,Department of Transportation | National Highway Traffic Safety Administration
+2023,Department of Transportation,Immediate Office of the Secretary of Transportation,OST,229171122.06,149859338.23,0.6539189444242667,79311783.83000001,Department of Transportation | Immediate Office of the Secretary of Transportation
+2023,Department of Transportation,Federal Transit Administration,FTA,154250741.51,150341601.32,0.974657235668805,3909140.1899999976,Department of Transportation | Federal Transit Administration
+2023,Department of Transportation,Federal Motor Carrier Safety Administration,FMCSA,98095546.17,93609647.82,0.9542701118945204,4485898.350000009,Department of Transportation | Federal Motor Carrier Safety Administration
+2023,Department of Transportation,Federal Railroad Administration,FRA,93450164.96,84837449.02,0.9078362682004195,8612715.939999998,Department of Transportation | Federal Railroad Administration
+2023,Department of Transportation,Pipeline and Hazardous Materials Safety Administration,PHMSA,51838747.64,44709033.8,0.862463617186258,7129713.840000004,Department of Transportation | Pipeline and Hazardous Materials Safety Administration
+2023,Department of Transportation,Saint Lawrence Seaway Development Corporation,SLSDC,14706425.29,14043688.61,0.9549355695261551,662736.6799999997,Department of Transportation | Saint Lawrence Seaway Development Corporation
+2023,Department of Veterans Affairs,Department of Veterans Affairs,VA,61679758915.09,56894063790.93,0.922410605872372,4785695124.159996,Department of Veterans Affairs | Department of Veterans Affairs
+2023,Department of the Interior,Departmental Offices,,2594687244.31,2282733198.99,0.8797720048903399,311954045.3200002,Department of the Interior | Departmental Offices
+2023,Department of the Interior,National Park Service,NPS,1919388551.43,1733564724.44,0.9031859250949705,185823826.99,Department of the Interior | National Park Service
+2023,Department of the Interior,Bureau of Indian Affairs and Bureau of Indian Education,,807209383.34,730653061.79,0.9051592769731788,76556321.55000007,Department of the Interior | Bureau of Indian Affairs and Bureau of Indian Education
+2023,Department of the Interior,Bureau of Reclamation,BOR,706544783.39,624233954.04,0.8835023182039886,82310829.35000002,Department of the Interior | Bureau of Reclamation
+2023,Department of the Interior,Bureau of Land Management,BLM,608709441.9,539543143.16,0.8863722262560817,69166298.74000001,Department of the Interior | Bureau of Land Management
+2023,Department of the Interior,U.S. Geological Survey,USGS,534762323.91,466224222.31,0.8718344607771303,68538101.60000002,Department of the Interior | U.S. Geological Survey
+2023,Department of the Interior,U.S. Fish and Wildlife Service,USFWS,347855591.56,323780602.29,0.9307902766144054,24074989.26999998,Department of the Interior | U.S. Fish and Wildlife Service
+2023,Department of the Interior,Bureau of Safety and Environmental Enforcement,BSEE,63696034.46,50594203.99,0.7943069677559328,13101830.469999999,Department of the Interior | Bureau of Safety and Environmental Enforcement
+2023,Department of the Interior,Bureau of Ocean Energy Management,BOEM,40359407.57,37010832.5,0.9170311143890757,3348575.0700000003,Department of the Interior | Bureau of Ocean Energy Management
+2023,Department of the Interior,"Office of Surface Mining, Reclamation and Enforcement",OSMRE,5754255.68,4327174.99,0.7519956064934536,1427080.6899999995,"Department of the Interior | Office of Surface Mining, Reclamation and Enforcement"
+2023,Department of the Interior,Office of the Inspector General,OIG,2734500.0,2511187.6,0.9183351983909307,223312.3999999999,Department of the Interior | Office of the Inspector General
+2023,Department of the Treasury,United States Mint,USMINT,4397647142.87,4353918319.35,0.9900563137288315,43728823.519999504,Department of the Treasury | United States Mint
+2023,Department of the Treasury,Internal Revenue Service,IRS,4270894642.38,3818686643.68,0.8941186714809704,452207998.7000003,Department of the Treasury | Internal Revenue Service
+2023,Department of the Treasury,Bureau of the Fiscal Service,,719529216.23,626286430.43,0.8704113972069834,93242785.80000007,Department of the Treasury | Bureau of the Fiscal Service
+2023,Department of the Treasury,Bureau of Engraving and Printing,BEP,500059735.34,327015221.14,0.6539523141523407,173044514.2,Department of the Treasury | Bureau of Engraving and Printing
+2023,Department of the Treasury,Office of the Comptroller of the Currency,OCC,185657112.11,172138575.19,0.9271854615944343,13518536.920000017,Department of the Treasury | Office of the Comptroller of the Currency
+2023,Department of the Treasury,Departmental Offices,DO,173920171.2,142873842.68,0.8214909270972476,31046328.51999998,Department of the Treasury | Departmental Offices
+2023,Department of the Treasury,Office of Inspector General,OIG,10225998.53,8643133.67,0.84521170667526,1582864.8599999994,Department of the Treasury | Office of Inspector General
+2023,Environmental Protection Agency,Environmental Protection Agency,EPA,1863311252.45,1671736608.25,0.8971859135460565,191574644.20000005,Environmental Protection Agency | Environmental Protection Agency
+2023,General Services Administration,Federal Acquisition Service,FAS,20512269782.86,18692895886.18,0.9113031411959945,1819373896.6800003,General Services Administration | Federal Acquisition Service
+2023,General Services Administration,Public Buildings Service,PBS,3112962716.43,2649328803.07,0.8510634544663923,463633913.35999966,General Services Administration | Public Buildings Service
+2023,General Services Administration,Office of Administrative Services,OAS,287457996.72,282523080.81,0.9828325669617503,4934915.910000026,General Services Administration | Office of Administrative Services
+2023,General Services Administration,Office of Inspector General,OIG,5734657.57,2684455.54,0.46811086925980133,3050202.0300000003,General Services Administration | Office of Inspector General
+2023,National Aeronautics and Space Administration,National Aeronautics and Space Administration,NASA,16129086435.76,10136316846.69,0.6284495335220379,5992769589.07,National Aeronautics and Space Administration | National Aeronautics and Space Administration
+2023,Small Business Administration,Small Business Administration,SBA,382451895.67,349258701.0,0.9132094910606983,33193194.670000017,Small Business Administration | Small Business Administration
+2023,Social Security Administration,Social Security Administration,SSA,1937692238.12,1781751140.33,0.919522257083871,155941097.78999996,Social Security Administration | Social Security Administration
+2024,Agency for International Development,Agency for International Development,USAID,7444753388.62,7207498794.31,0.9681313024186046,237254594.30999947,Agency for International Development | Agency for International Development
+2024,Department of Agriculture,Agricultural Marketing Service,AMS,4715451215.18,4695626489.07,0.9957957944626421,19824726.11000061,Department of Agriculture | Agricultural Marketing Service
+2024,Department of Agriculture,Forest Service,FS,3837667808.47,3285706602.87,0.85617275044448,551961205.5999999,Department of Agriculture | Forest Service
+2024,Department of Agriculture,Office of the Chief Financial Officer,OCFO,1603576318.41,1292869096.91,0.8062410763161701,310707221.5,Department of Agriculture | Office of the Chief Financial Officer
+2024,Department of Agriculture,Rural Housing Service,RHS,370783900.69,313317720.25,0.8450143592182403,57466180.44,Department of Agriculture | Rural Housing Service
+2024,Department of Agriculture,Agricultural Research Service,ARS,366636436.4,313518530.36,0.8551210388100969,53117906.03999996,Department of Agriculture | Agricultural Research Service
+2024,Department of Agriculture,Under Secretary for Farm and Foreign Agricultural Services,,301645919.07,254468239.27,0.8435991445020945,47177679.79999998,Department of Agriculture | Under Secretary for Farm and Foreign Agricultural Services
+2024,Department of Agriculture,Animal and Plant Health Inspection Service,APHIS,257583390.4,166907344.68,0.6479740189024238,90676045.72,Department of Agriculture | Animal and Plant Health Inspection Service
+2024,Department of Agriculture,Food and Nutrition Service,FNS,86713788.54,84485534.45,0.9743033475123494,2228254.0900000036,Department of Agriculture | Food and Nutrition Service
+2024,Department of Agriculture,Food Safety and Inspection Service,FSIS,45096188.92,33854573.58,0.750719171415073,11241615.340000004,Department of Agriculture | Food Safety and Inspection Service
+2024,Department of Agriculture,Office of the Inspector General,OIG,12738513.82,10182046.64,0.7993119749977239,2556467.1799999997,Department of Agriculture | Office of the Inspector General
+2024,Department of Agriculture,Farm Service Agency,FSA,-18114.4,-360.0,,0.0,Department of Agriculture | Farm Service Agency
+2024,Department of Agriculture,Natural Resources Conservation Service,NRCS,-369076.51,-365374.37,,0.0,Department of Agriculture | Natural Resources Conservation Service
+2024,Department of Commerce,National Oceanic and Atmospheric Administration,NOAA,2616874648.96,2146469256.74,0.8202415265068395,470405392.22,Department of Commerce | National Oceanic and Atmospheric Administration
+2024,Department of Commerce,U.S. Patent and Trademark Office,USPTO,932862446.73,814782609.55,0.8734220274447642,118079837.18000007,Department of Commerce | U.S. Patent and Trademark Office
+2024,Department of Commerce,Office of the Secretary,OS,833372322.56,713823307.36,0.8565478934640371,119549015.19999993,Department of Commerce | Office of the Secretary
+2024,Department of Commerce,U.S. Census Bureau,,419903888.64,270584411.55,0.6443960603136557,149319477.08999997,Department of Commerce | U.S. Census Bureau
+2024,Department of Commerce,National Institute of Standards and Technology,NIST,381996106.43,257215988.38,0.673347146869766,124780118.05000001,Department of Commerce | National Institute of Standards and Technology
+2024,Department of Defense,Department of the Navy,USN,134967361420.78,61756428802.3,0.4575656525562912,73210932618.48,Department of Defense | Department of the Navy
+2024,Department of Defense,Department of the Army,USA,103995055988.58,63953782107.23,0.6149694473384673,40041273881.35,Department of Defense | Department of the Army
+2024,Department of Defense,Department of the Air Force,USAF,99924139407.97,46345607688.99,0.4638079243271766,53578531718.98,Department of Defense | Department of the Air Force
+2024,Department of Defense,Defense Logistics Agency,DLA,53151911755.81,43925327014.52,0.8264110464421546,9226584741.29,Department of Defense | Defense Logistics Agency
+2024,Department of Defense,Defense Health Agency,DHA,18617783862.85,15922138137.39,0.855211246122644,2695645725.459999,Department of Defense | Defense Health Agency
+2024,Department of Defense,Missile Defense Agency,MDA,8461434265.19,4606356045.58,0.544394236392093,3855078219.6099997,Department of Defense | Missile Defense Agency
+2024,Department of Defense,Defense Information Systems Agency,DISA,7106176976.28,6047056429.23,0.8509577582172126,1059120547.0500002,Department of Defense | Defense Information Systems Agency
+2024,Department of Defense,USTRANSCOM,,5154508231.87,5134646624.76,0.9961467503364925,19861607.109999657,Department of Defense | USTRANSCOM
+2024,Department of Defense,U.S. Special Operations Command,USSOCOM,4926311497.66,3047931210.69,0.6187045240922684,1878380286.9699998,Department of Defense | U.S. Special Operations Command
+2024,Department of Defense,Washington Headquarters Services,WHS,2670303518.35,1599998631.44,0.5991823103422531,1070304886.9099998,Department of Defense | Washington Headquarters Services
+2024,Department of Defense,Defense Advanced Research Projects Agency,DARPA,1808311631.63,1378732209.03,0.762441708007607,429579422.60000014,Department of Defense | Defense Advanced Research Projects Agency
+2024,Department of Defense,Defense Microelectronics Activity,DMEA,1383556116.03,1329862638.66,0.9611916880364283,53693477.369999886,Department of Defense | Defense Microelectronics Activity
+2024,Department of Defense,Defense Threat Reduction Agency,DTRA,1329699724.69,1117988411.98,0.8407826152183664,211711312.71000004,Department of Defense | Defense Threat Reduction Agency
+2024,Department of Defense,Defense Counterintelligence and Security Agency,DCSA,925303946.55,768730128.07,0.8307866090231365,156573818.4799999,Department of Defense | Defense Counterintelligence and Security Agency
+2024,Department of Defense,Defense Commissary Agency,DECA,419098046.48,264976546.44,0.6322543105737074,154121500.04000002,Department of Defense | Defense Commissary Agency
+2024,Department of Defense,Defense Finance and Accounting Service,DFAS,366234834.98,357078369.12,0.974998375398943,9156465.860000014,Department of Defense | Defense Finance and Accounting Service
+2024,Department of Defense,Department of Defense Education Activity,DODEA,309457928.6,270897431.3,0.8753934097780295,38560497.30000001,Department of Defense | Department of Defense Education Activity
+2024,Department of Defense,Defense Human Resources Activity,,295353888.57,200293719.83,0.6781482404032396,95060168.73999998,Department of Defense | Defense Human Resources Activity
+2024,Department of Defense,U.S. Cyber Command,USCYBERCOM,144810258.63,77394433.01,0.5344540762664337,67415825.61999999,Department of Defense | U.S. Cyber Command
+2024,Department of Defense,Defense Media Activity,DMA,112858657.77,100198400.66,0.88782201241662,12660257.11,Department of Defense | Defense Media Activity
+2024,Department of Defense,Uniformed Services University of the Health Sciences,USUHS,50168520.64,23523034.54,0.468880370397942,26645486.1,Department of Defense | Uniformed Services University of the Health Sciences
+2024,Department of Defense,Immediate Office of the Secretary of Defense,SECDEF,4273371.0,4273371.0,1.0,0.0,Department of Defense | Immediate Office of the Secretary of Defense
+2024,Department of Defense,Office of the Inspector General,OIG,300.9,300.9,1.0,0.0,Department of Defense | Office of the Inspector General
+2024,Department of Defense,Defense Contract Management Agency,DCMA,-78783068.25,467177986.7,,-467177986.7,Department of Defense | Defense Contract Management Agency
+2024,Department of Education,Department of Education,ED,2724859964.87,2669121369.17,0.9795444182752125,55738595.69999981,Department of Education | Department of Education
+2024,Department of Energy,Department of Energy,DOE,45893679340.66,44375864539.26,0.9669275851662806,1517814801.4000015,Department of Energy | Department of Energy
+2024,Department of Energy,Federal Energy Regulatory Commission,FERC,150130864.25,129004532.0,0.859280552632934,21126332.25,Department of Energy | Federal Energy Regulatory Commission
+2024,Department of Health and Human Services,Centers for Medicare and Medicaid Services,CMS,8388437117.44,8236927787.89,0.9819383125332127,151509329.54999924,Department of Health and Human Services | Centers for Medicare and Medicaid Services
+2024,Department of Health and Human Services,National Institutes of Health,NIH,7583650998.79,6712860929.07,0.8851753502555777,870790069.7200003,Department of Health and Human Services | National Institutes of Health
+2024,Department of Health and Human Services,Office of Assistant Secretary for Preparedness and Response,,6354792543.8,5643377881.83,0.8880506866169713,711414661.9700003,Department of Health and Human Services | Office of Assistant Secretary for Preparedness and Response
+2024,Department of Health and Human Services,Centers for Disease Control and Prevention,CDC,1852610207.47,1775730179.99,0.9585017791816064,76880027.48000002,Department of Health and Human Services | Centers for Disease Control and Prevention
+2024,Department of Health and Human Services,Food and Drug Administration,FDA,1706144090.51,1431979153.74,0.8393072787374912,274164936.77,Department of Health and Human Services | Food and Drug Administration
+2024,Department of Health and Human Services,Indian Health Service,IHS,1408886288.97,1088917249.88,0.7728922187723745,319969039.0899999,Department of Health and Human Services | Indian Health Service
+2024,Department of Health and Human Services,Office of the Assistant Secretary for Administration,ASA,1008375127.07,846370299.66,0.8393407145208631,162004827.4100001,Department of Health and Human Services | Office of the Assistant Secretary for Administration
+2024,Department of Health and Human Services,Health Resources and Services Administration,HRSA,573232157.27,524124796.42,0.9143325086926871,49107360.849999964,Department of Health and Human Services | Health Resources and Services Administration
+2024,Department of Health and Human Services,Administration for Children and Families,ACF,463044026.99,333012305.97,0.7191806535865148,130031721.01999998,Department of Health and Human Services | Administration for Children and Families
+2024,Department of Health and Human Services,Substance Abuse and Mental Health Services Administration,SAMHSA,335278757.71,332525245.42,0.9917873941409029,2753512.289999962,Department of Health and Human Services | Substance Abuse and Mental Health Services Administration
+2024,Department of Health and Human Services,Agency for Healthcare Research and Quality,AHRQ,178536360.29,176772223.29,0.9901188923245972,1764137.0,Department of Health and Human Services | Agency for Healthcare Research and Quality
+2024,Department of Health and Human Services,Office of the Inspector General,OIG,15621994.41,15476835.76,0.9907080590230476,145158.65000000037,Department of Health and Human Services | Office of the Inspector General
+2024,Department of Homeland Security,U.S. Customs and Border Protection,CBP,5766862174.36,5039201306.28,0.8738203123155522,727660868.0799999,Department of Homeland Security | U.S. Customs and Border Protection
+2024,Department of Homeland Security,Office of Procurement Operations,OPO,4105660582.99,3794527690.28,0.9242185547438962,311132892.70999956,Department of Homeland Security | Office of Procurement Operations
+2024,Department of Homeland Security,U.S. Coast Guard,USCG,3223881208.42,2380885248.43,0.738515191630418,842995959.9900002,Department of Homeland Security | U.S. Coast Guard
+2024,Department of Homeland Security,U.S. Immigration and Customs Enforcement,ICE,3217137733.55,2983823052.36,0.9274775590871127,233314681.19000006,Department of Homeland Security | U.S. Immigration and Customs Enforcement
+2024,Department of Homeland Security,Federal Emergency Management Agency,FEMA,2711722830.54,2476903066.26,0.9134056911586208,234819764.27999973,Department of Homeland Security | Federal Emergency Management Agency
+2024,Department of Homeland Security,Transportation Security Administration,TSA,2264663024.86,2011453473.91,0.8881910694127868,253209550.95000005,Department of Homeland Security | Transportation Security Administration
+2024,Department of Homeland Security,U.S. Citizenship and Immigration Services,USCIS,1490016660.26,1394692067.15,0.9360244783482043,95324593.1099999,Department of Homeland Security | U.S. Citizenship and Immigration Services
+2024,Department of Homeland Security,U.S. Secret Service,USSS,518486132.24,382845092.23,0.7383902257443337,135641040.01,Department of Homeland Security | U.S. Secret Service
+2024,Department of Homeland Security,Federal Law Enforcement Training Center,FLETC,255184474.57,195937895.22,0.7678284329411742,59246579.349999994,Department of Homeland Security | Federal Law Enforcement Training Center
+2024,Department of Homeland Security,Office of the Inspector General,IG,54285466.57,54305484.04,1.0003687445510703,-20017.469999998808,Department of Homeland Security | Office of the Inspector General
+2024,Department of Housing and Urban Development,Department of Housing and Urban Development,HUD,1525527557.97,409320295.73,0.2683139308703655,1116207262.24,Department of Housing and Urban Development | Department of Housing and Urban Development
+2024,Department of Justice,Federal Bureau of Investigation,FBI,2536903598.49,2236079273.68,0.8814206716451288,300824324.80999994,Department of Justice | Federal Bureau of Investigation
+2024,Department of Justice,"Offices, Boards and Divisions",,2087675764.03,1839732929.11,0.8812349890763798,247942834.92000008,"Department of Justice | Offices, Boards and Divisions"
+2024,Department of Justice,Federal Prison System / Bureau of Prisons,,2044811025.86,1650568557.45,0.8071985804926933,394242468.40999985,Department of Justice | Federal Prison System / Bureau of Prisons
+2024,Department of Justice,U.S. Marshals Service,,1342283839.69,1320256818.84,0.9835898934348436,22027020.850000143,Department of Justice | U.S. Marshals Service
+2024,Department of Justice,Drug Enforcement Administration,DEA,576103038.17,477487989.31,0.8288239389029224,98615048.85999995,Department of Justice | Drug Enforcement Administration
+2024,Department of Justice,"Bureau of Alcohol, Tobacco, Firearms and Explosives Acquisition and Property Management Division",,322678506.97,275719945.14,0.8544726072060143,46958561.83000004,"Department of Justice | Bureau of Alcohol, Tobacco, Firearms and Explosives Acquisition and Property Management Division"
+2024,Department of Justice,Federal Prison Industries / Unicor,,255671840.73,206496842.27,0.807663611606212,49174998.45999998,Department of Justice | Federal Prison Industries / Unicor
+2024,Department of Justice,Office of Justice Programs,OJP,225273990.65,198603604.4,0.8816091188643397,26670386.25,Department of Justice | Office of Justice Programs
+2024,Department of Justice,Office of the Inspector General,OIG,8195287.73,4552769.25,0.5555350098732896,3642518.4800000004,Department of Justice | Office of the Inspector General
+2024,Department of Labor,Office of the Assistant Secretary for Administration and Management,,2180086617.37,2071728692.09,0.9502965045440624,108357925.27999997,Department of Labor | Office of the Assistant Secretary for Administration and Management
+2024,Department of Labor,Office of Inspector General,OIG,9780310.17,7421139.16,0.758783620458532,2359171.01,Department of Labor | Office of Inspector General
+2024,Department of State,Department of State,DOS,11495740846.52,8765886146.35,0.7625333820050072,2729854700.17,Department of State | Department of State
+2024,Department of State,International Boundary and Water Commission: U.S.-Mexico,IBWC,159811684.2,137843382.85,0.8625363254259478,21968301.349999994,Department of State | International Boundary and Water Commission: U.S.-Mexico
+2024,Department of Transportation,Federal Aviation Administration,FAA,5157673269.37,4172625245.82,0.8090131010430753,985048023.5499997,Department of Transportation | Federal Aviation Administration
+2024,Department of Transportation,Federal Highway Administration,FHWA,1270440555.44,1230315735.24,0.9684166094759913,40124820.20000005,Department of Transportation | Federal Highway Administration
+2024,Department of Transportation,Maritime Administration,MARAD,1142183078.24,793832315.44,0.6950131993403573,348350762.79999995,Department of Transportation | Maritime Administration
+2024,Department of Transportation,National Highway Traffic Safety Administration,NHTSA,335812591.08,272774494.58,0.8122819150489132,63038096.5,Department of Transportation | National Highway Traffic Safety Administration
+2024,Department of Transportation,Immediate Office of the Secretary of Transportation,OST,234717725.57,160535708.44,0.6839522155821306,74182017.13,Department of Transportation | Immediate Office of the Secretary of Transportation
+2024,Department of Transportation,Federal Transit Administration,FTA,144247679.09,140951052.69,0.9771460697267569,3296626.400000006,Department of Transportation | Federal Transit Administration
+2024,Department of Transportation,Federal Motor Carrier Safety Administration,FMCSA,122924765.1,114753861.52,0.9335292316942568,8170903.579999998,Department of Transportation | Federal Motor Carrier Safety Administration
+2024,Department of Transportation,Federal Railroad Administration,FRA,103855015.15,96201760.79,0.9263082832451929,7653254.359999999,Department of Transportation | Federal Railroad Administration
+2024,Department of Transportation,Pipeline and Hazardous Materials Safety Administration,PHMSA,45941912.54,38269172.64,0.8329904116786689,7672739.8999999985,Department of Transportation | Pipeline and Hazardous Materials Safety Administration
+2024,Department of Transportation,Saint Lawrence Seaway Development Corporation,SLSDC,7140891.63,5895295.29,0.8255685137739586,1245596.3399999999,Department of Transportation | Saint Lawrence Seaway Development Corporation
+2024,Department of Veterans Affairs,Department of Veterans Affairs,VA,66875613460.73,61629354128.43,0.9215519819436025,5246259332.300003,Department of Veterans Affairs | Department of Veterans Affairs
+2024,Department of the Interior,Departmental Offices,,3363304392.62,3061322248.64,0.910212663283576,301982143.98,Department of the Interior | Departmental Offices
+2024,Department of the Interior,National Park Service,NPS,1288412226.59,1141618800.98,0.8860664136985773,146793425.6099999,Department of the Interior | National Park Service
+2024,Department of the Interior,Bureau of Reclamation,BOR,1076336467.03,1021032745.08,0.9486185559589904,55303721.94999993,Department of the Interior | Bureau of Reclamation
+2024,Department of the Interior,Bureau of Land Management,BLM,637334345.63,545356287.25,0.8556831920158321,91978058.38,Department of the Interior | Bureau of Land Management
+2024,Department of the Interior,Bureau of Indian Affairs and Bureau of Indian Education,,605962231.41,547799760.19,0.9040163425950444,58162471.21999991,Department of the Interior | Bureau of Indian Affairs and Bureau of Indian Education
+2024,Department of the Interior,U.S. Geological Survey,USGS,604892544.21,558828668.87,0.923847837469777,46063875.34000003,Department of the Interior | U.S. Geological Survey
+2024,Department of the Interior,U.S. Fish and Wildlife Service,USFWS,409064036.69,366225989.44,0.8952778943936744,42838047.25,Department of the Interior | U.S. Fish and Wildlife Service
+2024,Department of the Interior,Bureau of Safety and Environmental Enforcement,BSEE,88418373.2,77557322.26,0.877162963455202,10861050.939999998,Department of the Interior | Bureau of Safety and Environmental Enforcement
+2024,Department of the Interior,Bureau of Ocean Energy Management,BOEM,37646530.45,25962611.02,0.6896415342838054,11683919.430000003,Department of the Interior | Bureau of Ocean Energy Management
+2024,Department of the Interior,"Office of Surface Mining, Reclamation and Enforcement",OSMRE,7053519.16,5479785.3,0.77688671083159,1573733.8600000003,"Department of the Interior | Office of Surface Mining, Reclamation and Enforcement"
+2024,Department of the Interior,Office of the Inspector General,OIG,2839323.94,2441435.34,0.8598650212486849,397888.6000000001,Department of the Interior | Office of the Inspector General
+2024,Department of the Treasury,Internal Revenue Service,IRS,4618599203.89,3947904691.35,0.8547839977162102,670694512.5400004,Department of the Treasury | Internal Revenue Service
+2024,Department of the Treasury,United States Mint,USMINT,2729246246.37,2699420030.69,0.9890716289452922,29826215.67999983,Department of the Treasury | United States Mint
+2024,Department of the Treasury,Bureau of Engraving and Printing,BEP,891298236.35,561546825.4,0.6300324655635116,329751410.95000005,Department of the Treasury | Bureau of Engraving and Printing
+2024,Department of the Treasury,Bureau of the Fiscal Service,,685167330.24,578742056.79,0.8446725803276092,106425273.45000005,Department of the Treasury | Bureau of the Fiscal Service
+2024,Department of the Treasury,Office of the Comptroller of the Currency,OCC,204324037.81,192298317.63,0.94114387955086,12025720.180000007,Department of the Treasury | Office of the Comptroller of the Currency
+2024,Department of the Treasury,Departmental Offices,DO,153182317.91,135764607.99,0.8862942527724805,17417709.919999987,Department of the Treasury | Departmental Offices
+2024,Department of the Treasury,Office of Inspector General,OIG,10405655.26,8753007.72,0.8411779461546376,1652647.539999999,Department of the Treasury | Office of Inspector General
+2024,Environmental Protection Agency,Environmental Protection Agency,EPA,2212865855.25,2064698652.52,0.933042844699115,148167202.73000002,Environmental Protection Agency | Environmental Protection Agency
+2024,General Services Administration,Federal Acquisition Service,FAS,22164379324.46,19834678019.93,0.8948898468833276,2329701304.529999,General Services Administration | Federal Acquisition Service
+2024,General Services Administration,Public Buildings Service,PBS,3983996741.07,3439500465.4,0.8633291362774151,544496275.6700001,General Services Administration | Public Buildings Service
+2024,General Services Administration,Office of Administrative Services,OAS,350215700.65,345105170.66,0.9854074789322271,5110529.98999995,General Services Administration | Office of Administrative Services
+2024,General Services Administration,Office of Inspector General,OIG,3536431.05,2814102.53,0.7957464715733678,722328.52,General Services Administration | Office of Inspector General
+2024,National Aeronautics and Space Administration,National Aeronautics and Space Administration,NASA,15016134089.27,9691223453.8,0.645387381078663,5324910635.470001,National Aeronautics and Space Administration | National Aeronautics and Space Administration
+2024,Small Business Administration,Small Business Administration,SBA,336098854.95,289178715.69,0.8603978009178874,46920139.25999999,Small Business Administration | Small Business Administration
+2024,Social Security Administration,Social Security Administration,SSA,1874810926.29,1613782746.01,0.8607709307537802,261028180.27999997,Social Security Administration | Social Security Administration
+2025,Agency for International Development,Agency for International Development,USAID,4098524898.06,3965828459.02,0.9676233663719328,132696439.03999996,Agency for International Development | Agency for International Development
+2025,Department of Agriculture,Agricultural Marketing Service,AMS,3668522132.66,3626771985.57,0.988619355266169,41750147.089999676,Department of Agriculture | Agricultural Marketing Service
+2025,Department of Agriculture,Forest Service,FS,3513973188.33,3046231137.12,0.8668908309365069,467742051.21000004,Department of Agriculture | Forest Service
+2025,Department of Agriculture,Office of the Chief Financial Officer,OCFO,1394739043.46,1075972075.36,0.7714504590699499,318766968.10000014,Department of Agriculture | Office of the Chief Financial Officer
+2025,Department of Agriculture,Agricultural Research Service,ARS,346971693.45,278857588.68,0.8036897359184273,68114104.76999998,Department of Agriculture | Agricultural Research Service
+2025,Department of Agriculture,Animal and Plant Health Inspection Service,APHIS,276778606.82,170316242.65,0.6153519038440834,106462364.16999999,Department of Agriculture | Animal and Plant Health Inspection Service
+2025,Department of Agriculture,Rural Housing Service,RHS,205364216.01,165267330.11,0.8047523240463299,40096885.899999976,Department of Agriculture | Rural Housing Service
+2025,Department of Agriculture,Under Secretary for Farm and Foreign Agricultural Services,,68440916.95,76484996.53,1.1175331941545532,-8044079.579999998,Department of Agriculture | Under Secretary for Farm and Foreign Agricultural Services
+2025,Department of Agriculture,Food and Nutrition Service,FNS,52593120.73,51715172.8,0.9833067915002198,877947.9299999997,Department of Agriculture | Food and Nutrition Service
+2025,Department of Agriculture,Food Safety and Inspection Service,FSIS,31512766.53,26777952.97,0.8497493529965868,4734813.560000002,Department of Agriculture | Food Safety and Inspection Service
+2025,Department of Agriculture,Office of the Inspector General,OIG,10664130.01,7294165.61,0.6839906868314709,3369964.3999999994,Department of Agriculture | Office of the Inspector General
+2025,Department of Commerce,National Oceanic and Atmospheric Administration,NOAA,2080889551.68,1769398079.15,0.8503085027850141,311491472.53,Department of Commerce | National Oceanic and Atmospheric Administration
+2025,Department of Commerce,U.S. Patent and Trademark Office,USPTO,858519292.83,736795969.43,0.858217136858096,121723323.4000001,Department of Commerce | U.S. Patent and Trademark Office
+2025,Department of Commerce,Office of the Secretary,OS,679347835.72,592092649.52,0.8715603677348533,87255186.20000005,Department of Commerce | Office of the Secretary
+2025,Department of Commerce,National Institute of Standards and Technology,NIST,278176347.7,202022043.59,0.726237314064786,76154304.10999998,Department of Commerce | National Institute of Standards and Technology
+2025,Department of Commerce,U.S. Census Bureau,,261865139.01,170537479.45,0.6512416280178767,91327659.56,Department of Commerce | U.S. Census Bureau
+2025,Department of Defense,Department of the Navy,USN,176556016948.94,64584471025.85,0.36580158604579205,111971545923.09,Department of Defense | Department of the Navy
+2025,Department of Defense,Department of the Army,USA,107445020217.29,59205415000.18,0.551029865138903,48239605217.10999,Department of Defense | Department of the Army
+2025,Department of Defense,Department of the Air Force,USAF,98454625873.36,48857101070.47,0.4962397717433186,49597524802.89,Department of Defense | Department of the Air Force
+2025,Department of Defense,Defense Logistics Agency,DLA,55942798944.97,45559229983.81,0.8143895343639466,10383568961.160004,Department of Defense | Defense Logistics Agency
+2025,Department of Defense,Defense Health Agency,DHA,18443313478.77,15800843491.01,0.8567247696135657,2642469987.76,Department of Defense | Defense Health Agency
+2025,Department of Defense,Missile Defense Agency,MDA,9084034890.02,4174378142.21,0.45952907411178046,4909656747.81,Department of Defense | Missile Defense Agency
+2025,Department of Defense,Defense Information Systems Agency,DISA,7160146340.37,6166302928.98,0.8611978911958043,993843411.3900003,Department of Defense | Defense Information Systems Agency
+2025,Department of Defense,USTRANSCOM,,4812611086.91,4787190252.78,0.9947178706795687,25420834.130000114,Department of Defense | USTRANSCOM
+2025,Department of Defense,U.S. Special Operations Command,USSOCOM,4297156298.44,2738695172.17,0.6373273350946604,1558461126.2699995,Department of Defense | U.S. Special Operations Command
+2025,Department of Defense,Washington Headquarters Services,WHS,2655313522.28,1523342392.57,0.5736958667170773,1131971129.7100003,Department of Defense | Washington Headquarters Services
+2025,Department of Defense,Defense Advanced Research Projects Agency,DARPA,1817844364.43,1125662319.44,0.6192292043620361,692182044.99,Department of Defense | Defense Advanced Research Projects Agency
+2025,Department of Defense,Defense Microelectronics Activity,DMEA,1268796989.32,1223292256.71,0.9641355291720958,45504732.609999895,Department of Defense | Defense Microelectronics Activity
+2025,Department of Defense,Defense Threat Reduction Agency,DTRA,1134942521.8,935127941.31,0.8239429956566457,199814580.49,Department of Defense | Defense Threat Reduction Agency
+2025,Department of Defense,Defense Counterintelligence and Security Agency,DCSA,997405281.8,858516007.85,0.8607494100097918,138889273.94999993,Department of Defense | Defense Counterintelligence and Security Agency
+2025,Department of Defense,Defense Commissary Agency,DECA,470242492.46,273496298.71,0.5816069434287976,196746193.75,Department of Defense | Defense Commissary Agency
+2025,Department of Defense,Defense Finance and Accounting Service,DFAS,400725290.8,394097657.47,0.9834609058071461,6627633.329999983,Department of Defense | Defense Finance and Accounting Service
+2025,Department of Defense,Department of Defense Education Activity,DODEA,308604541.86,269027159.17,0.871753725815369,39577382.69,Department of Defense | Department of Defense Education Activity
+2025,Department of Defense,Defense Human Resources Activity,,248683927.03,160860436.78,0.6468469382043922,87823490.25,Department of Defense | Defense Human Resources Activity
+2025,Department of Defense,U.S. Cyber Command,USCYBERCOM,191305151.74,108965193.37,0.5695883899566541,82339958.37,Department of Defense | U.S. Cyber Command
+2025,Department of Defense,Defense Media Activity,DMA,85713085.03,78679090.62,0.9179355823263383,7033994.409999996,Department of Defense | Defense Media Activity
+2025,Department of Defense,Immediate Office of the Secretary of Defense,SECDEF,68075235.76,61867021.62,0.9088036336460569,6208214.140000008,Department of Defense | Immediate Office of the Secretary of Defense
+2025,Department of Defense,Uniformed Services University of the Health Sciences,USUHS,55266808.26,27226891.05,0.4926445348881452,28039917.209999997,Department of Defense | Uniformed Services University of the Health Sciences
+2025,Department of Defense,Office of the Inspector General,OIG,3537.54,3537.54,1.0,0.0,Department of Defense | Office of the Inspector General
+2025,Department of Defense,Defense Contract Management Agency,DCMA,-153575654.05,423348103.08,,-423348103.08,Department of Defense | Defense Contract Management Agency
+2025,Department of Education,Department of Education,ED,2502613339.39,2277887371.09,0.9102034801929189,224725968.2999997,Department of Education | Department of Education
+2025,Department of Energy,Department of Energy,DOE,48394135976.05,46943113340.25,0.9700165607560778,1451022635.800003,Department of Energy | Department of Energy
+2025,Department of Energy,Federal Energy Regulatory Commission,FERC,155202402.82,131030400.09,0.8442549709875684,24172002.72999999,Department of Energy | Federal Energy Regulatory Commission
+2025,Department of Health and Human Services,Centers for Medicare and Medicaid Services,CMS,7865096815.71,7689138451.35,0.9776279468030789,175958364.35999966,Department of Health and Human Services | Centers for Medicare and Medicaid Services
+2025,Department of Health and Human Services,National Institutes of Health,NIH,5820297074.97,5160462001.83,0.886632062824147,659835073.1400003,Department of Health and Human Services | National Institutes of Health
+2025,Department of Health and Human Services,Centers for Disease Control and Prevention,CDC,1575248925.54,1052067419.28,0.6678737577423506,523181506.26,Department of Health and Human Services | Centers for Disease Control and Prevention
+2025,Department of Health and Human Services,Indian Health Service,IHS,1450956487.48,1118846468.42,0.7711095943085077,332110019.05999994,Department of Health and Human Services | Indian Health Service
+2025,Department of Health and Human Services,Food and Drug Administration,FDA,1428426966.97,1167752977.48,0.8175097533737091,260673989.49,Department of Health and Human Services | Food and Drug Administration
+2025,Department of Health and Human Services,Office of Assistant Secretary for Preparedness and Response,,1390462176.21,1036307774.12,0.7452973492200103,354154402.09000003,Department of Health and Human Services | Office of Assistant Secretary for Preparedness and Response
+2025,Department of Health and Human Services,Office of the Assistant Secretary for Administration,ASA,727714872.12,649243345.52,0.8921672077809891,78471526.60000002,Department of Health and Human Services | Office of the Assistant Secretary for Administration
+2025,Department of Health and Human Services,Health Resources and Services Administration,HRSA,492066735.49,434386645.13,0.8827799438574888,57680090.360000014,Department of Health and Human Services | Health Resources and Services Administration
+2025,Department of Health and Human Services,Administration for Children and Families,ACF,215527917.58,207091054.0,0.9608548921423675,8436863.580000013,Department of Health and Human Services | Administration for Children and Families
+2025,Department of Health and Human Services,Substance Abuse and Mental Health Services Administration,SAMHSA,188278022.61,187194906.52,0.9942472516176591,1083116.0900000036,Department of Health and Human Services | Substance Abuse and Mental Health Services Administration
+2025,Department of Health and Human Services,Agency for Healthcare Research and Quality,AHRQ,128497652.78,126868693.78,0.9873230447034785,1628959.0,Department of Health and Human Services | Agency for Healthcare Research and Quality
+2025,Department of Health and Human Services,Office of the Inspector General,OIG,7656728.57,8036771.44,1.0496351498587861,-380042.8700000001,Department of Health and Human Services | Office of the Inspector General
+2025,Department of Homeland Security,U.S. Customs and Border Protection,CBP,10175186391.52,9410118096.12,0.9248103901037521,765068295.3999996,Department of Homeland Security | U.S. Customs and Border Protection
+2025,Department of Homeland Security,U.S. Immigration and Customs Enforcement,ICE,3988661487.38,3603132666.18,0.9033438103434445,385528821.2000003,Department of Homeland Security | U.S. Immigration and Customs Enforcement
+2025,Department of Homeland Security,Office of Procurement Operations,OPO,3855335713.85,3755660483.08,0.9741461604985723,99675230.76999998,Department of Homeland Security | Office of Procurement Operations
+2025,Department of Homeland Security,U.S. Coast Guard,USCG,3493673027.61,2721854296.79,0.7790810059440518,771818730.8200002,Department of Homeland Security | U.S. Coast Guard
+2025,Department of Homeland Security,Federal Emergency Management Agency,FEMA,2597426845.86,2457860979.97,0.9462676432591538,139565865.89000034,Department of Homeland Security | Federal Emergency Management Agency
+2025,Department of Homeland Security,Transportation Security Administration,TSA,1974035641.76,1818167203.0,0.921040717065761,155868438.76,Department of Homeland Security | Transportation Security Administration
+2025,Department of Homeland Security,U.S. Citizenship and Immigration Services,USCIS,1398399765.22,1357821416.9,0.9709822975309095,40578348.31999993,Department of Homeland Security | U.S. Citizenship and Immigration Services
+2025,Department of Homeland Security,U.S. Secret Service,USSS,518349859.8,403082111.08,0.7776255813699363,115267748.72000003,Department of Homeland Security | U.S. Secret Service
+2025,Department of Homeland Security,Federal Law Enforcement Training Center,FLETC,280112505.39,210387089.13,0.7510806732354863,69725416.25999999,Department of Homeland Security | Federal Law Enforcement Training Center
+2025,Department of Homeland Security,Office of the Inspector General,IG,48781690.34,47132090.8,0.9661840430599559,1649599.5400000066,Department of Homeland Security | Office of the Inspector General
+2025,Department of Housing and Urban Development,Department of Housing and Urban Development,HUD,-1331998929.39,81407730.22,,-81407730.22,Department of Housing and Urban Development | Department of Housing and Urban Development
+2025,Department of Justice,Federal Bureau of Investigation,FBI,2062150907.2,1733164645.31,0.840464506869335,328986261.8900001,Department of Justice | Federal Bureau of Investigation
+2025,Department of Justice,Federal Prison System / Bureau of Prisons,,2046476791.42,1633165294.35,0.7980375351419385,413311497.0700002,Department of Justice | Federal Prison System / Bureau of Prisons
+2025,Department of Justice,"Offices, Boards and Divisions",,1858942546.15,1683124811.62,0.9054205656360219,175817734.5300002,"Department of Justice | Offices, Boards and Divisions"
+2025,Department of Justice,U.S. Marshals Service,,1299168080.56,1268604708.14,0.9764746587625324,30563372.419999838,Department of Justice | U.S. Marshals Service
+2025,Department of Justice,Drug Enforcement Administration,DEA,610375295.97,422626876.35,0.6924049501026531,187748419.62,Department of Justice | Drug Enforcement Administration
+2025,Department of Justice,"Bureau of Alcohol, Tobacco, Firearms and Explosives Acquisition and Property Management Division",,324435503.9,271332991.12,0.8363233612176809,53102512.77999997,"Department of Justice | Bureau of Alcohol, Tobacco, Firearms and Explosives Acquisition and Property Management Division"
+2025,Department of Justice,Federal Prison Industries / Unicor,,196104223.2,146961083.64,0.7494029513587752,49143139.56,Department of Justice | Federal Prison Industries / Unicor
+2025,Department of Justice,Office of Justice Programs,OJP,133549071.91,117306434.81,0.8783770125265561,16242637.099999994,Department of Justice | Office of Justice Programs
+2025,Department of Justice,Office of the Inspector General,OIG,7542455.67,4937044.05,0.6545671948244941,2605411.62,Department of Justice | Office of the Inspector General
+2025,Department of Labor,Office of the Assistant Secretary for Administration and Management,,1745323472.75,1686967998.31,0.9665646653178549,58355474.44000006,Department of Labor | Office of the Assistant Secretary for Administration and Management
+2025,Department of Labor,Office of Inspector General,OIG,8887946.76,7600422.61,0.8551381792930542,1287524.1499999994,Department of Labor | Office of Inspector General
+2025,Department of State,Department of State,DOS,9715026549.45,7111390826.19,0.7319991139491635,2603635723.260001,Department of State | Department of State
+2025,Department of State,International Boundary and Water Commission: U.S.-Mexico,IBWC,130063465.99,108178672.11,0.8317375773940807,21884793.879999995,Department of State | International Boundary and Water Commission: U.S.-Mexico
+2025,Department of Transportation,Federal Aviation Administration,FAA,6034088729.88,4992800330.86,0.8274323687247621,1041288399.0200005,Department of Transportation | Federal Aviation Administration
+2025,Department of Transportation,Federal Highway Administration,FHWA,1211693544.54,1172906605.27,0.9679894809667201,38786939.26999998,Department of Transportation | Federal Highway Administration
+2025,Department of Transportation,Maritime Administration,MARAD,911895375.09,466246884.12,0.5112942743831588,445648490.97,Department of Transportation | Maritime Administration
+2025,Department of Transportation,National Highway Traffic Safety Administration,NHTSA,268402995.53,226054356.45,0.8422199461806431,42348639.08000001,Department of Transportation | National Highway Traffic Safety Administration
+2025,Department of Transportation,Immediate Office of the Secretary of Transportation,OST,249657929.33,169816134.73,0.6801952382835618,79841794.60000002,Department of Transportation | Immediate Office of the Secretary of Transportation
+2025,Department of Transportation,Federal Transit Administration,FTA,119230241.23,115382529.25,0.9677287243546072,3847711.980000004,Department of Transportation | Federal Transit Administration
+2025,Department of Transportation,Federal Motor Carrier Safety Administration,FMCSA,111652686.95,103488079.0,0.9268749532767065,8164607.950000003,Department of Transportation | Federal Motor Carrier Safety Administration
+2025,Department of Transportation,Federal Railroad Administration,FRA,66294513.44,64305854.88,0.9700026675389988,1988658.559999995,Department of Transportation | Federal Railroad Administration
+2025,Department of Transportation,Pipeline and Hazardous Materials Safety Administration,PHMSA,39094254.35,30592095.34,0.7825215200708898,8502159.010000002,Department of Transportation | Pipeline and Hazardous Materials Safety Administration
+2025,Department of Transportation,Saint Lawrence Seaway Development Corporation,SLSDC,10515614.88,9150655.06,0.8701968609942093,1364959.8200000003,Department of Transportation | Saint Lawrence Seaway Development Corporation
+2025,Department of Veterans Affairs,Department of Veterans Affairs,VA,78314110146.96,72223214815.58,0.9222248031682904,6090895331.380005,Department of Veterans Affairs | Department of Veterans Affairs
+2025,Department of the Interior,Departmental Offices,,2187329703.56,1975715535.08,0.9032545627960951,211614168.48000002,Department of the Interior | Departmental Offices
+2025,Department of the Interior,National Park Service,NPS,1496156717.83,1387539458.17,0.9274024850701894,108617259.65999985,Department of the Interior | National Park Service
+2025,Department of the Interior,Bureau of Reclamation,BOR,1068398922.64,1022925033.61,0.9574373503507149,45473889.02999997,Department of the Interior | Bureau of Reclamation
+2025,Department of the Interior,Bureau of Land Management,BLM,669776705.53,438165413.06,0.6541962559197636,231611292.46999997,Department of the Interior | Bureau of Land Management
+2025,Department of the Interior,U.S. Geological Survey,USGS,373475884.93,328336416.7,0.8791368598310961,45139468.23000002,Department of the Interior | U.S. Geological Survey
+2025,Department of the Interior,Bureau of Indian Affairs and Bureau of Indian Education,,365666233.66,297243031.47,0.8128807204724827,68423202.19,Department of the Interior | Bureau of Indian Affairs and Bureau of Indian Education
+2025,Department of the Interior,U.S. Fish and Wildlife Service,USFWS,313714718.4,278746522.76,0.8885350492372691,34968195.639999986,Department of the Interior | U.S. Fish and Wildlife Service
+2025,Department of the Interior,Bureau of Safety and Environmental Enforcement,BSEE,72290480.87,69032835.08,0.9549367254056833,3257645.7900000066,Department of the Interior | Bureau of Safety and Environmental Enforcement
+2025,Department of the Interior,Bureau of Ocean Energy Management,BOEM,9284495.97,6587864.71,0.7095554493519802,2696631.2600000007,Department of the Interior | Bureau of Ocean Energy Management
+2025,Department of the Interior,"Office of Surface Mining, Reclamation and Enforcement",OSMRE,3123056.31,2316150.39,0.7416294040500346,806905.9199999999,"Department of the Interior | Office of Surface Mining, Reclamation and Enforcement"
+2025,Department of the Interior,Office of the Inspector General,OIG,734178.33,607611.73,0.8276078238375683,126566.59999999998,Department of the Interior | Office of the Inspector General
+2025,Department of the Treasury,Internal Revenue Service,IRS,3922888733.98,3368033791.63,0.8585596023808029,554854942.3499999,Department of the Treasury | Internal Revenue Service
+2025,Department of the Treasury,United States Mint,USMINT,2513697832.6,2490238721.54,0.9906674896418495,23459111.059999943,Department of the Treasury | United States Mint
+2025,Department of the Treasury,Bureau of Engraving and Printing,BEP,665690468.32,380404903.0,0.5714441187058396,285285565.32000005,Department of the Treasury | Bureau of Engraving and Printing
+2025,Department of the Treasury,Departmental Offices,DO,660615656.2,619713592.05,0.9380849306762159,40902064.150000095,Department of the Treasury | Departmental Offices
+2025,Department of the Treasury,Bureau of the Fiscal Service,,577176124.43,475879519.3,0.8244961964945499,101296605.12999994,Department of the Treasury | Bureau of the Fiscal Service
+2025,Department of the Treasury,Office of the Comptroller of the Currency,OCC,207474800.01,196159999.23,0.9454642164761472,11314800.780000001,Department of the Treasury | Office of the Comptroller of the Currency
+2025,Department of the Treasury,Office of Inspector General,OIG,9714095.62,7933563.19,0.8167063101238035,1780532.4299999988,Department of the Treasury | Office of Inspector General
+2025,Environmental Protection Agency,Environmental Protection Agency,EPA,1697433936.71,1578410166.8,0.9298801754012918,119023769.91000009,Environmental Protection Agency | Environmental Protection Agency
+2025,General Services Administration,Federal Acquisition Service,FAS,20028778246.8,18550193502.08,0.9261769876075077,1478584744.7199974,General Services Administration | Federal Acquisition Service
+2025,General Services Administration,Public Buildings Service,PBS,3542930352.37,3133950253.0,0.8845644540834912,408980099.3699999,General Services Administration | Public Buildings Service
+2025,General Services Administration,Office of Administrative Services,OAS,235409536.83,231170557.59,0.9819931711472625,4238979.24000001,General Services Administration | Office of Administrative Services
+2025,General Services Administration,Office of Inspector General,OIG,3671147.47,2752139.46,0.7496673676255233,919008.0100000002,General Services Administration | Office of Inspector General
+2025,General Services Administration,Technology Transformation Service,TTS,-114704.22,-114704.22,,0.0,General Services Administration | Technology Transformation Service
+2025,National Aeronautics and Space Administration,National Aeronautics and Space Administration,NASA,15782664933.95,10420552032.87,0.6602530102792977,5362112901.08,National Aeronautics and Space Administration | National Aeronautics and Space Administration
+2025,Small Business Administration,Small Business Administration,SBA,110860869.48,93333701.12,0.8418994146247246,17527168.36,Small Business Administration | Small Business Administration
+2025,Social Security Administration,Social Security Administration,SSA,1746308710.84,1461330808.04,0.8368112688031423,284977902.79999995,Social Security Administration | Social Security Administration

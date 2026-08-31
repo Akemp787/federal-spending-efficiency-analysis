@@ -1,0 +1,13 @@
+name,passed,severity,message
+fiscal_year_coverage,True,ERROR,"Expected [2021, 2022, 2023, 2024, 2025], found [2021, 2022, 2023, 2024, 2025]"
+unique_agency_year_key,True,ERROR,"0 duplicate (fiscal_year, agency_name) rows"
+competition_slices_reconcile_to_totals,True,ERROR,0 of 325 agency-years exceed 1.0% reconciliation tolerance
+pricing_slices_reconcile_to_totals,True,ERROR,0 of 325 agency-years exceed 1.0% tolerance
+monthly_slices_reconcile_to_annual,True,ERROR,0 of 5 fiscal years exceed 1.0% tolerance
+shares_within_unit_interval,True,ERROR,"all shares in [0,1]"
+deflator_monotonic_increasing,True,WARN,GDP deflator rises across the window
+negative_net_obligations,False,WARN,4 agency-years have net-negative obligations (de-obligations exceeded awards)
+index_population_above_materiality_floor,True,ERROR,0 scored agencies fall below the $1.0B floor
+shift_share_reconciles_exactly,True,ERROR,max |residual| = 3.43e-16 (tolerance 1e-09)
+standardised_rates_bounded,True,ERROR,"0 of 19 agencies have a rate outside [0, 1]"
+subagency_rolls_up_to_agency,True,ERROR,0 of 98 agency-years exceed 2% tolerance

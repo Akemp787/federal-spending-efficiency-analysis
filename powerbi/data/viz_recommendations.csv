@@ -1,0 +1,7 @@
+id,recommendation,population,sizing_bn,evidence,confidence,sort_order,sizing_label,fiscal_year
+R1,Report competition at the level that awards contracts,Department of the Navy,16.2,Navy drove ~70% of the government-wide decline; its rate fell 45.8% to 36.6% on $176.6B.,High,1,$16.2B,2025
+R2,Test the 'we buy harder things' defence before accepting it,Department of Defense,0.0,"Portfolio adjustment explains only 6.1 pp of DoD's gap; 23.5 pp is practice, not mission.",High,2,Not dollar-sized,2025
+R3,"Use the September surge as a sampling frame, not a finding",Government-wide,83.4,September carried 19.0% of FY2025 obligations against an 8.3% even pace.,Medium,3,$83.4B,2025
+R4,Track contract-type risk as an independent signal,Health & Human Services,256.5,HHS cost-risk share rose 10.3 pp while its obligations fell 28.7%.,Medium,4,$256.5B,2025
+R5,"Use the efficiency index only at its tails, never as a ranking",19 scored agencies,0.0,"Only 4 of 19 agencies hold their quartile across 2,000 random weightings.",High,5,Not dollar-sized,2025
+R6,Treat vendor concentration as a data-quality priority first,Concentrated agencies,0.0,Vendor HHI is truncated at the top 100 and has no corporate-family rollup.,Low,6,Not dollar-sized,2025

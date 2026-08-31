@@ -1,0 +1,72 @@
+agency_name,agency_code,peak_obligations,latest_obligations,is_scored_in_index,size_band
+Department of Defense,DOD,491685487925.19,491685487925.19,True,Over $100B
+Department of Veterans Affairs,VA,78313337208.43,78313337208.43,True,$10B–$100B
+Department of Energy,DOE,48549337828.87,48549337828.87,True,$10B–$100B
+Department of Homeland Security,DHS,28336601669.43,28336601669.43,True,$10B–$100B
+General Services Administration,GSA,26502128197.23,23810677070.15,True,$10B–$100B
+Department of Health and Human Services,HHS,34263471655.44,21290230376.02,True,$10B–$100B
+National Aeronautics and Space Administration,NASA,16129104644.29,15782680383.9,True,$10B–$100B
+Department of State,DOS,11949724607.11,9865475459.76,True,$1B–$10B
+Department of Agriculture,USDA,11597506288.99,9569572358.2,True,$1B–$10B
+Department of Transportation,DOT,9022525885.22,9022525885.22,True,$1B–$10B
+Department of the Treasury,TREAS,10257934018.66,8556933934.18,True,$1B–$10B
+Department of Justice,DOJ,9960834896.24,8531620050.47,True,$1B–$10B
+Department of the Interior,DOI,8121263990.93,6554582845.32,True,$1B–$10B
+Department of Commerce,DOC,5185009413.32,4158787229.18,True,$1B–$10B
+Agency for International Development,USAID,7444753388.62,4099062195.34,True,$1B–$10B
+Department of Education,ED,2724859964.87,2502613339.39,True,$1B–$10B
+Department of Labor,DOL,2478804629.44,1754211419.51,True,$1B–$10B
+Social Security Administration,SSA,1937692238.12,1746308710.84,True,$1B–$10B
+Environmental Protection Agency,EPA,2212865855.25,1697433936.71,True,$1B–$10B
+National Science Foundation,NSF,775662102.55,711037984.7,False,Under $1B
+Securities and Exchange Commission,SEC,701649736.64,498159347.29,False,Under $1B
+Smithsonian Institution,SI,492068915.06,427132309.7,False,Under $1B
+Pension Benefit Guaranty Corporation,PBGC,394364864.13,291626660.21,False,Under $1B
+National Archives and Records Administration,NARA,241073877.84,207686582.24,False,Under $1B
+Office of Personnel Management,OPM,537335615.43,198566615.13,False,Under $1B
+Nuclear Regulatory Commission,NRC,192923805.28,183407577.41,False,Under $1B
+Government Accountability Office,GAO,131976560.0,117398587.27,False,Under $1B
+Consumer Financial Protection Bureau,CFPB,188349630.21,116253350.41,False,Under $1B
+Small Business Administration,SBA,1153700308.19,110860869.48,False,Under $1B
+Federal Trade Commission,FTC,112541952.24,93093005.65,False,Under $1B
+U.S. International Development Finance Corporation,DFC,103623017.2,87384127.33,False,Under $1B
+U.S. Agency for Global Media,USAGM,165534334.8,71779188.65,False,Under $1B
+Peace Corps,PC,146158049.97,68629163.35,False,Under $1B
+Commodity Futures Trading Commission,CFTC,89630205.84,67873876.61,False,Under $1B
+Federal Communications Commission,FCC,370700197.03,62776338.86,False,Under $1B
+District of Columbia Courts,DC COURTS,101489317.2,62556684.96,False,Under $1B
+Executive Office of the President,EOP,77299042.68,62096197.61,False,Under $1B
+National Gallery of Art,NGA,56650291.51,53802966.77,False,Under $1B
+Export-Import Bank of the United States,EXIM,51694299.83,51694299.83,False,Under $1B
+Equal Employment Opportunity Commission,EEOC,63561516.23,48610300.69,False,Under $1B
+Railroad Retirement Board,RRB,65461149.07,42984847.65,False,Under $1B
+Millennium Challenge Corporation,MCC,110069411.09,40397428.54,False,Under $1B
+Court Services and Offender Supervision Agency,CSOSA,47336503.54,36968224.75,False,Under $1B
+Consumer Product Safety Commission,CPSC,52138540.15,32912664.46,False,Under $1B
+Corporation for National and Community Service,CNCS,97557285.71,30258572.84,False,Under $1B
+National Transportation Safety Board,NTSB,29684092.31,29684092.31,False,Under $1B
+National Labor Relations Board,NLRB,30688482.68,27337929.65,False,Under $1B
+International Trade Commission,USITC,17797015.35,17797015.35,False,Under $1B
+United States Trade and Development Agency,USTDA,25834919.75,14868872.02,False,Under $1B
+Federal Election Commission,FEC,17511776.98,13729726.06,False,Under $1B
+Institute of Museum and Library Services,IMLS,12719460.59,11866490.63,False,Under $1B
+John F. Kennedy Center for the Performing Arts,KENNEDY CENTER,8661193.45,7462114.87,False,Under $1B
+Selective Service System,SSS,7423930.26,7423930.26,False,Under $1B
+Defense Nuclear Facilities Safety Board,DNFSB,7481001.09,5948705.18,False,Under $1B
+Federal Maritime Commission,FMC,6547801.39,5141006.49,False,Under $1B
+Council of the Inspectors General on Integrity and Efficiency,CIGIE,4609437.29,4609437.29,False,Under $1B
+National Endowment for the Arts,NEA,5454582.58,3864613.57,False,Under $1B
+Merit Systems Protection Board,MSPB,4934015.12,3201752.74,False,Under $1B
+Committee for Purchase from People Who Are Blind or Severely Disabled,ABILITYONE,4079143.84,2064250.29,False,Under $1B
+National Endowment for the Humanities,NEH,3605567.22,1948159.64,False,Under $1B
+United States Chemical Safety Board,CSB,2423077.79,1648617.8,False,Under $1B
+Federal Labor Relations Authority,FLRA,2518056.56,1616655.84,False,Under $1B
+Occupational Safety and Health Review Commission,OSHRC,1859174.11,1556962.33,False,Under $1B
+Federal Mediation and Conciliation Service,FMCS,8113545.54,1527484.73,False,Under $1B
+Federal Housing Finance Agency,FHFA,992056.0,387811.87,False,Under $1B
+Morris K. Udall and Stewart L. Udall Foundation,UDALL,1939583.56,311296.71,False,Under $1B
+American Battle Monuments Commission,ABMC,278000.0,278000.0,False,Under $1B
+Nuclear Waste Technical Review Board,NWTRB,29835.08,29835.08,False,Under $1B
+Administrative Conference of the U.S.,ACUS,194608.16,26500.0,False,Under $1B
+Federal Mine Safety and Health Review Commission,FMSHRC,3904432.29,-461436.78,False,Net negative
+Department of Housing and Urban Development,HUD,1525527557.97,-1331998929.39,False,Net negative

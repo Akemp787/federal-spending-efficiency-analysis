@@ -1,0 +1,186 @@
+{
+  "name": "Federal Contract Efficiency",
+  "dataColors": [
+    "#2a78d6",
+    "#eb6834",
+    "#1baf7a",
+    "#eda100",
+    "#4a3aa7",
+    "#e34948"
+  ],
+  "background": "#FFFFFF",
+  "foreground": "#0D1418",
+  "tableAccent": "#2a78d6",
+  "good": "#0CA30C",
+  "neutral": "#6D7C88",
+  "bad": "#e34948",
+  "maximum": "#2a78d6",
+  "center": "#F0EFEC",
+  "minimum": "#e34948",
+  "textClasses": {
+    "title": {
+      "fontFace": "Segoe UI Semibold",
+      "fontSize": 16,
+      "color": "#0D1418"
+    },
+    "header": {
+      "fontFace": "Segoe UI Semibold",
+      "fontSize": 12,
+      "color": "#0D1418"
+    },
+    "label": {
+      "fontFace": "Segoe UI",
+      "fontSize": 10,
+      "color": "#48555F"
+    },
+    "callout": {
+      "fontFace": "Segoe UI Light",
+      "fontSize": 36,
+      "color": "#0D1418"
+    }
+  },
+  "visualStyles": {
+    "*": {
+      "*": {
+        "background": [
+          {
+            "show": true,
+            "color": {
+              "solid": {
+                "color": "#FFFFFF"
+              }
+            }
+          }
+        ],
+        "border": [
+          {
+            "show": true,
+            "color": {
+              "solid": {
+                "color": "#D8DEE5"
+              }
+            },
+            "radius": 6
+          }
+        ],
+        "visualHeader": [
+          {
+            "show": false
+          }
+        ],
+        "title": [
+          {
+            "show": true,
+            "fontSize": 12,
+            "fontColor": {
+              "solid": {
+                "color": "#0D1418"
+              }
+            }
+          }
+        ],
+        "categoryAxis": [
+          {
+            "gridlineShow": false,
+            "labelColor": {
+              "solid": {
+                "color": "#48555F"
+              }
+            },
+            "fontSize": 10
+          }
+        ],
+        "valueAxis": [
+          {
+            "gridlineColor": {
+              "solid": {
+                "color": "#E3E8ED"
+              }
+            },
+            "labelColor": {
+              "solid": {
+                "color": "#48555F"
+              }
+            },
+            "fontSize": 10
+          }
+        ],
+        "legend": [
+          {
+            "position": "TopCenter",
+            "showTitle": false,
+            "fontSize": 10,
+            "labelColor": {
+              "solid": {
+                "color": "#48555F"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "page": {
+      "*": {
+        "background": [
+          {
+            "color": {
+              "solid": {
+                "color": "#F4F6F8"
+              }
+            },
+            "transparency": 0
+          }
+        ]
+      }
+    },
+    "card": {
+      "*": {
+        "labels": [
+          {
+            "fontSize": 32,
+            "color": {
+              "solid": {
+                "color": "#0D1418"
+              }
+            }
+          }
+        ],
+        "categoryLabels": [
+          {
+            "fontSize": 10,
+            "color": {
+              "solid": {
+                "color": "#6D7C88"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "lineChart": {
+      "*": {
+        "lineStyles": [
+          {
+            "strokeWidth": 3,
+            "showMarker": true,
+            "markerSize": 5
+          }
+        ]
+      }
+    },
+    "slicer": {
+      "*": {
+        "header": [
+          {
+            "show": true,
+            "fontColor": {
+              "solid": {
+                "color": "#48555F"
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

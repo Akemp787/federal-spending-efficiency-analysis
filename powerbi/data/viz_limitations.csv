@@ -1,0 +1,11 @@
+category,limitation,detail,sort_order
+Scope,"Obligations, not outlays","Figures are money committed, not money spent. De-obligations are included, so an agency can post a negative year.",1
+Scope,Contracts only,"Grants, loans and direct payments are out of scope. This is a picture of federal contracting, not federal spending.",2
+Attribution,"Awarding agency, not funding agency","Where one agency buys on another's behalf, the obligation is credited to the awarding agency. This materially affects GSA.",3
+Measurement,Competition rate is not competition quality,A competed award drawing a single bid satisfies the process without obtaining price discipline. The single-offer rate needs transaction-level data.,4
+Measurement,Portfolio adjustment is coarse,"Product categories group unlike purchases, so the 23.5 pp practice gap is an upper bound rather than a point estimate.",5
+Measurement,Vendor concentration is understated,"Computed on the top 100 recipients with no corporate-family rollup, so subsidiaries count separately.",6
+Method,Index weights are a judgement,"Only 4 of 19 agencies hold their quartile across 2,000 random weightings. The middle of the ranking is not separable.",7
+Data,Source data carries reporting lag,"Agency-reported FPDS data is corrected continuously, so recent figures can move after the snapshot date.",8
+Interpretation,"Nothing here identifies waste, fraud or abuse","Sole-source awards are frequently lawful and correct. Every output indicates where review would be most productive, not where wrongdoing occurred.",9
+Interpretation,No savings estimate is possible,"Competition affects price, but this analysis observes obligations, not prices. Converting these figures into savings would exceed the evidence.",10

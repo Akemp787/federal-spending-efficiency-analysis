@@ -1,6 +1,6 @@
 {
-  "generated_at_utc": "2026-08-27T16:48:08+00:00",
-  "snapshot_date": "2026-08-27",
+  "generated_at_utc": "2026-08-31T22:25:04+00:00",
+  "snapshot_date": "2026-08-31",
   "fiscal_years": [
     2021,
     2022,
@@ -49,6 +49,6 @@
   ],
   "materiality_floor_usd": 1000000000,
   "agency_vendor_query_failures": [],
-  "api_cache_hits": 0,
+  "api_cache_hits": 763,
   "api_network_calls": 0
 }

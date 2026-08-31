@@ -10,8 +10,9 @@ what the Makefile and CI invoke.
     fedspend validate    run data-quality contracts (non-zero exit on failure)
     fedspend report      render dashboard + tables -> outputs/
     fedspend sample      refresh the committed sample extracts
+    fedspend powerbi     build the Power BI star schema + theme -> powerbi/
     fedspend query       run ad-hoc SQL against the warehouse
-    fedspend all         ingest -> analyse -> warehouse -> validate -> report
+    fedspend all         ingest -> analyse -> warehouse -> validate -> report -> powerbi
 """
 
 from __future__ import annotations
@@ -73,6 +74,13 @@ def cmd_report(args: argparse.Namespace) -> int:
     return 0
 
 
+def cmd_powerbi(args: argparse.Namespace) -> int:
+    from .report.powerbi import build_powerbi_package
+
+    build_powerbi_package(_cfg(args))
+    return 0
+
+
 def cmd_sample(args: argparse.Namespace) -> int:
     from .report.exports import write_samples
 
@@ -102,7 +110,14 @@ def cmd_query(args: argparse.Namespace) -> int:
 
 
 def cmd_all(args: argparse.Namespace) -> int:
-    for step in (cmd_ingest, cmd_analyse, cmd_warehouse, cmd_validate, cmd_report):
+    for step in (
+        cmd_ingest,
+        cmd_analyse,
+        cmd_warehouse,
+        cmd_validate,
+        cmd_report,
+        cmd_powerbi,
+    ):
         code = step(args)
         if code != 0:
             log.error("stage %s failed with exit code %d", step.__name__, code)
@@ -140,6 +155,9 @@ def build_parser() -> argparse.ArgumentParser:
     )
     sub.add_parser("report", help="render dashboard and exports").set_defaults(func=cmd_report)
     sub.add_parser("sample", help="refresh committed sample data").set_defaults(func=cmd_sample)
+    sub.add_parser(
+        "powerbi", help="build the Power BI star schema and theme"
+    ).set_defaults(func=cmd_powerbi)
 
     q = sub.add_parser("query", help="run SQL against the warehouse")
     q.add_argument("--sql", help="SQL string")

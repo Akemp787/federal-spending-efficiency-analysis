@@ -1,0 +1,341 @@
+// ===========================================================================
+// Federal Contract Spending Efficiency — DAX measures
+//
+// Paste each block into Power BI Desktop as a new measure
+// (Modeling ▸ New measure), or create them all inside a dedicated
+// "_Measures" table (Home ▸ Enter data ▸ name it "_Measures" ▸ Load) so they
+// group together in the field list rather than scattering across fact tables.
+//
+// Conventions used throughout:
+//   • DIVIDE() instead of "/" so a zero denominator returns BLANK rather than
+//     an error that breaks a whole visual.
+//   • VAR ... RETURN for anything evaluated more than once.
+//   • Shares are stored 0–1 and formatted as percentages in the model, so no
+//     measure multiplies by 100 except where a label needs a number in text.
+// ===========================================================================
+
+
+// ---------------------------------------------------------------------------
+// 1. SCALE
+// ---------------------------------------------------------------------------
+
+Total Obligations =
+SUM ( fact_agency_year[obligations] )
+
+Total Obligations (Real) =
+SUM ( fact_agency_year[obligations_real] )
+
+Total Obligations $B =
+DIVIDE ( [Total Obligations], 1e9 )
+
+// Government-wide totals come from their own fact table, which already nets
+// out cross-agency effects. Using the agency table with no filter would give
+// the same number today, but would silently change if the agency table were
+// ever filtered upstream.
+Gov Obligations =
+SUM ( fact_government_year[obligations] )
+
+
+// ---------------------------------------------------------------------------
+// 2. GROWTH — nominal versus real
+//
+// The headline of the whole analysis: most of the apparent growth is price
+// level. These measures make that comparison the default rather than an
+// afterthought.
+// ---------------------------------------------------------------------------
+
+Obligations PY =
+CALCULATE (
+    [Total Obligations],
+    FILTER (
+        ALL ( dim_fiscal_year ),
+        dim_fiscal_year[fiscal_year] = MAX ( dim_fiscal_year[fiscal_year] ) - 1
+    )
+)
+
+YoY Change $ =
+[Total Obligations] - [Obligations PY]
+
+YoY Change % =
+DIVIDE ( [YoY Change $], [Obligations PY] )
+
+// Growth from the first year of the window to the currently selected year,
+// nominal and real. The gap between them is finding #1.
+Growth vs Base % =
+VAR BaseYear = CALCULATE ( MIN ( dim_fiscal_year[fiscal_year] ), ALL ( dim_fiscal_year ) )
+VAR BaseValue =
+    CALCULATE ( [Total Obligations], ALL ( dim_fiscal_year ), dim_fiscal_year[fiscal_year] = BaseYear )
+RETURN
+    DIVIDE ( [Total Obligations] - BaseValue, BaseValue )
+
+Real Growth vs Base % =
+VAR BaseYear = CALCULATE ( MIN ( dim_fiscal_year[fiscal_year] ), ALL ( dim_fiscal_year ) )
+VAR BaseValue =
+    CALCULATE ( [Total Obligations (Real)], ALL ( dim_fiscal_year ), dim_fiscal_year[fiscal_year] = BaseYear )
+RETURN
+    DIVIDE ( [Total Obligations (Real)] - BaseValue, BaseValue )
+
+// The wedge between the two: dollars of apparent growth that are price only.
+Inflation Wedge pp =
+( [Growth vs Base %] - [Real Growth vs Base %] ) * 100
+
+
+// ---------------------------------------------------------------------------
+// 3. COMPETITION
+// ---------------------------------------------------------------------------
+
+// Recomputed from the components rather than averaging a stored rate — an
+// average of agency rates is not the government rate, because agencies differ
+// enormously in size. This is the single most common error in a competition
+// dashboard.
+Competed Share =
+DIVIDE (
+    SUM ( fact_agency_year[competed_obligations] ),
+    SUM ( fact_agency_year[competed_obligations] ) + SUM ( fact_agency_year[not_competed_obligations] )
+)
+
+Non-Competed $ =
+SUM ( fact_agency_year[not_competed_obligations] )
+
+Non-Competed $B =
+DIVIDE ( [Non-Competed $], 1e9 )
+
+Competed Share PY =
+CALCULATE (
+    [Competed Share],
+    FILTER (
+        ALL ( dim_fiscal_year ),
+        dim_fiscal_year[fiscal_year] = MAX ( dim_fiscal_year[fiscal_year] ) - 1
+    )
+)
+
+Competed Share Change pp =
+( [Competed Share] - [Competed Share PY] ) * 100
+
+// What holding last year's rate would have been worth, in dollars. This is the
+// measure that turns a percentage-point move into something a decision-maker
+// can weigh.
+Dollars At Prior Rate $B =
+VAR Gap = [Competed Share PY] - [Competed Share]
+VAR Base = SUM ( fact_agency_year[competed_obligations] ) + SUM ( fact_agency_year[not_competed_obligations] )
+RETURN
+    DIVIDE ( MAX ( Gap, 0 ) * Base, 1e9 )
+
+Subagency Competed Share =
+DIVIDE (
+    SUM ( fact_subagency_year[competed_obligations] ),
+    SUM ( fact_subagency_year[obligations] )
+)
+
+
+// ---------------------------------------------------------------------------
+// 4. ATTRIBUTION — who caused the change
+//
+// The decomposition splits a change into behaviour (within) and budget mix,
+// and the three terms reconcile to the total with no residual.
+// ---------------------------------------------------------------------------
+
+Within Effect pp =
+SUM ( fact_competition_attribution[within_effect_pp] )
+
+Mix Effect pp =
+SUM ( fact_competition_attribution[mix_effect_pp] )
+
+Total Effect pp =
+SUM ( fact_competition_attribution[total_effect_pp] )
+
+// Share of the government-wide move attributable to the current selection.
+// ALLSELECTED keeps the denominator at the visual's total so the percentages
+// read against what the viewer can actually see.
+Share of Total Move % =
+DIVIDE (
+    [Total Effect pp],
+    CALCULATE ( [Total Effect pp], ALLSELECTED ( fact_competition_attribution ) )
+)
+
+// Reconciliation proof, for the methodology page. Should always display 0.00.
+Attribution Residual pp =
+[Total Effect pp] - ( [Within Effect pp] + [Mix Effect pp]
+    + SUM ( fact_competition_attribution[interaction_effect] ) * 100 )
+
+
+// ---------------------------------------------------------------------------
+// 5. PORTFOLIO ADJUSTMENT
+// ---------------------------------------------------------------------------
+
+Observed Rate =
+AVERAGE ( fact_portfolio_adjusted[observed_rate] )
+
+Portfolio-Adjusted Rate =
+AVERAGE ( fact_portfolio_adjusted[standardised_rate] )
+
+Portfolio Effect pp =
+( [Observed Rate] - [Portfolio-Adjusted Rate] ) * 100
+
+// How far the selection sits below the civilian benchmark once product mix is
+// held constant — the number that survives the "we buy harder things" objection.
+Gap to Civilian Median pp =
+VAR CivilianMedian =
+    CALCULATE (
+        MEDIAN ( fact_portfolio_adjusted[standardised_rate] ),
+        ALL ( fact_portfolio_adjusted ),
+        fact_portfolio_adjusted[agency_name] <> "Department of Defense"
+    )
+RETURN
+    ( CivilianMedian - [Portfolio-Adjusted Rate] ) * 100
+
+// Coverage guard: a standardised rate built on a thin basket must not be ranked.
+Coverage Warning =
+IF ( AVERAGE ( fact_portfolio_adjusted[reference_coverage] ) < 0.8, "⚠ thin coverage", "" )
+
+
+// ---------------------------------------------------------------------------
+// 6. TIMING — the year-end surge
+// ---------------------------------------------------------------------------
+
+September Share =
+DIVIDE (
+    CALCULATE ( SUM ( fact_month[obligations] ), fact_month[fiscal_month] = 12 ),
+    SUM ( fact_month[obligations] )
+)
+
+// An even pace would place 1/12 of the year in any month. Anything above that
+// is the schedule-driven portion.
+September Above Even Pace $B =
+VAR Total = SUM ( fact_month[obligations] )
+VAR Sept = CALCULATE ( SUM ( fact_month[obligations] ), fact_month[fiscal_month] = 12 )
+RETURN
+    DIVIDE ( MAX ( Sept - DIVIDE ( Total, 12 ), 0 ), 1e9 )
+
+Even Pace Reference = 100
+
+
+// ---------------------------------------------------------------------------
+// 7. CONTRACT-TYPE RISK
+// ---------------------------------------------------------------------------
+
+Government-Risk Share =
+DIVIDE (
+    SUM ( fact_agency_year[government_risk_obligations] ),
+    SUM ( fact_agency_year[obligations] )
+)
+
+Government-Risk $B =
+DIVIDE ( SUM ( fact_agency_year[government_risk_obligations] ), 1e9 )
+
+Risk Migration pp =
+SUM ( fact_risk_migration[change_pp] )
+
+
+// ---------------------------------------------------------------------------
+// 8. EFFICIENCY INDEX
+// ---------------------------------------------------------------------------
+
+Efficiency Index =
+AVERAGE ( fact_efficiency_index[efficiency_index] )
+
+Rank Spread =
+SUM ( fact_index_sensitivity[rank_worst] ) - SUM ( fact_index_sensitivity[rank_best] )
+
+// Reads the sensitivity verdict rather than the score, so the visual can never
+// present an unstable rank as if it were settled.
+Index Reliability =
+VAR Verdict = SELECTEDVALUE ( fact_index_sensitivity[quartile_verdict] )
+RETURN
+    SWITCH (
+        Verdict,
+        "robustly top quartile", "✔ Robust — top quartile",
+        "robustly bottom quartile", "✔ Robust — bottom quartile",
+        "⚠ Not separable — do not read as a rank"
+    )
+
+Robust Agency Count =
+CALCULATE (
+    COUNTROWS ( fact_index_sensitivity ),
+    fact_index_sensitivity[quartile_verdict] <> "not separable"
+)
+
+
+// ---------------------------------------------------------------------------
+// 9. CONCENTRATION
+// ---------------------------------------------------------------------------
+
+Vendor HHI =
+AVERAGE ( fact_agency_year[vendor_hhi] )
+
+// DOJ/FTC Horizontal Merger Guidelines thresholds.
+HHI Band =
+VAR H = [Vendor HHI]
+RETURN
+    SWITCH (
+        TRUE (),
+        ISBLANK ( H ), "No data",
+        H < 1500, "Unconcentrated",
+        H < 2500, "Moderately concentrated",
+        "Highly concentrated"
+    )
+
+
+// ---------------------------------------------------------------------------
+// 10. DYNAMIC TITLES AND NARRATIVE
+//
+// Bind these to a visual's Title ▸ fx ▸ "Field value" so the headline restates
+// what the current filter selection actually shows. A title that goes stale
+// when someone clicks a slicer is how a dashboard starts lying.
+// ---------------------------------------------------------------------------
+
+Title — Competition =
+VAR FY = SELECTEDVALUE ( dim_fiscal_year[fiscal_year_label], "the period" )
+VAR Rate = FORMAT ( [Competed Share], "0.0%" )
+VAR Move = [Competed Share Change pp]
+VAR Direction = IF ( Move < 0, "down", "up" )
+RETURN
+    "Competed share in " & FY & ": " & Rate & " — "
+        & Direction & " " & FORMAT ( ABS ( Move ), "0.0" ) & " points on the prior year"
+
+Title — Growth =
+"Nominal growth " & FORMAT ( [Growth vs Base %], "0.0%" )
+    & " vs real growth " & FORMAT ( [Real Growth vs Base %], "0.0%" )
+    & " — a gap of " & FORMAT ( [Inflation Wedge pp], "0.0" ) & " points"
+
+Title — Index Caveat =
+"Contract Efficiency Index — only "
+    & [Robust Agency Count]
+    & " of " & COUNTROWS ( ALL ( fact_index_sensitivity ) )
+    & " agencies hold their quartile across 2,000 weightings"
+
+// KPI subtitle that states direction in words as well as colour, so the card
+// is readable without relying on hue alone.
+Subtitle — Competition Move =
+VAR Move = [Competed Share Change pp]
+RETURN
+    FORMAT ( Move, "+0.0;-0.0" ) & " pp vs prior year"
+
+
+// ---------------------------------------------------------------------------
+// 11. CONDITIONAL FORMATTING HELPERS
+//
+// Return hex strings, bound via Format ▸ Data colors ▸ fx ▸ "Field value".
+// Colours match the HTML dashboard so the deck and the repo look like one
+// piece of work.
+// ---------------------------------------------------------------------------
+
+Colour — Diverging =
+IF ( [YoY Change $] >= 0, "#2A78D6", "#E34948" )
+
+Colour — Attribution =
+IF ( [Total Effect pp] >= 0, "#2A78D6", "#E34948" )
+
+Colour — Confidence =
+SWITCH (
+    SELECTEDVALUE ( viz_recommendations[confidence] ),
+    "High", "#0CA30C",
+    "Medium", "#EDA100",
+    "Low", "#6D7C88",
+    "#6D7C88"
+)
+
+// Highlights September without a second series, so the surge column reads as
+// emphasis rather than as a different quantity.
+Colour — September =
+IF ( SELECTEDVALUE ( viz_monthly_pacing[is_september] ) = TRUE (), "#EB6834", "#2A78D6" )

@@ -1,0 +1,122 @@
+subagency_key,subagency_name,agency_name,subagency_code,latest_obligations,is_military_department
+Department of Defense | Department of the Navy,Department of the Navy,Department of Defense,USN,176556016948.94,True
+Department of Defense | Department of the Army,Department of the Army,Department of Defense,USA,107445020217.29,True
+Department of Defense | Department of the Air Force,Department of the Air Force,Department of Defense,USAF,98454625873.36,True
+Department of Veterans Affairs | Department of Veterans Affairs,Department of Veterans Affairs,Department of Veterans Affairs,VA,78314110146.96,False
+Department of Defense | Defense Logistics Agency,Defense Logistics Agency,Department of Defense,DLA,55942798944.97,False
+Department of Energy | Department of Energy,Department of Energy,Department of Energy,DOE,48394135976.05,False
+General Services Administration | Federal Acquisition Service,Federal Acquisition Service,General Services Administration,FAS,20028778246.8,False
+Department of Defense | Defense Health Agency,Defense Health Agency,Department of Defense,DHA,18443313478.77,False
+National Aeronautics and Space Administration | National Aeronautics and Space Administration,National Aeronautics and Space Administration,National Aeronautics and Space Administration,NASA,15782664933.95,False
+Department of Homeland Security | U.S. Customs and Border Protection,U.S. Customs and Border Protection,Department of Homeland Security,CBP,10175186391.52,False
+Department of State | Department of State,Department of State,Department of State,DOS,9715026549.45,False
+Department of Defense | Missile Defense Agency,Missile Defense Agency,Department of Defense,MDA,9084034890.02,False
+Department of Health and Human Services | Centers for Medicare and Medicaid Services,Centers for Medicare and Medicaid Services,Department of Health and Human Services,CMS,7865096815.71,False
+Department of Defense | Defense Information Systems Agency,Defense Information Systems Agency,Department of Defense,DISA,7160146340.37,False
+Department of Transportation | Federal Aviation Administration,Federal Aviation Administration,Department of Transportation,FAA,6034088729.88,False
+Department of Health and Human Services | National Institutes of Health,National Institutes of Health,Department of Health and Human Services,NIH,5820297074.97,False
+Department of Defense | USTRANSCOM,USTRANSCOM,Department of Defense,,4812611086.91,False
+Department of Defense | U.S. Special Operations Command,U.S. Special Operations Command,Department of Defense,USSOCOM,4297156298.44,False
+Agency for International Development | Agency for International Development,Agency for International Development,Agency for International Development,USAID,4098524898.06,False
+Department of Homeland Security | U.S. Immigration and Customs Enforcement,U.S. Immigration and Customs Enforcement,Department of Homeland Security,ICE,3988661487.38,False
+Department of the Treasury | Internal Revenue Service,Internal Revenue Service,Department of the Treasury,IRS,3922888733.98,False
+Department of Homeland Security | Office of Procurement Operations,Office of Procurement Operations,Department of Homeland Security,OPO,3855335713.85,False
+Department of Agriculture | Agricultural Marketing Service,Agricultural Marketing Service,Department of Agriculture,AMS,3668522132.66,False
+General Services Administration | Public Buildings Service,Public Buildings Service,General Services Administration,PBS,3542930352.37,False
+Department of Agriculture | Forest Service,Forest Service,Department of Agriculture,FS,3513973188.33,False
+Department of Homeland Security | U.S. Coast Guard,U.S. Coast Guard,Department of Homeland Security,USCG,3493673027.61,False
+Department of Defense | Washington Headquarters Services,Washington Headquarters Services,Department of Defense,WHS,2655313522.28,False
+Department of Homeland Security | Federal Emergency Management Agency,Federal Emergency Management Agency,Department of Homeland Security,FEMA,2597426845.86,False
+Department of the Treasury | United States Mint,United States Mint,Department of the Treasury,USMINT,2513697832.6,False
+Department of Education | Department of Education,Department of Education,Department of Education,ED,2502613339.39,False
+Department of the Interior | Departmental Offices,Departmental Offices,Department of the Interior,,2187329703.56,False
+Department of Commerce | National Oceanic and Atmospheric Administration,National Oceanic and Atmospheric Administration,Department of Commerce,NOAA,2080889551.68,False
+Department of Justice | Federal Bureau of Investigation,Federal Bureau of Investigation,Department of Justice,FBI,2062150907.2,False
+Department of Justice | Federal Prison System / Bureau of Prisons,Federal Prison System / Bureau of Prisons,Department of Justice,,2046476791.42,False
+Department of Homeland Security | Transportation Security Administration,Transportation Security Administration,Department of Homeland Security,TSA,1974035641.76,False
+"Department of Justice | Offices, Boards and Divisions","Offices, Boards and Divisions",Department of Justice,,1858942546.15,False
+Department of Defense | Defense Advanced Research Projects Agency,Defense Advanced Research Projects Agency,Department of Defense,DARPA,1817844364.43,False
+Social Security Administration | Social Security Administration,Social Security Administration,Social Security Administration,SSA,1746308710.84,False
+Department of Labor | Office of the Assistant Secretary for Administration and Management,Office of the Assistant Secretary for Administration and Management,Department of Labor,,1745323472.75,False
+Environmental Protection Agency | Environmental Protection Agency,Environmental Protection Agency,Environmental Protection Agency,EPA,1697433936.71,False
+Department of Health and Human Services | Centers for Disease Control and Prevention,Centers for Disease Control and Prevention,Department of Health and Human Services,CDC,1575248925.54,False
+Department of the Interior | National Park Service,National Park Service,Department of the Interior,NPS,1496156717.83,False
+Department of Health and Human Services | Indian Health Service,Indian Health Service,Department of Health and Human Services,IHS,1450956487.48,False
+Department of Health and Human Services | Food and Drug Administration,Food and Drug Administration,Department of Health and Human Services,FDA,1428426966.97,False
+Department of Homeland Security | U.S. Citizenship and Immigration Services,U.S. Citizenship and Immigration Services,Department of Homeland Security,USCIS,1398399765.22,False
+Department of Agriculture | Office of the Chief Financial Officer,Office of the Chief Financial Officer,Department of Agriculture,OCFO,1394739043.46,False
+Department of Health and Human Services | Office of Assistant Secretary for Preparedness and Response,Office of Assistant Secretary for Preparedness and Response,Department of Health and Human Services,,1390462176.21,False
+Department of Justice | U.S. Marshals Service,U.S. Marshals Service,Department of Justice,,1299168080.56,False
+Department of Defense | Defense Microelectronics Activity,Defense Microelectronics Activity,Department of Defense,DMEA,1268796989.32,False
+Department of Transportation | Federal Highway Administration,Federal Highway Administration,Department of Transportation,FHWA,1211693544.54,False
+Department of Defense | Defense Threat Reduction Agency,Defense Threat Reduction Agency,Department of Defense,DTRA,1134942521.8,False
+Department of the Interior | Bureau of Reclamation,Bureau of Reclamation,Department of the Interior,BOR,1068398922.64,False
+Department of Defense | Defense Counterintelligence and Security Agency,Defense Counterintelligence and Security Agency,Department of Defense,DCSA,997405281.8,False
+Department of Transportation | Maritime Administration,Maritime Administration,Department of Transportation,MARAD,911895375.09,False
+Department of Commerce | U.S. Patent and Trademark Office,U.S. Patent and Trademark Office,Department of Commerce,USPTO,858519292.83,False
+Department of Health and Human Services | Office of the Assistant Secretary for Administration,Office of the Assistant Secretary for Administration,Department of Health and Human Services,ASA,727714872.12,False
+Department of Commerce | Office of the Secretary,Office of the Secretary,Department of Commerce,OS,679347835.72,False
+Department of the Interior | Bureau of Land Management,Bureau of Land Management,Department of the Interior,BLM,669776705.53,False
+Department of the Treasury | Bureau of Engraving and Printing,Bureau of Engraving and Printing,Department of the Treasury,BEP,665690468.32,False
+Department of the Treasury | Departmental Offices,Departmental Offices,Department of the Treasury,DO,660615656.2,False
+Department of Justice | Drug Enforcement Administration,Drug Enforcement Administration,Department of Justice,DEA,610375295.97,False
+Department of the Treasury | Bureau of the Fiscal Service,Bureau of the Fiscal Service,Department of the Treasury,,577176124.43,False
+Department of Homeland Security | U.S. Secret Service,U.S. Secret Service,Department of Homeland Security,USSS,518349859.8,False
+Department of Health and Human Services | Health Resources and Services Administration,Health Resources and Services Administration,Department of Health and Human Services,HRSA,492066735.49,False
+Department of Defense | Defense Commissary Agency,Defense Commissary Agency,Department of Defense,DECA,470242492.46,False
+Department of Defense | Defense Finance and Accounting Service,Defense Finance and Accounting Service,Department of Defense,DFAS,400725290.8,False
+Department of the Interior | U.S. Geological Survey,U.S. Geological Survey,Department of the Interior,USGS,373475884.93,False
+Department of the Interior | Bureau of Indian Affairs and Bureau of Indian Education,Bureau of Indian Affairs and Bureau of Indian Education,Department of the Interior,,365666233.66,False
+Department of Agriculture | Agricultural Research Service,Agricultural Research Service,Department of Agriculture,ARS,346971693.45,False
+"Department of Justice | Bureau of Alcohol, Tobacco, Firearms and Explosives Acquisition and Property Management Division","Bureau of Alcohol, Tobacco, Firearms and Explosives Acquisition and Property Management Division",Department of Justice,,324435503.9,False
+Department of the Interior | U.S. Fish and Wildlife Service,U.S. Fish and Wildlife Service,Department of the Interior,USFWS,313714718.4,False
+Department of Defense | Department of Defense Education Activity,Department of Defense Education Activity,Department of Defense,DODEA,308604541.86,False
+Department of Homeland Security | Federal Law Enforcement Training Center,Federal Law Enforcement Training Center,Department of Homeland Security,FLETC,280112505.39,False
+Department of Commerce | National Institute of Standards and Technology,National Institute of Standards and Technology,Department of Commerce,NIST,278176347.7,False
+Department of Agriculture | Animal and Plant Health Inspection Service,Animal and Plant Health Inspection Service,Department of Agriculture,APHIS,276778606.82,False
+Department of Transportation | National Highway Traffic Safety Administration,National Highway Traffic Safety Administration,Department of Transportation,NHTSA,268402995.53,False
+Department of Commerce | U.S. Census Bureau,U.S. Census Bureau,Department of Commerce,,261865139.01,False
+Department of Transportation | Immediate Office of the Secretary of Transportation,Immediate Office of the Secretary of Transportation,Department of Transportation,OST,249657929.33,False
+Department of Defense | Defense Human Resources Activity,Defense Human Resources Activity,Department of Defense,,248683927.03,False
+General Services Administration | Office of Administrative Services,Office of Administrative Services,General Services Administration,OAS,235409536.83,False
+Department of Health and Human Services | Administration for Children and Families,Administration for Children and Families,Department of Health and Human Services,ACF,215527917.58,False
+Department of the Treasury | Office of the Comptroller of the Currency,Office of the Comptroller of the Currency,Department of the Treasury,OCC,207474800.01,False
+Department of Agriculture | Rural Housing Service,Rural Housing Service,Department of Agriculture,RHS,205364216.01,False
+Department of Justice | Federal Prison Industries / Unicor,Federal Prison Industries / Unicor,Department of Justice,,196104223.2,False
+Department of Defense | U.S. Cyber Command,U.S. Cyber Command,Department of Defense,USCYBERCOM,191305151.74,False
+Department of Health and Human Services | Substance Abuse and Mental Health Services Administration,Substance Abuse and Mental Health Services Administration,Department of Health and Human Services,SAMHSA,188278022.61,False
+Department of Energy | Federal Energy Regulatory Commission,Federal Energy Regulatory Commission,Department of Energy,FERC,155202402.82,False
+Department of Justice | Office of Justice Programs,Office of Justice Programs,Department of Justice,OJP,133549071.91,False
+Department of State | International Boundary and Water Commission: U.S.-Mexico,International Boundary and Water Commission: U.S.-Mexico,Department of State,IBWC,130063465.99,False
+Department of Health and Human Services | Agency for Healthcare Research and Quality,Agency for Healthcare Research and Quality,Department of Health and Human Services,AHRQ,128497652.78,False
+Department of Transportation | Federal Transit Administration,Federal Transit Administration,Department of Transportation,FTA,119230241.23,False
+Department of Transportation | Federal Motor Carrier Safety Administration,Federal Motor Carrier Safety Administration,Department of Transportation,FMCSA,111652686.95,False
+Small Business Administration | Small Business Administration,Small Business Administration,Small Business Administration,SBA,110860869.48,False
+Department of Defense | Defense Media Activity,Defense Media Activity,Department of Defense,DMA,85713085.03,False
+Department of the Interior | Bureau of Safety and Environmental Enforcement,Bureau of Safety and Environmental Enforcement,Department of the Interior,BSEE,72290480.87,False
+Department of Agriculture | Under Secretary for Farm and Foreign Agricultural Services,Under Secretary for Farm and Foreign Agricultural Services,Department of Agriculture,,68440916.95,False
+Department of Defense | Immediate Office of the Secretary of Defense,Immediate Office of the Secretary of Defense,Department of Defense,SECDEF,68075235.76,False
+Department of Transportation | Federal Railroad Administration,Federal Railroad Administration,Department of Transportation,FRA,66294513.44,False
+Department of Housing and Urban Development | Chief Procurement Officer,Chief Procurement Officer,Department of Housing and Urban Development,,59682337.74,False
+Department of Defense | Uniformed Services University of the Health Sciences,Uniformed Services University of the Health Sciences,Department of Defense,USUHS,55266808.26,False
+Department of Agriculture | Food and Nutrition Service,Food and Nutrition Service,Department of Agriculture,FNS,52593120.73,False
+Department of Homeland Security | Office of the Inspector General,Office of the Inspector General,Department of Homeland Security,IG,48781690.34,False
+Department of Transportation | Pipeline and Hazardous Materials Safety Administration,Pipeline and Hazardous Materials Safety Administration,Department of Transportation,PHMSA,39094254.35,False
+Department of Agriculture | Food Safety and Inspection Service,Food Safety and Inspection Service,Department of Agriculture,FSIS,31512766.53,False
+Department of Agriculture | Office of the Inspector General,Office of the Inspector General,Department of Agriculture,OIG,10664130.01,False
+Department of Transportation | Saint Lawrence Seaway Development Corporation,Saint Lawrence Seaway Development Corporation,Department of Transportation,SLSDC,10515614.88,False
+Department of the Treasury | Office of Inspector General,Office of Inspector General,Department of the Treasury,OIG,9714095.62,False
+Department of the Interior | Bureau of Ocean Energy Management,Bureau of Ocean Energy Management,Department of the Interior,BOEM,9284495.97,False
+Department of Labor | Office of Inspector General,Office of Inspector General,Department of Labor,OIG,8887946.76,False
+Department of Health and Human Services | Office of the Inspector General,Office of the Inspector General,Department of Health and Human Services,OIG,7656728.57,False
+Department of Justice | Office of the Inspector General,Office of the Inspector General,Department of Justice,OIG,7542455.67,False
+General Services Administration | Office of Inspector General,Office of Inspector General,General Services Administration,OIG,3671147.47,False
+"Department of the Interior | Office of Surface Mining, Reclamation and Enforcement","Office of Surface Mining, Reclamation and Enforcement",Department of the Interior,OSMRE,3123056.31,False
+Department of the Interior | Office of the Inspector General,Office of the Inspector General,Department of the Interior,OIG,734178.33,False
+Department of Labor | Employment and Training Administration,Employment and Training Administration,Department of Labor,ETA,492441.0,False
+Department of Defense | Office of the Inspector General,Office of the Inspector General,Department of Defense,OIG,3537.54,False
+Department of Agriculture | Farm Service Agency,Farm Service Agency,Department of Agriculture,FSA,-18114.4,False
+General Services Administration | Technology Transformation Service,Technology Transformation Service,General Services Administration,TTS,-114704.22,False
+Department of Agriculture | Natural Resources Conservation Service,Natural Resources Conservation Service,Department of Agriculture,NRCS,-369076.51,False
+Department of Defense | Defense Contract Management Agency,Defense Contract Management Agency,Department of Defense,DCMA,-153575654.05,False
+Department of Housing and Urban Development | Department of Housing and Urban Development,Department of Housing and Urban Development,Department of Housing and Urban Development,HUD,-1331998929.39,False
