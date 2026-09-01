@@ -16,7 +16,7 @@ import pandas as pd
 import pytest
 
 ROOT = Path(__file__).resolve().parents[1]
-PBI = ROOT / "powerbi"
+PBI = ROOT / "work-in-progress" / "powerbi"
 DATA = PBI / "data"
 
 requires_export = pytest.mark.skipif(

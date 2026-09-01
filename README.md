@@ -20,7 +20,7 @@ clean checkout.
 | [**Recommendations**](docs/RECOMMENDATIONS.md) | Six actions, each sized in dollars and paired with the evidence that would prove it wrong. |
 | [**Findings notebook**](notebooks/02_findings.ipynb) | The analysis with charts, rendered on GitHub — no setup needed. |
 | [Interactive dashboard](outputs/dashboard.html) | The whole story as one page. Download and open it; it works offline. |
-| [**Power BI report**](powerbi/README.md) | A modelled star schema, DAX measures, theme and page-by-page build guide for a ten-page deck. |
+| [Power BI model](work-in-progress/powerbi/README.md) | A star schema, DAX measures, theme and build guide. The `.pbix` itself is not built — see [work in progress](work-in-progress/). |
 | [**Slide deck**](outputs/Federal_Contract_Efficiency.pptx) | A twelve-slide PowerPoint walkthrough, generated from the analysis tables. |
 
 For how the project treats the limits of its own conclusions, see
@@ -225,8 +225,8 @@ docs/                   executive summary · recommendations · methodology
 notebooks/              pipeline walkthrough · findings · index deep-dive
 data/samples/           committed results, so a fresh clone can verify the findings
 outputs/                dashboard.html · CSVs formatted for Power BI / Tableau
-powerbi/                star schema, DAX, theme, build guide and talk track
 deck/                   PowerPoint generator, driven by the analysis tables
+work-in-progress/       components that work but are not finished deliverables
 ```
 
 ---
@@ -245,20 +245,17 @@ images, so they stay editable.
 
 ---
 
-## The Power BI report
+## Work in progress
 
-[`powerbi/`](powerbi/README.md) contains everything needed to assemble a ten-page Power BI
-presentation: 25 model-ready tables in a star schema, ~40 documented DAX measures, a theme file
-carrying the validated palette, a page-by-page build guide, and a talk track.
+[`work-in-progress/`](work-in-progress/) holds components that are built and tested but are not
+yet finished deliverables. Currently that is the **Power BI model**: 25 model-ready tables in a
+star schema, ~40 documented DAX measures, a theme file, a page-by-page build guide and a talk
+track, all covered by 35 contract tests — but no `.pbix`, because that file can only be authored
+in Power BI Desktop.
 
-The data is shaped for the visuals it feeds — legend-driven charts get long tables rather than
-wide ones — and the model's structural guarantees are enforced by 35 contract tests, because a
-duplicate key or an orphan foreign key in Power BI does not raise an error, it just quietly
-returns the wrong number. The recommendations and limitations pages are bound to data tables
-rather than typed into text boxes, so the deck regenerates with the analysis.
-
-`.pbix` files can only be authored in Power BI Desktop, so the file itself is assembled by hand
-from the guide — roughly an hour of mechanical work.
+The folder's [README](work-in-progress/README.md) says plainly what is done, what is not, and what
+would finish each item. Keeping the boundary explicit seemed better than letting a directory named
+`powerbi/` imply a report that does not exist.
 
 ---
 

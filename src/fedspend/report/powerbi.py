@@ -13,7 +13,7 @@ need a single-column key on a dimension table. Handing a reviewer the analysis
 tables and calling it a Power BI deliverable pushes an hour of unpivoting onto
 them, so this module does that work here where it can be tested and re-run.
 
-Output layout (``powerbi/data``)
+Output layout (``work-in-progress/powerbi/data``)
     dim_*        one row per entity, single-column key, no measures
     fact_*       additive measures keyed to the dimensions
     viz_*        pre-unpivoted long tables shaped for one specific visual each
@@ -463,8 +463,8 @@ def build_theme(out: Path) -> Path:
 
 # ----------------------------------------------------------------- orchestrate
 def build_powerbi_package(cfg: Config) -> Path:
-    """Write the whole Power BI package under ``powerbi/``."""
-    root = cfg.root / "powerbi"
+    """Write the whole Power BI package under ``work-in-progress/powerbi/``."""
+    root = cfg.root / "work-in-progress" / "powerbi"
     data = root / "data"
     data.mkdir(parents=True, exist_ok=True)
 

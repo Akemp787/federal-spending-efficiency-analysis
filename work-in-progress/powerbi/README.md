@@ -10,13 +10,16 @@ theme carries the palette. Assembly is roughly **60–90 minutes of mechanical w
 design exercise.
 
 ```
-powerbi/
+work-in-progress/powerbi/
 ├── data/                  25 model-ready CSVs (dim_ / fact_ / viz_)
 ├── fedspend_theme.json    colour palette, typography, visual defaults
 ├── measures.dax           ~40 DAX measures, grouped and commented
 ├── README.md              this file
 └── TALK_TRACK.md          what to say on each page
 ```
+
+This folder sits under `work-in-progress/` because the `.pbix` itself is not built yet —
+see [../README.md](../README.md).
 
 Regenerate any time the analysis changes:
 
@@ -28,7 +31,7 @@ python -m fedspend.cli powerbi
 
 ## Step 1 — Load and model (about 20 minutes)
 
-**Import.** Power BI Desktop ▸ *Get data* ▸ *Text/CSV* ▸ select all 25 files in `powerbi/data`
+**Import.** Power BI Desktop ▸ *Get data* ▸ *Text/CSV* ▸ select all 25 files in `work-in-progress/powerbi/data`
 ▸ *Load*. Or *Get data* ▸ *Folder* to bring them in as one batch.
 
 **Apply the theme.** *View* ▸ *Themes* ▸ *Browse for themes* ▸ `fedspend_theme.json`. This sets

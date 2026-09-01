@@ -12,7 +12,7 @@ help:
 	@echo "warehouse  load DuckDB and install SQL views"
 	@echo "validate   run data-quality contracts (fails the build on ERROR)"
 	@echo "report     render dashboard and BI exports into outputs/"
-	@echo "powerbi    build the Power BI star schema + theme into powerbi/"
+	@echo "powerbi    build the Power BI model into work-in-progress/powerbi/"
 	@echo "deck       build the PowerPoint leave-behind (needs Node.js)"
 	@echo "all        ingest -> analyse -> warehouse -> validate -> report -> powerbi"
 	@echo "test       run the pytest suite"

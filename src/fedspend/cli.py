@@ -10,7 +10,7 @@ what the Makefile and CI invoke.
     fedspend validate    run data-quality contracts (non-zero exit on failure)
     fedspend report      render dashboard + tables -> outputs/
     fedspend sample      refresh the committed sample extracts
-    fedspend powerbi     build the Power BI star schema + theme -> powerbi/
+    fedspend powerbi     build the Power BI model -> work-in-progress/powerbi/
     fedspend deck        build the PowerPoint leave-behind -> outputs/*.pptx
     fedspend query       run ad-hoc SQL against the warehouse
     fedspend all         ingest -> analyse -> warehouse -> validate -> report -> powerbi
